@@ -8,3 +8,6 @@
 /golf_courses_alberta.png filter=lfs diff=lfs merge=lfs -text
 /golf_courses_calgary.geojson filter=lfs diff=lfs merge=lfs -text
 /golf_courses_calgary.png filter=lfs diff=lfs merge=lfs -text
+/cache/226631d0f9f216c85093d9e0e2063a3dd1ff5245.json filter=lfs diff=lfs merge=lfs -text
+/golf_courses_alberta_v1.geojson filter=lfs diff=lfs merge=lfs -text
+/golf_courses_alberta_v1.png filter=lfs diff=lfs merge=lfs -text

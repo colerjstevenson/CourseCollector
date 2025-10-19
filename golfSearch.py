@@ -31,7 +31,8 @@ logging.basicConfig(
 def main():
     region = "Alberta, Canada"
     output_prefix = "golf_courses_alberta"
-
+    gdf = None
+    
     # if files already exists, skip data collection and load existing data to create map
     if os.path.exists(f"{output_prefix}.geojson") and os.path.exists(f"{output_prefix}.csv"):
         logging.info("Existing data found, loading...")
@@ -58,8 +59,8 @@ def main():
             # -----------------------
             # Clean and project
             # -----------------------
-            print("Processing data...")
-            gdf = gdf[['name', 'geometry']].copy()
+            # print("Processing data...")
+            # gdf = gdf[['name', 'geometry']].copy()
             gdf = gdf.to_crs(epsg=3347)  # NAD83 / StatsCan Lambert (meters)
             gdf['area_m2'] = gdf['geometry'].area
 
@@ -86,8 +87,8 @@ def main():
             csv_file = f"{output_prefix}.csv"
 
             gdf.to_file(geojson_file, driver="GeoJSON")
-            gdf[['name', 'lat', 'lon', 'area_m2']].to_csv(csv_file, index=False)
-
+            # gdf[['name', 'lat', 'lon', 'area_m2']].to_csv(csv_file, index=False)
+            gdf.drop(columns=['leisure','geometry']).to_csv(csv_file, index=False)
         # -----------------------
         # Create map overlay and save image
         # -----------------------
