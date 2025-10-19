@@ -3,7 +3,7 @@
 Collect approximate locations and areas of all golf courses in Alberta, Canada
 using OpenStreetMap data via the OSMnx library.
 """
-
+import os
 import osmnx as ox
 import geopandas as gpd
 import logging
@@ -29,58 +29,64 @@ logging.basicConfig(
 )
 
 def main():
-    region = "Edmonton, Alberta, Canada"
-    output_prefix = "golf_courses_edmonton"
+    region = "Alberta, Canada"
+    output_prefix = "golf_courses_alberta"
 
-    logging.info(f"Starting golf course collection for {region}")
+    # if files already exists, skip data collection and load existing data to create map
+    if os.path.exists(f"{output_prefix}.geojson") and os.path.exists(f"{output_prefix}.csv"):
+        logging.info("Existing data found, loading...")
+        gdf = gpd.read_file(f"{output_prefix}.geojson")
+    else:
+        logging.info(f"Starting golf course collection for {region}")
 
     try:
         # -----------------------
         # Fetch data from OSM
         # -----------------------
-        print(f"Fetching golf courses in {region} from OpenStreetMap...")
-        tags = {'leisure': 'golf_course'}
-        gdf = ox.features_from_place(region, tags=tags)
+        if gdf is None:
+            print(f"Fetching golf courses in {region} from OpenStreetMap...")
+            tags = {'leisure': 'golf_course'}
+            gdf = ox.features_from_place(region, tags=tags)
 
-        if gdf.empty:
-            logging.warning("No golf courses found in OSM data for this region.")
-            print("No golf courses found. Try a smaller subregion or check OSM coverage.")
-            return
+            if gdf.empty:
+                logging.warning("No golf courses found in OSM data for this region.")
+                print("No golf courses found. Try a smaller subregion or check OSM coverage.")
+                return
 
-        logging.info(f"Fetched {len(gdf)} golf courses.")
+            logging.info(f"Fetched {len(gdf)} golf courses.")
 
-        # -----------------------
-        # Clean and project
-        # -----------------------
-        print("Processing data...")
-        gdf = gdf[['name', 'geometry']].copy()
-        gdf = gdf.to_crs(epsg=3347)  # NAD83 / StatsCan Lambert (meters)
-        gdf['area_m2'] = gdf['geometry'].area
+            # -----------------------
+            # Clean and project
+            # -----------------------
+            print("Processing data...")
+            gdf = gdf[['name', 'geometry']].copy()
+            gdf = gdf.to_crs(epsg=3347)  # NAD83 / StatsCan Lambert (meters)
+            gdf['area_m2'] = gdf['geometry'].area
 
-        # Compute centroids and convert back to lat/lon
-        centroids = gdf.copy()
-        centroids = centroids.to_crs(epsg=4326)
-        gdf['lat'] = centroids['geometry'].centroid.y
-        gdf['lon'] = centroids['geometry'].centroid.x
+            # Compute centroids and convert back to lat/lon
+            centroids = gdf.copy()
+            centroids = centroids.to_crs(epsg=4326)
+            gdf['lat'] = centroids['geometry'].centroid.y
+            gdf['lon'] = centroids['geometry'].centroid.x
 
-        # -----------------------
-        # Filter and sort
-        # -----------------------
-        # Remove tiny polygons (sometimes OSM includes things like mini-putt or errors)
-        gdf = gdf[gdf['area_m2'] > 10000]  # >1 hectare
-        gdf = gdf.sort_values(by='area_m2', ascending=False)
+            # -----------------------
+            # Filter and sort
+            # -----------------------
+            # Remove tiny polygons (sometimes OSM includes things like mini-putt or errors)
+            gdf = gdf[gdf['area_m2'] > 10000]  # >1 hectare
+            gdf = gdf.sort_values(by='area_m2', ascending=False)
 
-        # -----------------------
-        # Save outputs
-        # -----------------------
-        print("Saving results...")
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+            # -----------------------
+            # Save outputs
+            # -----------------------
+            print("Saving results...")
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-        geojson_file = f"{output_prefix}.geojson"
-        csv_file = f"{output_prefix}.csv"
+            geojson_file = f"{output_prefix}.geojson"
+            csv_file = f"{output_prefix}.csv"
 
-        gdf.to_file(geojson_file, driver="GeoJSON")
-        gdf[['name', 'lat', 'lon', 'area_m2']].to_csv(csv_file, index=False)
+            gdf.to_file(geojson_file, driver="GeoJSON")
+            gdf[['name', 'lat', 'lon', 'area_m2']].to_csv(csv_file, index=False)
 
         # -----------------------
         # Create map overlay and save image
@@ -104,9 +110,9 @@ def main():
                 name = row.get('name') or ''
                 if name:
                     x, y = row['centroid'].x, row['centroid'].y
-                    ax.text(x, y, name, fontsize=8, fontweight='semibold',
-                            ha='center', va='center', color='white',
-                            bbox=dict(facecolor='black', alpha=0.4, boxstyle='round'))
+                    # ax.text(x, y, name, fontsize=8, fontweight='semibold',
+                    #         ha='center', va='center', color='white',
+                    #         bbox=dict(facecolor='black', alpha=0.4, boxstyle='round'))
 
             # Set extent to the data bounds with a small padding
             minx, miny, maxx, maxy = gdf_3857.total_bounds
