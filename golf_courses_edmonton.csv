@@ -1,21 +1,21 @@
-name,lat,lon,area_m2
-The Quarry,53.620354730985035,-113.3271551137274,1170206.2531055082
-Jagare Ridge Golf Club,53.42035211127947,-113.57794722592595,1024337.3662661258
-Edmonton Country Club and Golf Course,53.49055817031657,-113.60429594838816,868835.2731946963
-Mill Woods Golf Course,53.481799361501054,-113.43378287044499,757706.0625449924
-River Ridge Golf and Country Club,53.439916678170356,-113.63547900885737,696637.8571454769
-Windermere Golf and Country Club,53.428510332056064,-113.64771105084274,680136.0643117438
-Highlands Golf Course,53.56017935636826,-113.43568808901435,619546.6672631092
-Lewis Estates Golf Course,53.52232145354095,-113.67619975556693,589332.1581446005
-Glendale Golf & Country Club,53.581254256609924,-113.67025405316714,586094.4960133035
-Royal Mayfair Golf Club,53.53329164009891,-113.54686974613197,581075.3518108311
-Derrick Golf and Winter Club,53.46829466718323,-113.54425085417604,555236.7093023035
-Victoria Golf Course,53.53647968808332,-113.52625763698252,550563.4404965776
-Raven Crest Golf & Country Club,53.610878076937105,-113.33786429341718,515682.80489473307
-Twin Willows Golf Club,53.6023499674979,-113.59661763486912,473111.0512531381
-Riverside Golf Course,53.55245558348373,-113.46005012123304,423207.5298167406
-Rundle Park Golf Course,53.56937028063655,-113.38245238315159,387897.01352957165
-Dragon's Head Par 3 Golf Club,53.57650277272008,-113.67048842513462,232017.80578346367
-Bogey Busters,53.42692491212832,-113.55492171345125,73084.5012519221
-,53.48341145664772,-113.4298194902345,34383.69626023652
-Kinsmen Pitch & Putt,53.52534200080339,-113.50973751635203,27714.62235557264
+name,opening_hours,addr:housenumber,addr:street,website,wheelchair,addr:city,addr:postcode,email,operator,phone,winter_service,addr:province,golf:course,golf:par,source,sport,operator:type,operator:wikidata,golf,landuse,building,fax,type,contact:city,contact:housenumber,contact:street,area_m2,lat,lon
+The Quarry,,945,167 Avenue NE,https://thequarryedmonton.com/,,Edmonton,T5Y 6L2,,The Quarry Edmonton,+1-780-477-8437,,AB,,,Bing,,,,,,,+1-780-669-7088,,,,,1170206.2531055082,53.620354730985035,-113.3271551137274
+Jagare Ridge Golf Club,,,,,,,,,,,,,,,,,,,,,,,multipolygon,Edmonton,14931,9th Avenue SW,1024337.3662661258,53.42035211127947,-113.57794722592595
+Edmonton Country Club and Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,868835.2731946963,53.49055817031657,-113.60429594838816
+Mill Woods Golf Course,Tu-Sa 06:30-18:00,4540,50 Street NW,https://www.millwoodsgolfcourse.com/,,Edmonton,T6L 6P6,golf@mwgolf.com,Mill Woods Cultural and Recreational Facility Association,+1-780-448-1601,no,,,,,,,,,,,,,,,,757706.0625449924,53.481799361501054,-113.43378287044499
+River Ridge Golf and Country Club,,5685,Windermere Boulevard SW,https://countryclubtour.com/river-ridge/,,Edmonton,T6W 0S6,,,,,AB,18,71,,,,,,,,,,,,,696637.8571454769,53.439916678170356,-113.63547900885737
+Windermere Golf and Country Club,,19110,Ellerslie Road SW,https://windermeregcc.com,,Edmonton,T6W1A5,,,+1-780-988-5501,,AB,18,,,,,,,,,,,,,,680136.0643117438,53.428510332056064,-113.64771105084274
+Highlands Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,619546.6672631092,53.56017935636826,-113.43568808901435
+Lewis Estates Golf Course,,260,Suder Greens Drive NW,,,Edmonton,T5T 4B7,,,,,AB,,,,golf,,,,,,,multipolygon,,,,589332.1581446005,53.52232145354095,-113.67619975556693
+Glendale Golf & Country Club,,,,,,,,,,,,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,586094.4960133035,53.581254256609924,-113.67025405316714
+Royal Mayfair Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,581075.3518108311,53.53329164009891,-113.54686974613197
+Derrick Golf and Winter Club,,,,,,,,,,,,,,,,,,,,,,,,,,,555236.7093023035,53.46829466718323,-113.54425085417604
+Victoria Golf Course,Mo-Su 06:00-10:00,,,,yes,,,,,,,,,,,,,,,,,,,,,,550563.4404965776,53.53647968808332,-113.52625763698252
+Raven Crest Golf & Country Club,Mo-Su 06:30-21:30,251,153 Avenue NE,https://countryclubtour.com,,Edmonton,T5Y 6K8,,,+1-780-408-8687,,AB,,,Bing,,,,,,,,,,,,515682.80489473307,53.610878076937105,-113.33786429341718
+Twin Willows Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,473111.0512531381,53.6023499674979,-113.59661763486912
+Riverside Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,423207.5298167406,53.55245558348373,-113.46005012123304
+Rundle Park Golf Course,,,,,,,,,City of Edmonton,,,,,,,,public,Q2096,,,,,,,,,387897.01352957165,53.56937028063655,-113.38245238315159
+Dragon's Head Par 3 Golf Club,Mo-Su 08:00-21:00,12240,199 Street NW,,,Edmonton,T5V1T8,,,+1-780-944-4653,,AB,,,,,,,,,,,,,,,232017.80578346367,53.57650277272008,-113.67048842513462
+Bogey Busters,,,,,,,,,,,,,,,,,,,driving_range,grass,,,,,,,73084.5012519221,53.42692491212832,-113.55492171345125
+,,,,,,,,,Mill Woods Golf Course,,,,,,,,,,driving_range,grass,,,,,,,34383.69626023652,53.48341145664772,-113.4298194902345
+Kinsmen Pitch & Putt,,,,https://kinsmenpitchandputt.ca/,,,,,,,,,,,,,,,,,,,multipolygon,,,,27714.62235557264,53.52534200080339,-113.50973751635203
