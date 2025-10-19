@@ -1,0 +1,2 @@
+/golf_courses_edmonton.geojson filter=lfs diff=lfs merge=lfs -text
+/golf_courses_edmonton.png filter=lfs diff=lfs merge=lfs -text
