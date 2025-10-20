@@ -47,3 +47,16 @@
 /cache/c189c3b54f1f0df9f366703df953d192e9a74023.json filter=lfs diff=lfs merge=lfs -text
 /data/golf_courses_quebec.geojson filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_quebec.png filter=lfs diff=lfs merge=lfs -text
+/cache/03630dde0f93cc36351f4eb29475d6b4c96717ef.json filter=lfs diff=lfs merge=lfs -text
+/cache/138b25da3bce545ea342609172b793e8881da766.json filter=lfs diff=lfs merge=lfs -text
+/cache/396f012b536040a497ceaf0293947170def98e3e.json filter=lfs diff=lfs merge=lfs -text
+/cache/56e661f11d09f61fb7b349513e9e33400a254f59.json filter=lfs diff=lfs merge=lfs -text
+/cache/576690ffaabcb9961220db49ad62b1dd08294130.json filter=lfs diff=lfs merge=lfs -text
+/cache/78b73bf8cad996f10e84edbbb26065e92b9c5f8d.json filter=lfs diff=lfs merge=lfs -text
+/cache/af5793719c61792dcd3692e6c642f4e7431e8ee7.json filter=lfs diff=lfs merge=lfs -text
+/cache/c1414f1dae5d90a1c3c09954be844778d29a5f7f.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_courses_british_columbia.geojson filter=lfs diff=lfs merge=lfs -text
+/data/golf_courses_manitoba.geojson filter=lfs diff=lfs merge=lfs -text
+/images/golf_courses_british_columbia.png filter=lfs diff=lfs merge=lfs -text
+/images/golf_courses_manitoba.png filter=lfs diff=lfs merge=lfs -text
+/data/golf_courses_saskatchewan.geojson filter=lfs diff=lfs merge=lfs -text
