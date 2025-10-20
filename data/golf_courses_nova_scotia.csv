@@ -1,0 +1,84 @@
+addr:city,addr:housenumber,addr:postcode,addr:province,addr:street,amenity,email,name,phone,website,opening_hours,source,sport,description,addr:housename,golf:course,operator,addr:district,designation,building,golf,fax,disused,type,addr:suburb,operational_status,landuse,fence_type,area_m2,lat,lon,province,gcid
+,,,,,,,Highland Links Golf Course,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,1665635.7636835868,46.65664604973959,-60.40477880760242,Nova Scotia,NA00036
+Timberlea,120,B3T0G9,,Brunello Boulevard,,,The Links at Brunello,+1 902-422-3500,https://www.thelinksatbrunello.com/,,,,,,,,,,,,,,multipolygon,,,,,1272276.3253439046,44.64308623403818,-63.72190987424873,Nova Scotia,NA00009
+,,,,,,,Le Portage Golf Club,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,1085844.277459581,46.64049228786807,-60.990006565446315,Nova Scotia,NA00037
+,,,,,,,Cabot Cliffs,,,,,,,,,,,,,,,,,,,,,1066655.1674514888,46.251322464371555,-61.28555277966184,Nova Scotia,NA00079
+,,,,,,,Bell Bay Golf Club,,,,,,,,,,,,,,,,,,,,,1004210.2032922413,46.11184923893907,-60.73749170065135,Nova Scotia,NA00058
+,,,,,,,Northumberland Links,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,962904.8003238542,45.87026801954291,-63.57785809899175,Nova Scotia,NA00055
+Eastern Passage,2400,B3G 1H6,Nova Scotia,Shore Road,,,Hartlen Point Forces Golf Club,,,,NRCan-CanVec-8.0,golf,,,,,,,,,,,multipolygon,,,,,922618.8949809384,44.59929734474486,-63.449621699175104,Nova Scotia,NA00018
+Pubnico,,,,Greenwood Road,,,West Pubnico Golf & Country Club,+1 902-762-2007,,closed,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,873037.5458372823,43.72262316185839,-65.7837312208279,Nova Scotia,NA00028
+,500,B0J 1J0,,Sherwood Road,,,Sherwood Golf and Country Club,+1 902-275-4956,http://www.golfnovascotia.com/golf-courses/south-shore/sherwood-golf-country-club/,,,,,,,,,,,,,,,,,,,843248.7045146713,44.72464628619795,-64.30848167597875,Nova Scotia,NA00064
+,,B4V7Y8,,Harold Whynot Road,,gmospreyridge@gmail.com,Osprey Ridge Golf Course,,https://www.ospreyridge.ca/,,,golf,,492,18_hole,,,,,,,,,,,,,828871.907631319,44.40493394736763,-64.50147782639694,Nova Scotia,NA00067
+Fall River,60,B2T 1Z2,Nova Scotia,Golf Club Road,,,Ashburn Golf Club - New Course,,,,,golf,,,,Ashburn Golf Club,,,,,,,,,,,,787136.3677542843,44.81519848393347,-63.6542392352171,Nova Scotia,NA00040
+Oakfield,6055,B2T 1E3,Nova Scotia,Highway 2,,,Oakfield,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,773602.94873752,44.91229089446312,-63.574310386775785,Nova Scotia,NA00035
+,,,,,,proshop@claregolf.ca,Clare Golf and Country Club,902-769-2124,https://claregolf.ca/,,,golf,,,,,,,,,,,,,,,,753868.5084867704,44.28345655009587,-66.11031587876097,Nova Scotia,NA00088
+Bayside,4441,B3Z 1L6,Nova Scotia,Prospect Road,,,Granite Springs Golf Club,,,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,,,,,,736232.5154351173,44.54119618861178,-63.80588461271731,Nova Scotia,NA00023
+,3060,,,Highway 221,,,Berwick Heights Golf Course,,,,,golf,,,,,,,,,,,,,,,,725272.1310742985,45.06386645803334,-64.80730067618573,Nova Scotia,NA00069
+,,,,,,,The Lakes Golf Club at Ben Eoin,,,,,,,,,,,,,,,,multipolygon,,,,,714317.5455607215,45.9734746766916,-60.43510982996953,Nova Scotia,NA00014
+Hammonds Plains,40,B4B 1T4,Nova Scotia,Club House Lane,,golfshop@glenarbour.com,Glen Arbour,+1 902-835-4653,https://www.glenarbour.com/,,,,,,,,,,,,,,,,,,,708911.2862252346,44.75377791574684,-63.7726662749005,Nova Scotia,NA00063
+Hubbards,376,B0J 1T0,Nova Scotia,Parkwood Drive,,,Aspotogan Ridge,+1 902-857-1333,https://aspotoganridge.com/,,,,,,,,13,,,,,,,,,,,694622.4758502321,44.59195366019235,-64.08380885422818,Nova Scotia,NA00062
+Stewiacke,802,B0N 2J0,,Highway 2,,,Fox Hollow Golf Club,+1 902-639-2535,,,,golf,,,,,,,,,,,,,,,,692643.033648543,45.11828557450115,-63.36597964376196,Nova Scotia,NA00070
+,,,,,,,Grandview Golf and Country Club,,,,NRCan-CanVec-8.0,golf,,,,,,,,,,,,,,,,665532.4665293787,44.71469391077597,-63.451472868616236,Nova Scotia,NA00043
+Digby,111,B0V 1A0,,Culloden Road,,proshop@digbypines.ca,Digby Pines Golf Course,+1 902-245-7709,https://www.digbypines.ca/golf-at-digby-pines-golf-resort-and-spa,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,653466.5397770756,44.62733132546778,-65.77956794424495,Nova Scotia,NA00057
+,,,,,,,Cabot Links Golf Resort,,,,,,,,,,,,,,,,,,,,,632117.9743527079,46.2348872335474,-61.30800590699782,Nova Scotia,NA00080
+,,,,,,info@dundeeresort.com,Dundee Resort & Golf Club,+1 902 3452649; +1 844 6386333,https://www.dundeeresort.com,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,628874.871065732,45.6954701629018,-61.0793675674724,Nova Scotia,NA00049
+,,,,,,info@dundeeresort.com,Dundee Resort & Golf Club,+1 902 3452649; +1 844 6386333,https://www.dundeeresort.com,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,628874.871065732,45.6954701629018,-61.0793675674724,Nova Scotia,NA00048
+Frasers Mountain,151,,,Frasers Mountain Branch Road,,,Glen Lovat Golf Club,,https://glenlovat.com/,,,,,,,,,,,,,,multipolygon,,,,,628691.9327298512,45.60643011007479,-62.57125612643473,Nova Scotia,NA00020
+Shubenacadie,14049,B0N 2H0,,Highway 215,,golf@linksatpennhills.com,The Links At Penn Hills,+1 902-758-1406,http://linksatpennhills.com/,,,golf,,,,,,,,,,,,,,,,622328.6840159778,45.11940220271816,-63.404249878044645,Nova Scotia,NA00071
+,,,,,,,Paragon Golf and Country Club,,,,,,,,,,,,,,,,,,,,,618425.2948642744,44.97990067561978,-64.95665793819086,Nova Scotia,NA00031
+,,,,,,,Abercrombie Country Club Golf Course,+1 902 7526249,https://abercrombiegolf.com,,NRCan-CanVec-10.0,,,,18_hole,,,,,,+1 902 7523114,,,,,,,618018.8774438017,45.61013724494218,-62.66967499575989,Nova Scotia,NA00051
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-8.0,golf,,,,,,,,,,,,,,,,610828.7124759428,45.8447180104957,-64.17035042396434,Nova Scotia,NA00042
+Chester,53,B0J 1J0,,Quaker Drive,,,Mill Ridge Golf Course,+1 902-275-4748,,,,golf,,,,,,,,,,,multipolygon,,,,,607565.2452455718,44.592602002259866,-64.25849585366234,Nova Scotia,NA00007
+,,,,,,,East Mountain,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,586256.5836268297,45.41601369959873,-63.18719280621236,Nova Scotia,NA00041
+,,,,,,,Clare Golf and Country Club,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,580564.891513213,44.28832740552211,-66.1144163235222,Nova Scotia,NA00050
+,,,,,,,Linacy Greens,,,,,,,,,,,,,,,yes,,,,,,565372.9262902784,45.59044003575149,-62.566207233529866,Nova Scotia,NA00089
+,,,,,,,Lingan Golf Club,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,545897.1474833589,46.17490335862235,-60.09929916350397,Nova Scotia,NA00033
+,,,,,,,Upper North Sydney,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,538366.3723060203,46.18219802212957,-60.29833166101854,Nova Scotia,NA00044
+,,,,,,,Ken-Wo Golf Club,,https://www.ken-wo.com/,,,,,,,,,,,,,,,,,,,534338.6473569738,45.07119901782479,-64.42927133422945,Nova Scotia,NA00047
+,,,,,,,Chester Golf Course,,,,NRCan-CanVec-7.0,golf,,,,,,Public and Private,,,,,,,,,,527020.3354833147,44.5376976981519,-64.22157941291808,Nova Scotia,NA00068
+,,,,,,,Antigonish Golf & Country Club,,,,,golf,,,,,,,,,,,,,,,,515308.228054755,45.63622185686494,-62.00323412121014,Nova Scotia,NA00073
+Windsor,595,,,Falmouth Back Road,,avgcc@eastlink.ca,Avon Valley Golf & Country Club,+1 902-798-2673,https://avonvalleygolf.com/,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,507180.36427761684,44.98982868249259,-64.18780483787071,Nova Scotia,NA00085
+,,,,,,,Truro Golf & Country Club,,,,,,,,,,,,,,,,,,,,,491322.81502270926,45.36249853190038,-63.300239209241425,Nova Scotia,NA00046
+Brookfield,785,B0N1C0,Nova Scotia,Highway 2,,,Brookfield Golf & Country Club,+1 902-673-3352,https://www.brookfieldgolf.com/,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,,,,,,477092.95034924365,45.24648599151695,-63.27661813724297,Nova Scotia,NA00026
+,28,,,Forbes Street,,info@yarmouthlinks.ca,Yarmouth Links,+1 902-742-2161,https://www.yarmouthlinks.ca/,,NRCan-CanVec-7.0,golf,,,,Yarmouth Golf and Country Club,,,,,,,,,,,,470444.13580276794,43.82167411347827,-66.11614674677435,Nova Scotia,NA00027
+Halifax,,,Nova Scotia,,,,Ashburn Golf Club Old Course,,,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,multipolygon,,,,,465709.19977370446,44.64703125933115,-63.637447678659775,Nova Scotia,NA00016
+,,,,,,,Lost Creek Golf Club,,,,,,,,,,,,,,,,multipolygon,,,,,465218.1384059852,44.84842781217335,-63.66637510403274,Nova Scotia,NA00011
+Centreville,2075,B0P 1J0,Nova Scotia,Lakewood Road,,,Eagle Crest Golf Course,,,,,,,,,,,,,,,,,,,,,444428.61877424,45.122606119901505,-64.51086396637542,Nova Scotia,NA00034
+Dartmouth,227,B3A 2Y5,Nova Scotia,School Street,,,Brightwood Golf and Country Club,,,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,multipolygon,,,,chain_link,440026.7500472744,44.67728302252632,-63.57172837814036,Nova Scotia,NA00019
+Greenwood,445,B0P 1N0,Nova Scotia,Thunderbird Way,,,Greenwood Golf Club,,,,,,,,,,,,,,,,,,,,,437006.4855433468,44.99021934680232,-64.92530974005308,Nova Scotia,NA00030
+,,,,,,,Fort View Golf Course,,,,,golf,,,,,,,,,,,,,,,,421843.7147299415,44.72785460776727,-65.52361919976383,Nova Scotia,NA00059
+Meaghers Grant,3909,B0N 1V0,Nova Scotia,Highway 357,,,River Oaks Golf Club North Course,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,multipolygon,,,,,403573.82534172514,44.91380299641016,-63.23855323208026,Nova Scotia,NA00006
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,393741.0876166681,44.9739764626603,-63.990061825511034,Nova Scotia,NA00077
+Mount Uniacke,83,B0N 1Z0,,Alder Lane,,,Uniacke Pines Golf Course,+1 902-866-2440,,,,,,,,,,,,,,,,,,,,349051.4740841674,44.892506582092125,-63.83809573362384,Nova Scotia,NA00087
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,335096.1137755947,44.85638179506895,-65.2290076996824,Nova Scotia,NA00065
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,335096.1137755947,44.85638179506895,-65.2290076996824,Nova Scotia,NA00066
+Debert,388,B0M 1G0,,Reid Road,,,Debert Golf Club,+1 902-662-4499,,,,,,,9_hole,,,,,,,,,,,,,334944.0629194849,45.4490669808661,-63.491460926890625,Nova Scotia,NA00083
+,,,,,,,Brule Point,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,317558.83948419685,45.75202154085911,-63.20080990364409,Nova Scotia,NA00053
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,304028.8890594913,45.123037554082565,-63.41811411425414,Nova Scotia,NA00074
+Meaghers Grant,3856,B0N 1V0,Nova Scotia,Highway 357,,,River Oaks Golf Club South Course,,,,,,,,,,,,,,,,,,,,,287185.2383318844,44.9104270736517,-63.224593279426735,Nova Scotia,NA00076
+,,,Nova Scotia,,,,Bluenose Golf Club,,https://www.bluenosegolfclub.com/,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,,,,,,261736.06115279536,44.36847036140959,-64.31396906665435,Nova Scotia,NA00025
+,,,,,,,Indian Lake Golf Course,,,,,,,,,,,,,,,,,,,,,253031.08429768833,44.592542176607466,-63.70528644880501,Nova Scotia,NA00021
+Clyde River,310,B0W 1R0,,Port Clyde Road,,,River Hills Golf & Country Club,+1 902-637-2415,https://www.riverhillsgolf.ca/,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,240905.4786820598,43.618386029066635,-65.47485775567239,Nova Scotia,NA00029
+,,,,,,,Passchendaele Golf Club,,,,,,,,,,,,,,,,,,,,,234009.8942318588,46.18466501654814,-59.98341212622025,Nova Scotia,NA00084
+River Philip,2770,,Nova Scotia,Highway 321,,,Springhill Centennial Golf Club,,,,aerial imagery,golf,,,,,,,,,,,,,,,,221519.35093005336,45.68104361284695,-63.92529936500585,Nova Scotia,NA00054
+,,,,,,,Alderdale Greens,,,,,,,,,,,,,,,,,,,,,209145.12584988287,46.15483311200289,-60.256878277722,Nova Scotia,NA00082
+Goffs,2103,B2T 1B9,Nova Scotia,Old Guysborough Road,,,Goffs,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,multipolygon,,,,,204583.30587387568,44.882112089920476,-63.481302513141806,Nova Scotia,NA00004
+Goffs,2103,B2T 1B9,Nova Scotia,Old Guysborough Road,,,Goffs,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,multipolygon,,,,,204583.30587387568,44.882112089920476,-63.481302513141806,Nova Scotia,NA00005
+,,,,,,,Greenfield,,,,,golf,,,,,,,,,,,,,,,,197692.40654411452,45.37817883634768,-63.11748743598531,Nova Scotia,NA00072
+,,,,,,golf@whitepoint.com,White Point Golf Club,+1-902-683-2485,https://www.whitepoint.com/things-to-do/golf/,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,193835.36413219347,43.959451794395136,-64.74186199506575,Nova Scotia,NA00061
+,,,,,,,Halifax,,,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,multipolygon,,,,,175461.83770551058,44.588955276019085,-63.59875131437004,Nova Scotia,NA00015
+,,,,,,,Reserve Mines,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,163015.98879869466,46.18321434995254,-60.066562523651996,Nova Scotia,NA00032
+East Petpeswick,108,B0J 2L0,Nova Scotia,Harbour Ridge Drive,,,Harbour Ridge Golf Course,,,,HRM open Data Halifax Regional Municipality survey,,,,,,2,,,,,,,,,,,123193.85387141463,44.74925660491813,-63.14306281863601,Nova Scotia,NA00078
+,,,,,,,Parrsboro Golf Club,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,120643.59170934989,45.38692819659277,-64.29655834700228,Nova Scotia,NA00056
+,,,,,,golf@thelinksatmontague.com,Links at Montague,+1 902-433-3330,https://thelinksatmontague.com/,,,,,,,,,,,,,,multipolygon,,,,,96546.57489138494,44.708397123096084,-63.504684719585875,Nova Scotia,NA00012
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-10.0,golf,Abandoned. Used as pasture.,,,,,,,,,,,,,,,81765.35768175143,44.36542070437898,-65.08025742027715,Nova Scotia,NA00060
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,80828.6339313349,46.33286147277022,-61.10093858633377,Nova Scotia,NA00038
+,,,,,,,Pictou,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,79801.72479976925,45.685219388253685,-62.68822855493952,Nova Scotia,NA00052
+,,,,,,,Unknown Golf Course,,,,NRCan-CanVec-7.0,golf,,,,,,,,,,,,,,,,79350.82962591409,46.18022161486993,-60.76503085650447,Nova Scotia,NA00039
+,,,,,,,Hammonds Plains,,,,CanVec 6.0 - NRCan,golf,,,,,,,,,,,,,,,,73656.9059457618,44.73490538932664,-63.75878315610158,Nova Scotia,NA00024
+Lake Loon,5,B2W 6C8,Nova Scotia,Lakehill Drive,,,Montague Golf Course,,,,,,,,,,,,,,,,multipolygon,,,,,50333.126591084285,44.70430455002019,-63.50121114429402,Nova Scotia,NA00013
+,,,,,,,Bacons Par 3,,,,,,,,,,,,,,,,,,,,,49063.5547418081,45.793712244515824,-64.18885849538904,Nova Scotia,NA00086
+Hatchet Lake,1604,B3T 1P7,Nova Scotia,Prospect Road,,,Prospect Short Game Golf,,,,,,,,,,,,,,,,,,,,,48735.95837103969,44.57748501475984,-63.70611742699858,Nova Scotia,NA00022
+Halifax,460,B3S 1G1,Nova Scotia,Washmill Lake Drive,,,Halifax,,,,HRM open Data Halifax Regional Municipality,,,,,,,,,,,,multipolygon,Clayton Park,closed,,,47319.6250413633,44.650192732526435,-63.65899615315039,Nova Scotia,NA00017
+,,,,,,,Lake Loon Driving Range,,,,,,,,,,,,,driving_range,,,multipolygon,,,grass,,41572.1213454222,44.69435037522616,-63.50489230872549,Nova Scotia,NA00010
+,,,,,,,Tiverton,,,,NRCan-CanVec-10.0,golf,,,,,,,,,,,,,,,,24466.37462867569,44.38465759268016,-66.22019082253837,Nova Scotia,NA00045

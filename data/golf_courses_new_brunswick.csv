@@ -1,0 +1,57 @@
+addr:street,name,phone,addr:city,addr:housenumber,addr:postcode,website,sport,source,email,mobile,wikidata,addr:province,golf:course,operator,name:en,opening_hours,name:fr,type,area_m2,lat,lon,province,gcid
+,Aroostook Valley Country Club,,,,,,golf,NRCan-CanVec-8.0,,,Q4795577,,,,,,,,1240040.4353927786,46.8034208625205,-67.7831230716647,New Brunswick,NK00036
+,Kingswood,,,,,,,,,,,,,,,,,multipolygon,1133941.0275792922,45.927019141392186,-66.70702736747612,New Brunswick,NK00005
+,Pine Needles Golf & Country Club,,,,,,,NRCan-CanVec-8.0,,,,,,,,,,multipolygon,929189.970188335,46.18774865282165,-64.41196891726585,New Brunswick,NK00008
+,Algonquin Golf Course,,,,,,,,,,,,,,,,,,900923.2795134264,45.08149702539646,-67.07349474506888,New Brunswick,NK00047
+Summerhill Row,West Hills Golf,,Fredericton,200,E3G,,,,,,,,,,,,,,827131.087887565,45.99993542094515,-66.63659122673816,New Brunswick,NK00048
+,Covered Bridge Golf & Country Club,+1-506-375-1112,Hartland,,E7P 3K4,,,,,,,New Brunswick,,,,,,,812878.0620939354,46.30242316618988,-67.54908524585144,New Brunswick,NK00046
+,Hillsborough Golf Course,,,,,,,,,,,,,,,,,,811899.3312608628,45.90237711602991,-64.66256882522684,New Brunswick,NK00042
+,River Bend Golf Course,,,,,,golf,,,,,,,,,,,,810653.8987234322,46.100963136426195,-66.60684969127023,New Brunswick,NK00023
+,Unknown Golf Course,,,,,,golf,,,,,,,,,,,,805445.8698917833,47.65751270167427,-64.98856970400509,New Brunswick,NK00043
+,Sussex Golf and Curling Club,,,,,,golf,NRCan-CanVec-8.0,,,,,,,,,,,764208.0957412259,45.711133916175925,-65.4404041487774,New Brunswick,NK00033
+,Magnetic Hill Golf Club,,,,,,golf,,,,,,,,,,,,762287.2930680373,46.1356616456823,-64.87382387532705,New Brunswick,NK00022
+,Royal Oaks Golf Club,,,,,,,,,,Q7374632,,,,,,,multipolygon,747617.8965581974,46.154290065733065,-64.79200531669919,New Brunswick,NK00002
+Rue Victoria,Club de Golf Fraser Edmundston,+1-506-735-7266,,570,,https://www.golfedmundston.com/,,NRCan-CanVec-8.0,,,,,,,Fraser Edmundston Golf Club,,Club de Golf Fraser Edmundston,,744538.7222131197,47.379503288651996,-68.34040598111773,New Brunswick,NK00032
+,Mactaquac Golf Course,,,,,,,,,,,,,Province of New Brunswick,,,,multipolygon,695211.8255273965,45.959972900996775,-66.89586048816138,New Brunswick,NK00004
+,Club de golf de Grand-Sault,,,,,http://www.grandgolf.ca,,,,,,,,,Grand Falls Golf Club,,Club de golf de Grand-Sault,,691395.186919664,47.05359971483074,-67.7797555293984,New Brunswick,NK00010
+,Rockwood Park Municipal Golf Course,+1 506 6340090,,,,https://rockwoodgolf.ca/,,,info@rockwoodgolf.ca,,,,,,,,,,687312.1322146263,45.311368794983565,-66.06978002196205,New Brunswick,NK00012
+,Welshpool,,,,,,,NRCan-CanVec-7.0,,,,,,,,,,,629514.842607827,44.88043115461001,-66.93256873975889,New Brunswick,NK00031
+,Club de Golf Fox Creek,,,,,,,,,,,,,,Fox Creek Golf Club,,Club de Golf Fox Creek,multipolygon,626204.2192489441,46.0820562920461,-64.69339955666918,New Brunswick,NK00003
+Catamount Road,Country Meadows Golf Club,,,149,,https://www.countrymeadows.nb.ca/,golf,,,,,,,,,,,,615207.6589855518,46.160420434791156,-64.95861015603175,New Brunswick,NK00017
+Coverdale Road,Moncton Golf & Country Club,,Riverview,212,E1B 4T9,,golf,CanVec 6.0 - NRCan,,,,,,,,,,,609975.8765526356,46.0631436947953,-64.78404944799341,New Brunswick,NK00016
+,Miramichi Golf and Country Club,,,,,,golf,NRCan-CanVec-10.0,,,,,,,,,,,598786.0872832352,47.00929868829689,-65.51296070750301,New Brunswick,NK00040
+,Golf St-Ignace,+1 506 8763737,,,,https://golfst-ignace.com/,,,golfstignace@nb.aibn.com,,,,,,,,,,579692.2219329897,46.70204390997098,-65.09270008313833,New Brunswick,NK00058
+,Golf Bouctouche,,,,,,,,,,,,,,,,,,577474.6857148047,46.48620090457257,-64.7595370382603,New Brunswick,NK00055
+,Terrain de Golf de la Vallée de Memramcook,,,,,,,,,,,,,,Memramcook Valley Golf Club,,,,564111.675325342,45.97754732595178,-64.57699443568866,New Brunswick,NK00053
+,Riverside Country Club,+1 506 8477545,,,,https://www.riversidecountryclub.ca,,,tanja.westra@riversidecountryclub.ca,+1 506 8477535,Q15904102,,,,,,,,537109.02751538,45.36867057987808,-65.9998024040497,New Brunswick,NK00014
+,Riverside Country Club,+1 506 8477545,,,,https://www.riversidecountryclub.ca,,,tanja.westra@riversidecountryclub.ca,+1 506 8477535,Q15904102,,,,,,,,537109.02751538,45.36867057987808,-65.9998024040497,New Brunswick,NK00013
+,Gage Golf and Curling Club,,,,,,golf,NRCan-CanVec-7.0,,,,,,,,,,,533662.5987967877,45.84491104130119,-66.49642192254241,New Brunswick,NK00027
+William Bell Drive,Hampton Golf Club,+1 506-832-5045,Hampton,68,E5N 6B3,https://www.hamptongolf.ca/,,,jon@hamptongolf.ca,,,New Brunswick,18_hole,,,,,,525023.8296773522,45.50463259325041,-65.82926989244986,New Brunswick,NK00011
+,Petitcodiac Golf and Country Club,,,,,,golf,NRCan-CanVec-7.0,,,,,,,,,,,520574.53351783287,45.95274404926273,-65.20854046850839,New Brunswick,NK00029
+,Gowan Brae Golf and Country Club,,,,,,,,,,,,,,,,,multipolygon,518353.1178523942,47.647339746616176,-65.66240898869202,New Brunswick,NK00006
+Route 115,Maplewood Golf & Country Club,,Irishtown,2559,E1H 2M3,https://www.maplewoodgolf.ca/,,,,,,,,,,,,,505067.77458597306,46.20670379622121,-64.81105404699923,New Brunswick,NK00045
+,Fredericton Golf Club,,,,,,golf,,,,,,,,,,,,490868.543185409,45.959665990038516,-66.68346205661615,New Brunswick,NK00009
+,Welsford Golf Course,+1 506 4862217,,,,https://welsfordgolfcourse.com,golf,NRCan-CanVec-7.0,,,,,,,,,,,465247.10320924985,45.460565701846726,-66.33734775699257,New Brunswick,NK00026
+,Westfield Golf & Country Club,+1 506 7572250,,,,https://www.westfieldgolf.com,golf,NRCan-CanVec-7.0,westgc@rogers.com,,,,,,,,,,430571.81791584915,45.33470072518651,-66.22272865725598,New Brunswick,NK00028
+Route 134,Lakeside Golf & Country Club,+1-506-861-9441,Moncton,1896,,,,,,,,,,,,,,,428473.41789580847,46.13852479910485,-64.68359705407703,New Brunswick,NK00044
+,St. George Golf Club,,,,,,,,,,,,,,,,,,409889.61044020794,45.14094312662751,-66.78060368824663,New Brunswick,NK00050
+,Unknown Golf Course,,,,,,,,,,,,,,,,,,378734.3112052804,45.20264126591649,-67.24799620475652,New Brunswick,NK00051
+,Restigouche Golf & Country Club,+1 506 7897628,,,,https://restigouchegolf.ca,golf,,,,,,,,,,,multipolygon,378590.32944145444,48.01245916057758,-66.5831842218366,New Brunswick,NK00007
+,Fundy National Park Golf Course,,,,,,golf,NRCan-CanVec-8.0,,,,,,,,,,,275123.1274980398,45.590677102046754,-64.96288966101798,New Brunswick,NK00034
+,Stonehurst Golf Course,+1 506 8524165,,,,https://www.stonehurstcamping.ca/golf,golf,CanVec 6.0 - NRCan,,,,,,,,,,,268158.21064874245,46.127023750401996,-64.92723502822167,New Brunswick,NK00018
+,Nackawic Golf Course,,,,,,golf,CanVec 6.0 - NRCan,,,,,,,,,,,255383.22484096783,46.00953741215152,-67.24224809777681,New Brunswick,NK00021
+,Woodstock,,,,,,golf,CanVec 6.0 - NRCan,,,,,,,,,,,229957.26253889312,46.15708277389117,-67.58307374069577,New Brunswick,NK00020
+,Plaster Rock Golf & Curling Club,,,,,,golf,NRCan-CanVec-8.0,,,,,,,,,,,215334.7128937385,46.904872207729404,-67.38520023694149,New Brunswick,NK00037
+,Sackville Golf & Country Club,+1 506-536-3437,,,,https://golfsackville.com/,golf,NRCan-CanVec-8.0,,,,,,,,,,,212026.3580627303,45.887957529561135,-64.38761285002927,New Brunswick,NK00035
+,Washademoak Golf Club,,,,,,,,,,,,,,,,,,194056.89980422083,45.93907263789001,-65.75433489546653,New Brunswick,NK00054
+,Carmen Creek Golf Course,,,,,,,,,,,,,,,,,,152906.0980554655,45.93710103513195,-66.61366260381581,New Brunswick,NK00025
+,110-256 Green Rd,,,,,,,CanVec 6.0 - NRCan,,,,,,,,,,,139211.7356372789,46.07892753126187,-67.76070963756086,New Brunswick,NK00019
+,Gilridge Golf Course,,,,,,,,,,,,,,,,,,138924.1119112231,45.99752028075271,-66.71198043387248,New Brunswick,NK00024
+,Saint-Quentin,,,,,,golf,CanVec 6.0 - NRCan;NRCan-CanVec-8.0,,,,,,,,,,,137321.77430440587,47.501349515113375,-67.3963590387847,New Brunswick,NK00015
+Golden Grove Road,Cedar Groves,+1 506 8477273,,2000,,cedargrovespar3.com,,,,,,,,,,,,,133725.2127936162,45.355928208445114,-65.95464486361749,New Brunswick,NK00056
+,Brookside Golf Course,,,,,,golf,,,,,,,,,,,,127792.68545676887,44.6578258354889,-66.84149327015591,New Brunswick,NK00052
+,Unknown Golf Course,,,,,,golf,NRCan-CanVec-8.0,,,,,,,,,,,124866.67921690321,46.907964506279676,-65.2141587526019,New Brunswick,NK00038
+,Ridgeview Greens Golf Club,,,,,,golf,NRCan-CanVec-7.0,,,,,,,,,,,109739.31934447479,46.17794416036055,-66.03378440002496,New Brunswick,NK00030
+,Unknown Golf Course,,,,,,golf,NRCan-CanVec-10.0,,,,,,,,,,,68575.62381080439,47.19667734983976,-65.13852577382909,New Brunswick,NK00039
+,Unknown Golf Course,,,,,,golf,NRCan-CanVec-10.0,,,,,,,,,,,30608.411871538843,47.048231186981916,-65.83571157636061,New Brunswick,NK00041
+,Shediac,,,,,,,,,,,,,,,,,,11298.203685599221,46.22488712746319,-64.52271171454656,New Brunswick,NK00057
