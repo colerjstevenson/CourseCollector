@@ -11,6 +11,8 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import warnings
 
+from nameFiller import find_nearby_golf_course
+
 try:
     import contextily as ctx
     _HAS_CONTEXTILY = True
@@ -29,9 +31,9 @@ logging.basicConfig(
 )
 
 def main():
-    province = "Quebec"
+    province = "British Columbia"
     region = f"{province}, Canada"
-    output_prefix = f"golf_courses_{province.lower()}"
+    output_prefix = f"golf_courses_{province.lower().replace(' ', '_')}"
     gdf = None
     
     # if files already exists, skip data collection and load existing data to create map
@@ -72,7 +74,21 @@ def main():
             gdf['lon'] = centroids['geometry'].centroid.x
             gdf['province'] = [province for _ in range(len(gdf))]
             gdf['gcid'] = [f'{province[0].upper()}{province[-1].upper()}{i+1:05d}' for i in range(len(gdf))]
-
+            gdf['name'] = gdf['name'].fillna('')
+            # gdf['name'] = [name if name and name != '' else find_nearby_golf_course(lat, lon)['name'] if find_nearby_golf_course(lat, lon) else 'Unknown Golf Course' for name, lat, lon in zip(gdf['name'], gdf['lat'], gdf['lon'])]
+            name_check = []
+            for name, lat, lon in zip(gdf['name'], gdf['lat'], gdf['lon']):
+                print(name)
+                if not name or name == '':
+                    check = find_nearby_golf_course(lat, lon)
+                    if check:
+                        name_check.append(check['name'])
+                    else:
+                        name_check.append('Unknown Golf Course')
+                else:
+                    name_check.append(name)
+            
+            gdf['name'] = name_check
             # -----------------------
             # Filter and sort
             # -----------------------
