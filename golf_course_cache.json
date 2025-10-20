@@ -2210,5 +2210,25 @@
   },
   "49.7406,-96.8971": null,
   "49.608,-100.2392": null,
-  "49.6066,-100.2436": null
+  "49.6066,-100.2436": null,
+  "48.9423,-57.9234": {
+    "name": "Corner Brook",
+    "address": "Corner Brook",
+    "lat": 48.9523316,
+    "lon": -57.9460401
+  },
+  "48.5328,-58.5575": {
+    "name": "Stephenville",
+    "address": "Stephenville",
+    "lat": 48.5500734,
+    "lon": -58.5761704
+  },
+  "52.9062,-66.9954": null,
+  "49.8783,-57.7637": null,
+  "48.9425,-55.735": {
+    "name": "Grand Falls-Windsor",
+    "address": "Grand Falls-Windsor",
+    "lat": 48.9279047,
+    "lon": -55.65989769999999
+  }
 }
