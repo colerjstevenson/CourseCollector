@@ -60,3 +60,4 @@
 /images/golf_courses_british_columbia.png filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_manitoba.png filter=lfs diff=lfs merge=lfs -text
 /data/golf_courses_saskatchewan.geojson filter=lfs diff=lfs merge=lfs -text
+/data/golf_courses_new_brunswick.geojson filter=lfs diff=lfs merge=lfs -text
