@@ -1,0 +1,1716 @@
+{
+  "42.699,-80.3255": {
+    "name": "74-14 Old Hill Rd",
+    "address": "Vittoria",
+    "lat": 42.69708857663472,
+    "lon": -80.3263840886798
+  },
+  "44.5844,-80.4979": {
+    "name": "162-158 W Ridge Dr",
+    "address": "Thornbury",
+    "lat": 44.58426573333784,
+    "lon": -80.4981148181174
+  },
+  "48.3447,-89.4103": null,
+  "44.0889,-79.1205": null,
+  "44.07,-81.4305": {
+    "name": "261-71 Guest Ave",
+    "address": "Holyrood",
+    "lat": 44.06711343069796,
+    "lon": -81.42242635918593
+  },
+  "44.3876,-75.9004": null,
+  "44.5523,-79.6706": {
+    "name": "34-12 Birch Grove Dr",
+    "address": "Barrie",
+    "lat": 44.55254873374474,
+    "lon": -79.67011255536816
+  },
+  "43.6463,-80.0797": {
+    "name": "Erin",
+    "address": "Erin",
+    "lat": 43.7758018,
+    "lon": -80.0687097
+  },
+  "43.5311,-80.1888": null,
+  "43.5705,-80.266": {
+    "name": "Guelph",
+    "address": "Guelph",
+    "lat": 43.5448048,
+    "lon": -80.24816659999999
+  },
+  "43.6685,-80.3228": null,
+  "43.5153,-80.3915": {
+    "name": "1223-1329 Township Rd 68",
+    "address": "Maryhill",
+    "lat": 43.51567921509924,
+    "lon": -80.39156864999362
+  },
+  "43.3089,-80.8304": null,
+  "43.3183,-81.7463": null,
+  "43.1148,-80.7429": {
+    "name": "Woodstock",
+    "address": "Woodstock",
+    "lat": 43.1315514,
+    "lon": -80.74727960000001
+  },
+  "43.5886,-81.699": null,
+  "43.7933,-81.706": null,
+  "43.8636,-81.3149": null,
+  "44.3187,-76.1876": {
+    "name": "Gananoque Golf & Country Club",
+    "address": "211 Golf Club Lane, Gananoque",
+    "lat": 44.318664,
+    "lon": -76.1876101
+  },
+  "44.2762,-76.3687": {
+    "name": "Kingston",
+    "address": "Kingston",
+    "lat": 44.2334401,
+    "lon": -76.49302949999999
+  },
+  "44.3404,-76.3129": {
+    "name": "Kingston",
+    "address": "Kingston",
+    "lat": 44.2334401,
+    "lon": -76.49302949999999
+  },
+  "43.9379,-79.3482": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "43.924,-79.4342": {
+    "name": "Richmond Hill",
+    "address": "Richmond Hill",
+    "lat": 43.8688079,
+    "lon": -79.41371529999999
+  },
+  "43.8663,-79.0696": {
+    "name": "Ajax",
+    "address": "Ajax",
+    "lat": 43.8611288,
+    "lon": -79.0259267
+  },
+  "43.9603,-79.1171": {
+    "name": "Pickering",
+    "address": "Pickering",
+    "lat": 43.83841839999999,
+    "lon": -79.086902
+  },
+  "44.0027,-79.3215": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "43.7971,-79.6022": {
+    "name": "Vaughan",
+    "address": "Vaughan",
+    "lat": 43.82622809999999,
+    "lon": -79.5561668
+  },
+  "43.8087,-79.5744": {
+    "name": "Vaughan",
+    "address": "Vaughan",
+    "lat": 43.82622809999999,
+    "lon": -79.5561668
+  },
+  "43.7916,-79.5964": {
+    "name": "Vaughan",
+    "address": "Vaughan",
+    "lat": 43.82622809999999,
+    "lon": -79.5561668
+  },
+  "43.4298,-79.8705": {
+    "name": "Burlington",
+    "address": "Burlington",
+    "lat": 43.3255196,
+    "lon": -79.7990319
+  },
+  "44.2878,-76.8041": null,
+  "44.3152,-79.3749": {
+    "name": "Georgina",
+    "address": "Georgina",
+    "lat": 44.30442250000001,
+    "lon": -79.36283170000002
+  },
+  "44.2946,-79.4781": {
+    "name": "24-6 Eastbourne Dr",
+    "address": "Georgina",
+    "lat": 44.29487430803341,
+    "lon": -79.47852177175812
+  },
+  "44.1985,-79.2607": {
+    "name": "Zephyr",
+    "address": "Zephyr",
+    "lat": 44.2010255,
+    "lon": -79.2651364
+  },
+  "44.5373,-79.0732": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.7283,-79.3874": null,
+  "44.7282,-79.3726": null,
+  "44.4988,-79.4858": null,
+  "44.5963,-79.5575": null,
+  "44.7273,-79.9648": null,
+  "44.6189,-79.7919": null,
+  "42.9077,-79.1764": {
+    "name": "Port Colborne",
+    "address": "Port Colborne",
+    "lat": 42.8862788,
+    "lon": -79.25135709999999
+  },
+  "42.898,-79.0699": {
+    "name": "Fort Erie",
+    "address": "Fort Erie",
+    "lat": 42.90537,
+    "lon": -78.9403359
+  },
+  "42.8801,-79.4309": null,
+  "42.9536,-79.0257": {
+    "name": "Fort Erie",
+    "address": "Fort Erie",
+    "lat": 42.90537,
+    "lon": -78.9403359
+  },
+  "42.9896,-79.3853": {
+    "name": "398-356 Victoria Ave",
+    "address": "Wellandport",
+    "lat": 42.98882636002764,
+    "lon": -79.38525118008243
+  },
+  "45.1018,-79.2734": {
+    "name": "Bracebridge",
+    "address": "Bracebridge",
+    "lat": 45.0402409,
+    "lon": -79.3085748
+  },
+  "45.0457,-79.3459": {
+    "name": "Bracebridge",
+    "address": "Bracebridge",
+    "lat": 45.0402409,
+    "lon": -79.3085748
+  },
+  "45.0718,-79.4884": null,
+  "45.2137,-79.4561": null,
+  "45.2088,-79.2886": {
+    "name": "Huntsville",
+    "address": "Huntsville",
+    "lat": 45.3269323,
+    "lon": -79.2167539
+  },
+  "44.9537,-79.3698": {
+    "name": "Gravenhurst",
+    "address": "Gravenhurst",
+    "lat": 44.919643,
+    "lon": -79.37418339999999
+  },
+  "44.9581,-79.3191": {
+    "name": "1058-1076 Reay Rd",
+    "address": "Gravenhurst",
+    "lat": 44.95847803402444,
+    "lon": -79.3233485843246
+  },
+  "44.8227,-79.4015": null,
+  "44.9968,-78.6608": null,
+  "44.8104,-77.9265": null,
+  "44.7964,-77.1668": {
+    "name": "Hunter's Creek Golf Course",
+    "address": "North Frontenac",
+    "lat": 44.79640260000001,
+    "lon": -77.1667141
+  },
+  "45.1097,-78.6094": {
+    "name": "Kris Cox Trail",
+    "address": "Address not available",
+    "lat": 45.11037363187685,
+    "lon": -78.60997196995116
+  },
+  "45.017,-78.548": null,
+  "44.3791,-80.2291": null,
+  "45.0312,-79.6343": null,
+  "45.1687,-79.6496": {
+    "name": "1040-1048 Muskoka District Road 28",
+    "address": "Minett",
+    "lat": 45.16593839177389,
+    "lon": -79.6494312818963
+  },
+  "45.1701,-79.5464": null,
+  "44.1172,-80.0567": null,
+  "44.7826,-81.0634": null,
+  "44.3937,-80.5424": {
+    "name": "105-201 Talisman Mountain Dr",
+    "address": "Kimberley",
+    "lat": 44.39396397731518,
+    "lon": -80.54295257598284
+  },
+  "42.8749,-79.4312": {
+    "name": "13133-13001 Long Beach Rd",
+    "address": "Dunnville",
+    "lat": 42.87423702881133,
+    "lon": -79.42954581408463
+  },
+  "43.3862,-80.2463": null,
+  "43.0569,-79.2993": {
+    "name": "Pelham",
+    "address": "Pelham",
+    "lat": 43.037222,
+    "lon": -79.328764
+  },
+  "42.972,-79.3357": null,
+  "42.9332,-78.9366": {
+    "name": "Fort Erie",
+    "address": "Fort Erie",
+    "lat": 42.90537,
+    "lon": -78.9403359
+  },
+  "42.9231,-78.9483": {
+    "name": "Fort Erie",
+    "address": "Fort Erie",
+    "lat": 42.90537,
+    "lon": -78.9403359
+  },
+  "43.36,-80.0116": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "44.142,-80.7441": null,
+  "44.0539,-80.7896": null,
+  "43.1209,-79.4108": {
+    "name": "3318-3212 Cherry Ave",
+    "address": "Vineland",
+    "lat": 43.11916382777691,
+    "lon": -79.41167159194868
+  },
+  "43.0693,-79.7154": null,
+  "44.0124,-77.7434": {
+    "name": "245-151 Presqu'Ile Pkwy",
+    "address": "Brighton",
+    "lat": 44.0130868047374,
+    "lon": -77.74063564813667
+  },
+  "44.0374,-77.6426": {
+    "name": "Quinte West",
+    "address": "Quinte West",
+    "lat": 44.1018879,
+    "lon": -77.5754056
+  },
+  "44.2607,-77.5536": {
+    "name": "Quinte West",
+    "address": "Quinte West",
+    "lat": 44.1018879,
+    "lon": -77.5754056
+  },
+  "44.284,-76.6371": {
+    "name": "Kingston",
+    "address": "Kingston",
+    "lat": 44.2334401,
+    "lon": -76.49302949999999
+  },
+  "44.5095,-76.698": null,
+  "48.3222,-89.3189": {
+    "name": "Thunder Bay",
+    "address": "Thunder Bay",
+    "lat": 48.3808951,
+    "lon": -89.2476823
+  },
+  "48.4851,-89.3261": {
+    "name": "Thunder Bay",
+    "address": "Thunder Bay",
+    "lat": 48.3808951,
+    "lon": -89.2476823
+  },
+  "48.4532,-89.3593": {
+    "name": "Thunder Bay",
+    "address": "Thunder Bay",
+    "lat": 48.3808951,
+    "lon": -89.2476823
+  },
+  "48.3673,-89.4131": null,
+  "44.8555,-76.034": null,
+  "44.8372,-76.0615": {
+    "name": "Cataraqui Trail",
+    "address": "Address not available",
+    "lat": 44.84047225675648,
+    "lon": -76.05748430662292
+  },
+  "43.9,-78.6113": {
+    "name": "39-63 The Cove Rd",
+    "address": "Newcastle",
+    "lat": 43.89958011459987,
+    "lon": -78.61134530504329
+  },
+  "43.8999,-78.6143": null,
+  "43.9011,-78.6086": null,
+  "43.9002,-78.6068": null,
+  "43.9347,-78.5516": {
+    "name": "Newcastle Golf and Country Club",
+    "address": "2429 Golf Course Road, Newcastle",
+    "lat": 43.9348983,
+    "lon": -78.5512542
+  },
+  "43.9408,-78.5563": null,
+  "43.9809,-78.6929": {
+    "name": "Ayren Links Golf & Country Clb",
+    "address": "5210 Bethesda Road, Bowmanville",
+    "lat": 43.9809,
+    "lon": -78.6929
+  },
+  "44.3377,-79.7552": null,
+  "44.3341,-79.86": {
+    "name": "Riverlea",
+    "address": "9058 5th Line, Angus",
+    "lat": 44.3342529,
+    "lon": -79.8599564
+  },
+  "44.2968,-79.8768": null,
+  "44.4754,-78.6075": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.4796,-78.6859": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.4787,-78.6889": {
+    "name": "49-27 Gray Rd",
+    "address": "Kawartha Lakes",
+    "lat": 44.47929454614525,
+    "lon": -78.6885374073267
+  },
+  "44.2851,-78.7699": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.282,-78.7728": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.4589,-78.2726": null,
+  "44.3988,-78.4632": null,
+  "44.2228,-78.7577": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.2521,-78.9599": {
+    "name": "Kawartha Lakes",
+    "address": "Kawartha Lakes",
+    "lat": 44.359798,
+    "lon": -78.7433799
+  },
+  "44.0783,-78.9636": {
+    "name": "Port Perry",
+    "address": "Port Perry",
+    "lat": 44.10504539999999,
+    "lon": -78.944148
+  },
+  "44.0038,-78.1547": null,
+  "44.2424,-78.2442": null,
+  "43.9844,-78.2665": null,
+  "44.5388,-78.1225": null,
+  "44.5755,-78.5015": null,
+  "45.1697,-75.8413": {
+    "name": "Ottawa",
+    "address": "Ottawa",
+    "lat": 45.4200572,
+    "lon": -75.7003397
+  },
+  "43.9573,-78.9367": {
+    "name": "Whitby",
+    "address": "Whitby",
+    "lat": 43.8997643,
+    "lon": -78.9400809
+  },
+  "43.1384,-79.7302": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "43.1932,-79.93": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "43.1875,-79.93": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "45.469,-77.6297": null,
+  "44.6327,-81.2183": null,
+  "44.5097,-81.3526": {
+    "name": "Southampton",
+    "address": "Southampton",
+    "lat": 44.4948543,
+    "lon": -81.3695635
+  },
+  "44.5609,-81.2133": {
+    "name": "45-13 Golf Course Rd",
+    "address": "Allenford",
+    "lat": 44.55970702937417,
+    "lon": -81.21374372782148
+  },
+  "44.4711,-81.3528": null,
+  "44.4183,-81.4052": null,
+  "45.7448,-82.1773": {
+    "name": "Mindemoya",
+    "address": "Mindemoya",
+    "lat": 45.7322279,
+    "lon": -82.1673197
+  },
+  "44.2391,-81.5717": null,
+  "44.1449,-81.6431": null,
+  "44.1357,-81.176": {
+    "name": "Walkerton",
+    "address": "Walkerton",
+    "lat": 44.1313,
+    "lon": -81.15071800000001
+  },
+  "44.1504,-81.0737": null,
+  "43.0467,-82.1418": null,
+  "43.0256,-82.1264": null,
+  "43.0859,-82.0068": null,
+  "42.994,-82.3988": {
+    "name": "Point Edward",
+    "address": "Point Edward",
+    "lat": 42.9954129,
+    "lon": -82.40484230000001
+  },
+  "45.2031,-74.355": null,
+  "45.8749,-82.4558": {
+    "name": "1-209 Golf Course Rd",
+    "address": "Gore Bay",
+    "lat": 45.8761555726965,
+    "lon": -82.4553863982408
+  },
+  "45.7563,-79.4098": null,
+  "45.8323,-79.479": null,
+  "49.8296,-94.3387": null,
+  "49.7488,-94.47": {
+    "name": "Kenora",
+    "address": "Kenora",
+    "lat": 49.7670416,
+    "lon": -94.4893924
+  },
+  "49.991,-94.6671": null,
+  "43.8497,-78.9816": {
+    "name": "Ajax",
+    "address": "Ajax",
+    "lat": 43.8611288,
+    "lon": -79.0259267
+  },
+  "43.8433,-78.9832": {
+    "name": "Ajax",
+    "address": "Ajax",
+    "lat": 43.8611288,
+    "lon": -79.0259267
+  },
+  "46.1596,-80.3727": {
+    "name": "French River",
+    "address": "French River",
+    "lat": 46.0361583,
+    "lon": -80.5373359
+  },
+  "46.0866,-80.6181": {
+    "name": "French River",
+    "address": "French River",
+    "lat": 46.0361583,
+    "lon": -80.5373359
+  },
+  "45.6527,-79.6597": null,
+  "43.3793,-80.3355": {
+    "name": "Cambridge",
+    "address": "Cambridge",
+    "lat": 43.3616211,
+    "lon": -80.3144276
+  },
+  "43.4153,-79.971": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "43.3062,-80.4683": null,
+  "43.0752,-79.2213": {
+    "name": "Thorold",
+    "address": "Thorold",
+    "lat": 43.1236091,
+    "lon": -79.1989299
+  },
+  "43.0754,-79.2189": {
+    "name": "Thorold",
+    "address": "Thorold",
+    "lat": 43.1236091,
+    "lon": -79.1989299
+  },
+  "43.6744,-80.2838": null,
+  "43.6634,-80.2882": null,
+  "43.2166,-81.2125": null,
+  "44.0504,-79.2798": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "44.0473,-79.2782": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "44.0525,-79.2796": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "44.032,-79.4542": {
+    "name": "Newmarket",
+    "address": "Newmarket",
+    "lat": 44.05918700000001,
+    "lon": -79.46125599999999
+  },
+  "44.191,-76.7899": {
+    "name": "Royal Oak Crescent",
+    "address": "Bath",
+    "lat": 44.1902800024184,
+    "lon": -76.79102017840445
+  },
+  "44.1833,-76.7849": {
+    "name": "110-10 Golf Links Dr",
+    "address": "Bath",
+    "lat": 44.18248216719496,
+    "lon": -76.78405642230467
+  },
+  "44.2363,-78.3849": null,
+  "41.9943,-82.8792": {
+    "name": "Essex",
+    "address": "Essex",
+    "lat": 42.1731709,
+    "lon": -82.82009359999999
+  },
+  "44.164,-79.8055": {
+    "name": "New Tecumseth",
+    "address": "New Tecumseth",
+    "lat": 44.1529303,
+    "lon": -79.8685861
+  },
+  "44.1606,-79.8067": {
+    "name": "New Tecumseth",
+    "address": "New Tecumseth",
+    "lat": 44.1529303,
+    "lon": -79.8685861
+  },
+  "44.1592,-79.8128": {
+    "name": "New Tecumseth",
+    "address": "New Tecumseth",
+    "lat": 44.1529303,
+    "lon": -79.8685861
+  },
+  "44.2296,-79.5427": {
+    "name": "Innisfil",
+    "address": "Innisfil",
+    "lat": 44.3008813,
+    "lon": -79.6114973
+  },
+  "43.2115,-80.9841": null,
+  "44.4218,-79.7736": {
+    "name": "Minesing",
+    "address": "Minesing",
+    "lat": 44.4429722,
+    "lon": -79.8421676
+  },
+  "44.4667,-79.6634": null,
+  "44.4302,-79.6094": {
+    "name": "Heritage Hills Golf Club",
+    "address": "367 First Line South Shanty Bay #1, Shanty Bay",
+    "lat": 44.4303627,
+    "lon": -79.60986319999999
+  },
+  "42.6156,-80.4662": null,
+  "42.7007,-80.3241": null,
+  "43.5669,-80.3619": {
+    "name": "The Cystic Fibrosis Gala",
+    "address": "5700 Wellington Road 86, Ariss",
+    "lat": 43.56727900000001,
+    "lon": -80.36175519999999
+  },
+  "43.102,-79.1674": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "43.1051,-79.1677": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "43.0472,-79.3371": {
+    "name": "Pelham",
+    "address": "Pelham",
+    "lat": 43.037222,
+    "lon": -79.328764
+  },
+  "43.0478,-79.3434": {
+    "name": "Pelham",
+    "address": "Pelham",
+    "lat": 43.037222,
+    "lon": -79.328764
+  },
+  "43.1632,-79.0808": {
+    "name": "Niagara-on-the-Lake",
+    "address": "Niagara-on-the-Lake",
+    "lat": 43.2549988,
+    "lon": -79.0772616
+  },
+  "43.1381,-79.0973": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "43.0354,-79.1312": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "43.0449,-79.1344": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "43.0943,-79.3699": {
+    "name": "Pelham",
+    "address": "Pelham",
+    "lat": 43.037222,
+    "lon": -79.328764
+  },
+  "43.1225,-79.3197": {
+    "name": "Lincoln",
+    "address": "Lincoln",
+    "lat": 43.1657895,
+    "lon": -79.4764775
+  },
+  "43.1252,-79.3138": {
+    "name": "Lincoln",
+    "address": "Lincoln",
+    "lat": 43.1657895,
+    "lon": -79.4764775
+  },
+  "43.1443,-79.1744": {
+    "name": "Niagara-on-the-Lake",
+    "address": "Niagara-on-the-Lake",
+    "lat": 43.2549988,
+    "lon": -79.0772616
+  },
+  "43.752,-81.7082": {
+    "name": "Goderich",
+    "address": "Goderich",
+    "lat": 43.7431102,
+    "lon": -81.71228640000001
+  },
+  "43.0246,-79.1767": {
+    "name": "Welland",
+    "address": "Welland",
+    "lat": 42.9921579,
+    "lon": -79.2482555
+  },
+  "42.7012,-81.2038": null,
+  "43.0946,-79.2456": {
+    "name": "Thorold",
+    "address": "Thorold",
+    "lat": 43.1236091,
+    "lon": -79.1989299
+  },
+  "43.1776,-79.1704": {
+    "name": "Niagara-on-the-Lake",
+    "address": "Niagara-on-the-Lake",
+    "lat": 43.2549988,
+    "lon": -79.0772616
+  },
+  "42.9382,-81.3805": null,
+  "46.3511,-79.4395": {
+    "name": "North Bay",
+    "address": "North Bay",
+    "lat": 46.3091152,
+    "lon": -79.4608204
+  },
+  "42.9006,-81.1848": {
+    "name": "London",
+    "address": "London",
+    "lat": 42.9849233,
+    "lon": -81.2452768
+  },
+  "45.4213,-76.3155": {
+    "name": "Ottawa",
+    "address": "Ottawa",
+    "lat": 45.4200572,
+    "lon": -75.7003397
+  },
+  "42.9851,-81.0796": null,
+  "45.8497,-77.1816": null,
+  "44.53,-79.9697": {
+    "name": "Wasaga Beach",
+    "address": "Wasaga Beach",
+    "lat": 44.52372279999999,
+    "lon": -80.00330009999999
+  },
+  "42.8312,-81.0938": {
+    "name": "Belmont Golf Club",
+    "address": "45809 Ferguson Line, Belmont",
+    "lat": 42.8313283,
+    "lon": -81.09380770000001
+  },
+  "42.7713,-81.0659": null,
+  "42.9709,-80.9564": null,
+  "42.8521,-80.73": {
+    "name": "Clubhouse Way",
+    "address": "Tillsonburg",
+    "lat": 42.85243954302994,
+    "lon": -80.72980300776506
+  },
+  "44.0107,-79.3012": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "44.0082,-79.3125": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "42.1869,-82.9271": {
+    "name": "Tecumseh",
+    "address": "Tecumseh",
+    "lat": 42.3117966,
+    "lon": -82.8857592
+  },
+  "42.2078,-82.9995": {
+    "name": "LaSalle",
+    "address": "LaSalle",
+    "lat": 42.2355411,
+    "lon": -83.1024769
+  },
+  "42.0785,-82.6825": {
+    "name": "Kingsville",
+    "address": "Kingsville",
+    "lat": 42.0378703,
+    "lon": -82.7396377
+  },
+  "42.2118,-83.0175": {
+    "name": "LaSalle",
+    "address": "LaSalle",
+    "lat": 42.2355411,
+    "lon": -83.1024769
+  },
+  "44.6441,-75.8577": null,
+  "44.357,-76.0447": null,
+  "43.969,-80.0463": {
+    "name": "Mono",
+    "address": "Mono",
+    "lat": 43.9462956,
+    "lon": -80.1042868
+  },
+  "43.9789,-80.0474": {
+    "name": "Mono",
+    "address": "Mono",
+    "lat": 43.9462956,
+    "lon": -80.1042868
+  },
+  "43.9771,-80.0505": {
+    "name": "Mono",
+    "address": "Mono",
+    "lat": 43.9462956,
+    "lon": -80.1042868
+  },
+  "42.9879,-82.2904": {
+    "name": "Sarnia",
+    "address": "Sarnia",
+    "lat": 42.974536,
+    "lon": -82.4065901
+  },
+  "42.9648,-82.2914": {
+    "name": "Sarnia",
+    "address": "Sarnia",
+    "lat": 42.974536,
+    "lon": -82.4065901
+  },
+  "43.1798,-80.9025": null,
+  "44.0914,-79.5778": {
+    "name": "Bradford West Gwillimbury",
+    "address": "Bradford West Gwillimbury",
+    "lat": 44.1143373,
+    "lon": -79.5647469
+  },
+  "44.4966,-80.2868": null,
+  "43.9898,-78.9195": {
+    "name": "Oshawa",
+    "address": "Oshawa",
+    "lat": 43.8975974,
+    "lon": -78.8635999
+  },
+  "44.0306,-77.1453": {
+    "name": "Prince Edward",
+    "address": "Prince Edward",
+    "lat": 44.0086859,
+    "lon": -77.1390876
+  },
+  "46.3298,-81.3317": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "47.8497,-83.4042": null,
+  "46.092,-77.4845": {
+    "name": "Deep River",
+    "address": "Deep River",
+    "lat": 46.0975505,
+    "lon": -77.49356379999999
+  },
+  "49.6859,-86.9424": null,
+  "46.3742,-82.574": {
+    "name": "Elliot Lake",
+    "address": "Elliot Lake",
+    "lat": 46.386179,
+    "lon": -82.650941
+  },
+  "46.217,-82.061": null,
+  "44.4661,-79.8157": {
+    "name": "Minesing",
+    "address": "Minesing",
+    "lat": 44.4429722,
+    "lon": -79.8421676
+  },
+  "49.7968,-92.8751": null,
+  "48.4158,-89.2728": {
+    "name": "Thunder Bay",
+    "address": "Thunder Bay",
+    "lat": 48.3808951,
+    "lon": -89.2476823
+  },
+  "46.6158,-81.4612": null,
+  "43.1025,-80.7319": null,
+  "46.217,-82.0611": null,
+  "50.6375,-93.2498": null,
+  "46.571,-84.3263": {
+    "name": "Sault Ste. Marie",
+    "address": "Sault Ste. Marie",
+    "lat": 46.5136494,
+    "lon": -84.33575259999999
+  },
+  "46.5033,-84.5113": {
+    "name": "Sault Ste. Marie",
+    "address": "Sault Ste. Marie",
+    "lat": 46.5136494,
+    "lon": -84.33575259999999
+  },
+  "43.1636,-79.9023": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "43.1331,-79.9508": {
+    "name": "Hamilton",
+    "address": "Hamilton",
+    "lat": 43.2557206,
+    "lon": -79.8711024
+  },
+  "44.5816,-80.4953": null,
+  "43.9376,-80.0456": {
+    "name": "Mono",
+    "address": "Mono",
+    "lat": 43.9462956,
+    "lon": -80.1042868
+  },
+  "44.5743,-80.4849": null,
+  "44.5122,-80.2933": null,
+  "48.4678,-81.3215": {
+    "name": "Timmins",
+    "address": "Timmins",
+    "lat": 48.4758208,
+    "lon": -81.3304953
+  },
+  "49.1217,-85.8313": null,
+  "44.0073,-79.0506": {
+    "name": "Townline Road",
+    "address": "Pickering",
+    "lat": 44.00750659733593,
+    "lon": -79.05130861216438
+  },
+  "44.0019,-79.0487": {
+    "name": "Pickering",
+    "address": "Pickering",
+    "lat": 43.83841839999999,
+    "lon": -79.086902
+  },
+  "43.7515,-80.3652": null,
+  "46.2052,-79.3599": null,
+  "43.5065,-80.1516": null,
+  "43.9624,-79.3493": {
+    "name": "Whitchurch-Stouffville",
+    "address": "Whitchurch-Stouffville",
+    "lat": 43.9705861,
+    "lon": -79.2442842
+  },
+  "42.9738,-79.29": {
+    "name": "Welland",
+    "address": "Welland",
+    "lat": 42.9921579,
+    "lon": -79.2482555
+  },
+  "42.9779,-79.2828": {
+    "name": "Welland",
+    "address": "Welland",
+    "lat": 42.9921579,
+    "lon": -79.2482555
+  },
+  "45.7674,-77.1475": null,
+  "45.8501,-77.182": null,
+  "43.3722,-80.3969": null,
+  "43.9587,-80.8168": null,
+  "44.4681,-81.3432": null,
+  "42.9323,-79.9125": null,
+  "42.2344,-82.7159": null,
+  "43.7967,-81.7045": null,
+  "48.5869,-88.752": null,
+  "44.3996,-79.5245": {
+    "name": "Innisfil",
+    "address": "Innisfil",
+    "lat": 44.3008813,
+    "lon": -79.6114973
+  },
+  "43.0215,-79.1123": {
+    "name": "Niagara Falls",
+    "address": "Niagara Falls",
+    "lat": 43.0895577,
+    "lon": -79.0849436
+  },
+  "44.5358,-80.4085": null,
+  "44.425,-81.3763": {
+    "name": "Port Elgin",
+    "address": "Port Elgin",
+    "lat": 44.4340516,
+    "lon": -81.39294129999999
+  },
+  "43.2078,-81.8887": null,
+  "43.7982,-79.5895": {
+    "name": "Vaughan",
+    "address": "Vaughan",
+    "lat": 43.82622809999999,
+    "lon": -79.5561668
+  },
+  "44.257,-80.7751": null,
+  "42.9765,-81.0138": null,
+  "46.5446,-80.9065": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5448,-80.9067": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.545,-80.9066": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5456,-80.9065": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5468,-80.9057": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5485,-80.9054": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5492,-80.9052": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5491,-80.9055": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5493,-80.9055": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5499,-80.9052": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5497,-80.9094": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5496,-80.9095": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5501,-80.905": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5497,-80.9055": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "46.5498,-80.9053": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "45.4056,-80.0739": {
+    "name": "McDougall",
+    "address": "McDougall",
+    "lat": 45.4301566,
+    "lon": -80.03010929999999
+  },
+  "44.5068,-78.3908": null,
+  "44.2014,-80.5706": null,
+  "46.1247,-79.3613": {
+    "name": "60-50 Golf Course Line",
+    "address": "Callander",
+    "lat": 46.12463514346104,
+    "lon": -79.36071566952043
+  },
+  "46.1293,-79.3581": null,
+  "46.1266,-79.1923": null,
+  "46.1235,-79.1912": null,
+  "44.8317,-76.0591": null,
+  "43.9801,-79.405": {
+    "name": "165-161 Civobel Dr",
+    "address": "Aurora",
+    "lat": 43.98026750003466,
+    "lon": -79.40478785045437
+  },
+  "46.5576,-81.2055": {
+    "name": "Greater Sudbury",
+    "address": "Greater Sudbury",
+    "lat": 46.4917317,
+    "lon": -80.99302899999999
+  },
+  "45.1272,-79.6114": {
+    "name": "1339-1307 Muskoka District Road 27",
+    "address": "Port Carling",
+    "lat": 45.12732713616355,
+    "lon": -79.61098217195054
+  },
+  "45.1332,-79.6067": null,
+  "43.9404,-78.3196": {
+    "name": "Port Hope",
+    "address": "Port Hope",
+    "lat": 43.949164,
+    "lon": -78.2934616
+  },
+  "43.0416,-82.1722": null,
+  "44.5249,-79.9792": {
+    "name": "1 Abby Dr",
+    "address": "Wasaga Beach",
+    "lat": 44.52505318139512,
+    "lon": -79.97987967929258
+  },
+  "44.051,-80.0072": {
+    "name": "Mono",
+    "address": "Mono",
+    "lat": 43.9462956,
+    "lon": -80.1042868
+  },
+  "44.0749,-77.6998": {
+    "name": "Brighton",
+    "address": "Brighton",
+    "lat": 44.0422599,
+    "lon": -77.73688279999999
+  },
+  "43.1789,-79.1812": {
+    "name": "Niagara-on-the-Lake",
+    "address": "Niagara-on-the-Lake",
+    "lat": 43.2549988,
+    "lon": -79.0772616
+  },
+  "44.5492,-79.6655": null,
+  "44.5519,-79.6644": null,
+  "44.5536,-79.6658": null,
+  "44.5508,-79.6696": null,
+  "44.5497,-79.6755": null,
+  "44.5534,-79.6767": null,
+  "44.5562,-79.6788": null,
+  "44.5576,-79.6749": null,
+  "44.5562,-79.6691": null,
+  "44.5552,-79.6698": null,
+  "44.5545,-79.6739": null,
+  "48.9955,-88.3162": null,
+  "50.5718,-112.0095": {
+    "name": "Alberta 542",
+    "address": "Duchess",
+    "lat": 50.57218930266808,
+    "lon": -112.0096513499832
+  },
+  "51.0817,-114.2215": {
+    "name": "177 Canada Olympic Rd S W",
+    "address": "Calgary",
+    "lat": 51.0819814072817,
+    "lon": -114.2219059644793
+  },
+  "54.0992,-114.4389": null,
+  "54.1144,-114.4057": {
+    "name": "Barrhead",
+    "address": "Barrhead",
+    "lat": 54.1229824,
+    "lon": -114.4017497
+  },
+  "53.7351,-114.4075": {
+    "name": "Ross Haven",
+    "address": "Ross Haven",
+    "lat": 53.7327163,
+    "lon": -114.4061791
+  },
+  "53.051,-113.9926": null,
+  "53.1162,-114.4718": {
+    "name": "Breton",
+    "address": "Breton",
+    "lat": 53.110032,
+    "lon": -114.4719526
+  },
+  "52.9525,-114.0324": null,
+  "52.6586,-113.5704": {
+    "name": "Ponoka",
+    "address": "Ponoka",
+    "lat": 52.6759035,
+    "lon": -113.5833723
+  },
+  "52.6124,-114.2479": null,
+  "52.6146,-114.25": null,
+  "52.4671,-113.7547": {
+    "name": "Lacombe",
+    "address": "Lacombe",
+    "lat": 52.4681872,
+    "lon": -113.730525
+  },
+  "52.3304,-114.0584": null,
+  "50.8395,-113.9887": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.8471,-113.9998": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.842,-113.9923": {
+    "name": "24-42 Summit Pointe Dr",
+    "address": "Address not available",
+    "lat": 50.84216756708582,
+    "lon": -113.9914324669113
+  },
+  "50.8467,-113.9837": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.8474,-113.9944": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.835,-113.9826": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.8389,-113.9839": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.8388,-113.9784": {
+    "name": "Heritage Pointe",
+    "address": "Address not available",
+    "lat": 50.8422721,
+    "lon": -114.0007032
+  },
+  "50.8358,-114.0196": null,
+  "51.4797,-112.8035": {
+    "name": "Drumheller",
+    "address": "Drumheller",
+    "lat": 51.4619438,
+    "lon": -112.7106587
+  },
+  "54.0449,-111.3141": null,
+  "49.1841,-113.3194": {
+    "name": "Cardston",
+    "address": "Cardston",
+    "lat": 49.1969427,
+    "lon": -113.301763
+  },
+  "51.0309,-114.2478": null,
+  "50.7073,-113.9125": null,
+  "53.8744,-110.7633": null,
+  "53.885,-110.9271": null,
+  "53.6522,-110.348": null,
+  "53.875,-110.7625": {
+    "name": "Township Road 565",
+    "address": "Lindbergh",
+    "lat": 53.87500469162801,
+    "lon": -110.7614610050226
+  },
+  "50.2287,-111.7719": null,
+  "56.263,-117.3459": null,
+  "53.4834,-113.4298": {
+    "name": "Edmonton",
+    "address": "Edmonton",
+    "lat": 53.5461663,
+    "lon": -113.4937355
+  },
+  "53.5374,-114.4346": null,
+  "53.0331,-110.2803": null,
+  "53.3366,-110.3265": {
+    "name": "Kitscoty",
+    "address": "Kitscoty",
+    "lat": 53.3415589,
+    "lon": -110.3340414
+  },
+  "49.7211,-113.4278": {
+    "name": "Fort Macleod",
+    "address": "Fort Macleod",
+    "lat": 49.7223893,
+    "lon": -113.4030896
+  },
+  "50.0101,-113.5888": {
+    "name": "Claresholm",
+    "address": "Claresholm",
+    "lat": 50.0192523,
+    "lon": -113.578771
+  },
+  "51.4415,-114.2894": null,
+  "50.9462,-114.0029": {
+    "name": "Calgary",
+    "address": "Calgary",
+    "lat": 51.04473309999999,
+    "lon": -114.0718831
+  },
+  "50.9444,-113.996": {
+    "name": "Calgary",
+    "address": "Calgary",
+    "lat": 51.04473309999999,
+    "lon": -114.0718831
+  },
+  "50.9426,-113.9865": {
+    "name": "100-180 Douglas Woods Grove SE",
+    "address": "Calgary",
+    "lat": 50.94312506174447,
+    "lon": -113.9878162667241
+  },
+  "50.9377,-113.988": {
+    "name": "49-73 Douglasview Rise SE",
+    "address": "Calgary",
+    "lat": 50.93776052066244,
+    "lon": -113.9887451171521
+  },
+  "50.9402,-113.9956": {
+    "name": "Calgary",
+    "address": "Calgary",
+    "lat": 51.04473309999999,
+    "lon": -114.0718831
+  },
+  "58.3893,-116.0089": null,
+  "53.9007,-119.1033": {
+    "name": "Grande Cache",
+    "address": "Grande Cache",
+    "lat": 53.8885721,
+    "lon": -119.1142817
+  },
+  "49.4745,-111.4502": {
+    "name": "Foremost",
+    "address": "Foremost",
+    "lat": 49.4790113,
+    "lon": -111.4407059
+  },
+  "53.4396,-113.3129": null,
+  "54.6067,-112.7056": {
+    "name": "Bondiss",
+    "address": "Bondiss",
+    "lat": 54.6036334,
+    "lon": -112.7025301
+  },
+  "53.7271,-113.2791": {
+    "name": "Fort in View Golf Course",
+    "address": "55028 Range Road 230",
+    "lat": 53.7271233,
+    "lon": -113.2790849
+  },
+  "53.9108,-114.3791": null,
+  "54.9836,-117.1948": null,
+  "53.3683,-111.1521": null,
+  "50.7426,-111.9028": null,
+  "50.0536,-112.1411": null,
+  "51.4842,-112.7994": {
+    "name": "Drumheller",
+    "address": "Drumheller",
+    "lat": 51.4619438,
+    "lon": -112.7106587
+  },
+  "51.3461,-110.4692": {
+    "name": "Oyen",
+    "address": "Oyen",
+    "lat": 51.3507218,
+    "lon": -110.4833686
+  },
+  "49.6465,-112.4692": {
+    "name": "Indian Hill Golf Course",
+    "address": "Range Road 191, Cranford",
+    "lat": 49.64641629999999,
+    "lon": -112.468942
+  },
+  "49.4287,-113.5013": {
+    "name": "TTB Solar Systems",
+    "address": "55036 SEC HWY 810 Site 155, Glenwood",
+    "lat": 49.4288535,
+    "lon": -113.5015986
+  },
+  "50.1557,-113.6387": {
+    "name": "Stavely",
+    "address": "Stavely",
+    "lat": 50.1615778,
+    "lon": -113.6409669
+  },
+  "50.3522,-113.7629": {
+    "name": "Nanton",
+    "address": "Nanton",
+    "lat": 50.3494617,
+    "lon": -113.7749129
+  },
+  "53.3643,-112.6771": null,
+  "49.8615,-111.3746": {
+    "name": "Bow Island",
+    "address": "Bow Island",
+    "lat": 49.8674022,
+    "lon": -111.3794447
+  },
+  "58.5465,-117.1089": null,
+  "57.0536,-117.5642": null,
+  "56.1987,-118.5823": null,
+  "51.1778,-114.2529": null,
+  "51.1449,-114.459": null,
+  "55.7373,-118.7809": null,
+  "49.8704,-113.5204": {
+    "name": "Granum",
+    "address": "Granum",
+    "lat": 49.8716708,
+    "lon": -113.507554
+  },
+  "46.8938,-71.1546": {
+    "name": "Qu\u00e9bec City",
+    "address": "Qu\u00e9bec City",
+    "lat": 46.8130816,
+    "lon": -71.20745959999999
+  },
+  "45.4427,-71.9666": {
+    "name": "Sherbrooke",
+    "address": "Sherbrooke",
+    "lat": 45.4042669,
+    "lon": -71.89367399999999
+  },
+  "46.042,-71.9437": {
+    "name": "Victoriaville",
+    "address": "Victoriaville",
+    "lat": 46.0556724,
+    "lon": -71.95895589999999
+  },
+  "45.6888,-72.8165": null,
+  "46.1682,-74.6123": {
+    "name": "Mont-Tremblant",
+    "address": "Mont-Tremblant",
+    "lat": 46.1184616,
+    "lon": -74.5961852
+  },
+  "48.2631,-79.0002": {
+    "name": "Rouyn-Noranda",
+    "address": "Rouyn-Noranda",
+    "lat": 48.2342362,
+    "lon": -79.01878359999999
+  },
+  "45.3684,-73.8637": {
+    "name": "2454-2364 Bd Don-Quichotte",
+    "address": "Notre-Dame-de-l'\u00cele-Perrot",
+    "lat": 45.36788646416784,
+    "lon": -73.86537576045055
+  },
+  "46.9655,-71.2806": null,
+  "46.9671,-71.2724": {
+    "name": "2-26 Chem. de l'\u00c9cho",
+    "address": "Lac-Beauport",
+    "lat": 46.96602497424905,
+    "lon": -71.27161192975635
+  },
+  "45.6583,-73.7797": {
+    "name": "Lorraine",
+    "address": "Lorraine",
+    "lat": 45.6703587,
+    "lon": -73.7888447
+  },
+  "49.1372,-68.4018": {
+    "name": "Chute-aux-Outardes",
+    "address": "Chute-aux-Outardes",
+    "lat": 49.12641499999999,
+    "lon": -68.39397199999999
+  },
+  "45.6357,-71.4178": null,
+  "45.7475,-76.1908": null,
+  "46.3914,-73.704": null,
+  "45.5192,-75.4964": {
+    "name": "Gatineau",
+    "address": "Gatineau",
+    "lat": 45.4765446,
+    "lon": -75.7012723
+  },
+  "45.7834,-71.8931": {
+    "name": "Val-des-Sources",
+    "address": "Val-des-Sources",
+    "lat": 45.7741034,
+    "lon": -71.9367197
+  },
+  "45.9334,-72.0065": {
+    "name": "Warwick",
+    "address": "Warwick",
+    "lat": 45.949523,
+    "lon": -71.99708640000001
+  },
+  "46.1959,-70.6041": {
+    "name": "Saint-Georges",
+    "address": "Saint-Georges",
+    "lat": 46.1229184,
+    "lon": -70.670352
+  },
+  "46.393,-72.6074": {
+    "name": "Trois-Rivi\u00e8res",
+    "address": "Trois-Rivi\u00e8res",
+    "lat": 46.34298200000001,
+    "lon": -72.5420716
+  },
+  "45.6509,-72.6029": {
+    "name": "Acton Vale",
+    "address": "Acton Vale",
+    "lat": 45.6470539,
+    "lon": -72.5650634
+  },
+  "46.6635,-71.261": {
+    "name": "Levis",
+    "address": "Levis",
+    "lat": 46.7582576,
+    "lon": -71.2397151
+  },
+  "46.625,-70.6967": {
+    "name": "Saint-Damien-de-Buckland",
+    "address": "Saint-Damien-de-Buckland",
+    "lat": 46.6240621,
+    "lon": -70.6579323
+  },
+  "46.7653,-71.6204": {
+    "name": "Pont-Rouge",
+    "address": "Pont-Rouge",
+    "lat": 46.7562377,
+    "lon": -71.69843159999999
+  },
+  "47.1644,-70.2946": {
+    "name": "Saint-Jean-Port-Joli",
+    "address": "Saint-Jean-Port-Joli",
+    "lat": 47.2153806,
+    "lon": -70.2694167
+  },
+  "48.4485,-71.1728": {
+    "name": "Saguenay",
+    "address": "Saguenay",
+    "lat": 48.4276054,
+    "lon": -71.0600102
+  },
+  "45.2816,-73.2486": {
+    "name": "Saint-Jean-sur-Richelieu",
+    "address": "Saint-Jean-sur-Richelieu",
+    "lat": 45.305771,
+    "lon": -73.2544903
+  },
+  "45.2419,-73.2326": {
+    "name": "Sabrevois",
+    "address": "Sabrevois",
+    "lat": 45.2068998,
+    "lon": -73.2294055
+  },
+  "46.1941,-73.7499": {
+    "name": "435-411 4e Rang",
+    "address": "Saint-Alphonse-Rodriguez",
+    "lat": 46.19395940083559,
+    "lon": -73.75008730253727
+  },
+  "45.0184,-73.7671": null,
+  "46.194,-73.7522": null,
+  "45.1557,-73.5774": null,
+  "45.0803,-74.4238": null,
+  "45.0114,-73.4148": null,
+  "46.7879,-71.3647": {
+    "name": "Qu\u00e9bec City",
+    "address": "Qu\u00e9bec City",
+    "lat": 46.8130816,
+    "lon": -71.20745959999999
+  },
+  "45.7502,-73.7272": {
+    "name": "Terrebonne",
+    "address": "Terrebonne",
+    "lat": 45.6929818,
+    "lon": -73.63311019999999
+  },
+  "45.7923,-73.9472": {
+    "name": "Sainte-Sophie",
+    "address": "Sainte-Sophie",
+    "lat": 45.8318083,
+    "lon": -73.88158419999999
+  },
+  "45.8429,-73.8833": {
+    "name": "Sainte-Sophie",
+    "address": "Sainte-Sophie",
+    "lat": 45.8318083,
+    "lon": -73.88158419999999
+  },
+  "45.8456,-73.882": {
+    "name": "Sainte-Sophie",
+    "address": "Sainte-Sophie",
+    "lat": 45.8318083,
+    "lon": -73.88158419999999
+  },
+  "48.5497,-78.1256": {
+    "name": "Amos",
+    "address": "Amos",
+    "lat": 48.5719053,
+    "lon": -78.115965
+  },
+  "49.9706,-74.3554": {
+    "name": "Chibougamau",
+    "address": "Chibougamau",
+    "lat": 49.9132295,
+    "lon": -74.36919859999999
+  },
+  "46.9027,-71.1504": null,
+  "45.3616,-73.291": {
+    "name": "Saint-Jean-sur-Richelieu",
+    "address": "Saint-Jean-sur-Richelieu",
+    "lat": 45.305771,
+    "lon": -73.2544903
+  },
+  "45.9133,-74.1453": {
+    "name": "Piedmont",
+    "address": "Piedmont",
+    "lat": 45.8946155,
+    "lon": -74.1241266
+  },
+  "49.919,-74.3801": {
+    "name": "Chibougamau",
+    "address": "Chibougamau",
+    "lat": 49.9132295,
+    "lon": -74.36919859999999
+  },
+  "48.5385,-71.295": null,
+  "45.8531,-74.1212": {
+    "name": "Sainte-Anne-des-Lacs",
+    "address": "Sainte-Anne-des-Lacs",
+    "lat": 45.8704803,
+    "lon": -74.1171529
+  },
+  "45.2967,-72.0981": {
+    "name": "Magog",
+    "address": "Magog",
+    "lat": 45.2666232,
+    "lon": -72.14896879999999
+  },
+  "45.4368,-73.9617": {
+    "name": "Senneville",
+    "address": "Senneville",
+    "lat": 45.4394121,
+    "lon": -73.9652468
+  },
+  "46.4593,-73.653": null,
+  "50.1697,-66.6179": {
+    "name": "Rue Thom",
+    "address": "Sept-Iles",
+    "lat": 50.17067759829597,
+    "lon": -66.6175271314699
+  },
+  "46.616,-72.6139": {
+    "name": "Shawinigan",
+    "address": "Shawinigan",
+    "lat": 46.5628245,
+    "lon": -72.7421908
+  },
+  "45.6848,-74.2769": {
+    "name": "Lachute",
+    "address": "Lachute",
+    "lat": 45.6520586,
+    "lon": -74.3398015
+  }
+}

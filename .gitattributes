@@ -39,3 +39,11 @@
 /images/golf_courses_edmonton.png filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_montreal.png filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_ontario.png filter=lfs diff=lfs merge=lfs -text
+/cache/0c9eaf77b2062e7e8208fd53eeebb68abcfbc4ba.json filter=lfs diff=lfs merge=lfs -text
+/cache/4a42957aefead12eb26224c8671198482fd8ee91.json filter=lfs diff=lfs merge=lfs -text
+/cache/9fd7cf41e1a67c019ac76842cbef58b80dbebbaf.json filter=lfs diff=lfs merge=lfs -text
+/cache/a23b3f58d0e460fcbfdff4670c5d1f6d5093a9c7.json filter=lfs diff=lfs merge=lfs -text
+/cache/b153b03adbd8590075f71b6c196deaba64814238.json filter=lfs diff=lfs merge=lfs -text
+/cache/c189c3b54f1f0df9f366703df953d192e9a74023.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_courses_quebec.geojson filter=lfs diff=lfs merge=lfs -text
+/images/golf_courses_quebec.png filter=lfs diff=lfs merge=lfs -text
