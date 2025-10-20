@@ -31,7 +31,7 @@ logging.basicConfig(
 )
 
 def main():
-    province = "British Columbia"
+    province = "Newfoundland and Labrador"
     region = f"{province}, Canada"
     output_prefix = f"golf_courses_{province.lower().replace(' ', '_')}"
     gdf = None
