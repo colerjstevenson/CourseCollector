@@ -29,8 +29,9 @@ logging.basicConfig(
 )
 
 def main():
-    region = "Quebec, Canada"
-    output_prefix = "golf_courses_quebec"
+    province = "Quebec"
+    region = f"{province}, Canada"
+    output_prefix = f"golf_courses_{province.lower()}"
     gdf = None
     
     # if files already exists, skip data collection and load existing data to create map
@@ -69,6 +70,8 @@ def main():
             centroids = centroids.to_crs(epsg=4326)
             gdf['lat'] = centroids['geometry'].centroid.y
             gdf['lon'] = centroids['geometry'].centroid.x
+            gdf['province'] = [province for _ in range(len(gdf))]
+            gdf['gcid'] = [f'{province[0].upper()}{province[-1].upper()}{i+1:05d}' for i in range(len(gdf))]
 
             # -----------------------
             # Filter and sort
@@ -142,7 +145,7 @@ def main():
         except Exception as e:
             logging.exception("Failed to create/save map image")
             print(f"Warning: creating map image failed: {e}")
-        print(f"Done! Found {len(gdf)} golf courses in Alberta.")
+        print(f"Done! Found {len(gdf)} golf courses in {province}.")
         print(f"Saved to:\n  {geojson_file}\n  {csv_file}")
 
         logging.info(f"Completed successfully with {len(gdf)} entries.")
