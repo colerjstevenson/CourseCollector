@@ -29,8 +29,8 @@ logging.basicConfig(
 )
 
 def main():
-    region = "Alberta, Canada"
-    output_prefix = "golf_courses_alberta"
+    region = "Quebec, Canada"
+    output_prefix = "golf_courses_quebec"
     gdf = None
     
     # if files already exists, skip data collection and load existing data to create map
@@ -83,8 +83,8 @@ def main():
             print("Saving results...")
             timestamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-            geojson_file = f"{output_prefix}.geojson"
-            csv_file = f"{output_prefix}.csv"
+            geojson_file = f"data/{output_prefix}.geojson"
+            csv_file = f"data/{output_prefix}.csv"
 
             gdf.to_file(geojson_file, driver="GeoJSON")
             # gdf[['name', 'lat', 'lon', 'area_m2']].to_csv(csv_file, index=False)
@@ -125,7 +125,7 @@ def main():
             ax.set_axis_off()
 
             # Add basemap if available; otherwise warn and save plain overlay
-            image_file = f"{output_prefix}.png"
+            image_file = f"images/{output_prefix}.png"
             if _HAS_CONTEXTILY:
                 try:
                     ctx.add_basemap(ax, crs=gdf_3857.crs.to_string(), source=ctx.providers.CartoDB.Positron)

@@ -1,0 +1,11 @@
+addr:city,addr:housenumber,addr:postcode,addr:street,name,phone,phone:mnemonic,website,email,addr:province,operator,source,sport,wikidata,wikipedia,alt_name,type,area_m2,lat,lon
+,,,,Club de Golf Royal Montreal,,,,,,,CanVec 6.0 - NRCan,golf,Q1420672,fr:Club de golf Royal Montréal,,,1825250.9982174526,45.49517385532006,-73.90464781244073
+,,,,Elm Ridge Country Club,,,,,,,CanVec 6.0 - NRCan,golf,,,,,1480380.0426363933,45.4828790606395,-73.91577860291794
+,,,,Club de Golf St-Raphaël,,,,,,,CanVec 6.0 - NRCan,golf,,,,multipolygon,1399118.3828581176,45.5045321725628,-73.89485688937738
+,,,,Golf Dorval,+1 514 6314653,,http://www.golfdorval.com,info@golfdorval.com,,,,,,,,,1090418.7224114363,45.47169771412655,-73.7721204743249
+Montréal,3700,,Rue Damien-Gauthier,Golf de l'Île de Montréal - Parcours de l'Irlande,,,,,QC,Club de Golf de l'Île de Montréal,,,,,,,705031.9102748674,45.69071489788139,-73.50721568828003
+,,,,Golf de l'Île de Montréal,,,,,,,,,,,,,688086.540990508,45.682810239126404,-73.52190226807448
+,,,,Club de Golf Meadowbrook,,,,,,,,,,,,multipolygon,579026.4550405043,45.45453282370751,-73.67130495718622
+,,,,Club de Golf Métropolitain Anjou,,,,,,,,,,,,,479934.939964931,45.627338138309575,-73.56598868933985
+Montréal,999,H3E 1X9,Boulevard de la Forêt,Golf Exécutif Montréal,,,,,QC,Golf Exécutif Montréal,bing,,,,Golf Île des Soeurs,,270445.1787985973,45.45157651646208,-73.55705526450231
+Montréal,4235,H1Y 2G3,Boulevard Viau,Club de golf municipal de Montréal,+1-514-872-4653,+1-514-872-GOLF,http://www1.ville.montreal.qc.ca/banque311/content/golf-municipal-de-montr%C3%A9al-et-centre-de-pratique,,,,,,,,,,144580.3368594356,45.56937673676482,-73.55801018542338
