@@ -1712,5 +1712,503 @@
     "address": "Lachute",
     "lat": 45.6520586,
     "lon": -74.3398015
-  }
+  },
+  "49.2173,-123.1595": {
+    "name": "7425 Yew St",
+    "address": "Vancouver",
+    "lat": 49.21707731879974,
+    "lon": -123.1590938686854
+  },
+  "54.7933,-127.1896": {
+    "name": "Smithers",
+    "address": "Smithers",
+    "lat": 54.7817914,
+    "lon": -127.1665996
+  },
+  "54.7668,-127.1272": null,
+  "55.9477,-129.9789": {
+    "name": "Dyke Road",
+    "address": "Address not available",
+    "lat": 55.94757469988826,
+    "lon": -129.9793060849531
+  },
+  "49.062,-122.7849": {
+    "name": "Surrey",
+    "address": "Surrey",
+    "lat": 49.1913466,
+    "lon": -122.8490125
+  },
+  "49.0642,-122.7775": {
+    "name": "Surrey",
+    "address": "Surrey",
+    "lat": 49.1913466,
+    "lon": -122.8490125
+  },
+  "56.3244,-120.9971": null,
+  "54.0473,-123.9982": {
+    "name": "Vanderhoof",
+    "address": "Vanderhoof",
+    "lat": 54.01397979999999,
+    "lon": -124.0129801
+  },
+  "49.3919,-121.4329": {
+    "name": "Hope",
+    "address": "Hope",
+    "lat": 49.379491,
+    "lon": -121.4416917
+  },
+  "50.8062,-121.309": {
+    "name": "Cache Creek",
+    "address": "Cache Creek",
+    "lat": 50.81128770000001,
+    "lon": -121.323619
+  },
+  "50.8269,-119.6913": {
+    "name": "Chase",
+    "address": "Chase",
+    "lat": 50.8188483,
+    "lon": -119.6845191
+  },
+  "50.8246,-119.691": {
+    "name": "Chase",
+    "address": "Chase",
+    "lat": 50.8188483,
+    "lon": -119.6845191
+  },
+  "50.0155,-119.492": null,
+  "49.3365,-119.7214": null,
+  "50.358,-119.284": null,
+  "49.8385,-119.4705": {
+    "name": "Kelowna",
+    "address": "Kelowna",
+    "lat": 49.8863235,
+    "lon": -119.4965917
+  },
+  "50.9665,-119.1738": null,
+  "49.459,-120.4655": null,
+  "49.1794,-123.0669": {
+    "name": "Richmond",
+    "address": "Richmond",
+    "lat": 49.1665898,
+    "lon": -123.133569
+  },
+  "49.154,-123.8322": {
+    "name": "Gabriola",
+    "address": "Gabriola",
+    "lat": 49.1702362,
+    "lon": -123.8467858
+  },
+  "54.0458,-124.0034": {
+    "name": "Vanderhoof",
+    "address": "Vanderhoof",
+    "lat": 54.01397979999999,
+    "lon": -124.0129801
+  },
+  "54.0138,-125.0593": null,
+  "53.0162,-122.557": null,
+  "49.3078,-123.0259": {
+    "name": "Seymour Creek Golf Centre",
+    "address": "315 Seymour Boulevard, North Vancouver",
+    "lat": 49.3076497,
+    "lon": -123.0257515
+  },
+  "50.6901,-120.2838": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "50.684,-120.2969": {
+    "name": "River Gate Drive",
+    "address": "Kamloops",
+    "lat": 50.68399936329403,
+    "lon": -120.2977510876289
+  },
+  "50.6861,-120.2932": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "50.6882,-120.297": {
+    "name": "Clubhouse Drive",
+    "address": "Kamloops",
+    "lat": 50.68793518776097,
+    "lon": -120.2966357238897
+  },
+  "50.6895,-120.3019": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "54.7667,-127.128": null,
+  "49.2091,-122.6433": {
+    "name": "Maple Ridge",
+    "address": "Maple Ridge",
+    "lat": 49.2193226,
+    "lon": -122.598398
+  },
+  "49.1449,-122.3583": {
+    "name": "Mission",
+    "address": "Mission",
+    "lat": 49.1329272,
+    "lon": -122.3261603
+  },
+  "50.5198,-116.0109": null,
+  "50.4711,-115.948": null,
+  "53.8446,-122.827": {
+    "name": "Prince George",
+    "address": "Prince George",
+    "lat": 53.9170641,
+    "lon": -122.7496693
+  },
+  "50.8813,-119.8649": {
+    "name": "5038 Valley Drive",
+    "address": "Sun Peaks",
+    "lat": 50.88133564463134,
+    "lon": -119.8643896742361
+  },
+  "50.8804,-119.8951": {
+    "name": "Sun Peaks",
+    "address": "Sun Peaks",
+    "lat": 50.8815578,
+    "lon": -119.8972041
+  },
+  "50.8827,-119.8809": {
+    "name": "Sun Peaks",
+    "address": "Sun Peaks",
+    "lat": 50.8815578,
+    "lon": -119.8972041
+  },
+  "50.8772,-119.9016": {
+    "name": "Sun Peaks",
+    "address": "Sun Peaks",
+    "lat": 50.8815578,
+    "lon": -119.8972041
+  },
+  "50.8803,-119.8999": {
+    "name": "Sun Peaks",
+    "address": "Sun Peaks",
+    "lat": 50.8815578,
+    "lon": -119.8972041
+  },
+  "50.8782,-119.9044": {
+    "name": "Sun Peaks",
+    "address": "Sun Peaks",
+    "lat": 50.8815578,
+    "lon": -119.8972041
+  },
+  "49.5463,-115.7487": {
+    "name": "Mission Hills Golf Course",
+    "address": "3320 Theatre Road, Cranbrook",
+    "lat": 49.5465597,
+    "lon": -115.7490894
+  },
+  "49.6582,-117.5158": null,
+  "50.5449,-116.019": null,
+  "50.559,-116.0398": null,
+  "49.7961,-124.4567": null,
+  "49.0408,-123.9029": null,
+  "49.0659,-122.7855": {
+    "name": "Surrey",
+    "address": "Surrey",
+    "lat": 49.1913466,
+    "lon": -122.8490125
+  },
+  "49.0629,-122.7709": {
+    "name": "3385-3353 Canterbury Dr",
+    "address": "Surrey",
+    "lat": 49.06278339359466,
+    "lon": -122.7710703837195
+  },
+  "49.0702,-122.786": {
+    "name": "Surrey",
+    "address": "Surrey",
+    "lat": 49.1913466,
+    "lon": -122.8490125
+  },
+  "49.069,-122.7822": {
+    "name": "Surrey",
+    "address": "Surrey",
+    "lat": 49.1913466,
+    "lon": -122.8490125
+  },
+  "50.185,-119.4081": {
+    "name": "Vernon",
+    "address": "Vernon",
+    "lat": 50.2670137,
+    "lon": -119.2720107
+  },
+  "48.6496,-123.6416": {
+    "name": "Shawnigan Lake",
+    "address": "Shawnigan Lake",
+    "lat": 48.6511793,
+    "lon": -123.6449961
+  },
+  "48.834,-123.3182": {
+    "name": "Mayne Island",
+    "address": "Mayne Island",
+    "lat": 48.84761049999999,
+    "lon": -123.2838914
+  },
+  "49.457,-119.6095": null,
+  "51.654,-121.296": {
+    "name": "100 Mile House",
+    "address": "100 Mile House",
+    "lat": 51.64397049999999,
+    "lon": -121.2950097
+  },
+  "49.8582,-119.4538": {
+    "name": "Kelowna",
+    "address": "Kelowna",
+    "lat": 49.8863235,
+    "lon": -119.4965917
+  },
+  "51.737,-121.3447": null,
+  "48.4552,-123.3455": {
+    "name": "Cedar Hill Golf Course",
+    "address": "1400 Derby Road, Saanich Core",
+    "lat": 48.45489999999999,
+    "lon": -123.345
+  },
+  "49.0851,-125.7853": null,
+  "49.6029,-115.8462": null,
+  "49.5559,-119.6952": {
+    "name": "Mountain Avenue",
+    "address": "Summerland",
+    "lat": 49.55588819974922,
+    "lon": -119.6953771142611
+  },
+  "49.2255,-122.6669": {
+    "name": "Golden Ears Way",
+    "address": "Maple Ridge",
+    "lat": 49.22533175634351,
+    "lon": -122.66628588785
+  },
+  "49.2085,-123.0515": {
+    "name": "Vancouver",
+    "address": "Vancouver",
+    "lat": 49.2827291,
+    "lon": -123.1207375
+  },
+  "49.1529,-122.5915": {
+    "name": "Glover Road",
+    "address": "Langley Township",
+    "lat": 49.15287504308307,
+    "lon": -122.5910082304023
+  },
+  "50.6087,-118.7348": null,
+  "50.6895,-120.2916": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "50.6863,-120.2864": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "50.6919,-120.2872": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "50.69,-120.2862": {
+    "name": "Kamloops Indian Reserve No. 1",
+    "address": "Address not available",
+    "lat": 50.7160891,
+    "lon": -120.2449021
+  },
+  "49.7561,-126.0507": {
+    "name": "Gold River",
+    "address": "Gold River",
+    "lat": 49.7781637,
+    "lon": -126.0496149
+  },
+  "49.7559,-126.052": {
+    "name": "Gold River",
+    "address": "Gold River",
+    "lat": 49.7781637,
+    "lon": -126.0496149
+  },
+  "49.759,-126.0561": {
+    "name": "Gold River",
+    "address": "Gold River",
+    "lat": 49.7781637,
+    "lon": -126.0496149
+  },
+  "50.8482,-118.9559": {
+    "name": "Eagle River Golf & Country Club",
+    "address": "1450 Husky Frontage Road, Sicamous",
+    "lat": 50.8480181,
+    "lon": -118.9557179
+  },
+  "50.4565,-116.2464": null,
+  "50.4448,-116.2472": null,
+  "50.4494,-116.2507": null,
+  "50.4541,-116.2509": null,
+  "52.2162,-122.0797": null,
+  "49.0225,-119.4874": {
+    "name": "Osoyoos",
+    "address": "Osoyoos",
+    "lat": 49.032304,
+    "lon": -119.468163
+  },
+  "49.7468,-123.1291": {
+    "name": "Squamish",
+    "address": "Squamish",
+    "lat": 49.7016339,
+    "lon": -123.1558121
+  },
+  "51.0837,-99.5456": null,
+  "51.1512,-100.4968": null,
+  "51.1514,-100.5014": null,
+  "51.2464,-101.3378": null,
+  "51.3042,-100.3596": null,
+  "49.4819,-97.0227": {
+    "name": "Otterburne",
+    "address": "Otterburne",
+    "lat": 49.49370949999999,
+    "lon": -97.0325147
+  },
+  "49.3617,-97.3516": {
+    "name": "Morris",
+    "address": "Morris",
+    "lat": 49.3546676,
+    "lon": -97.3646212
+  },
+  "49.4633,-97.0123": null,
+  "50.6786,-99.9127": null,
+  "50.6517,-99.9573": null,
+  "50.7071,-98.0461": {
+    "name": "Lundar",
+    "address": "Lundar",
+    "lat": 50.69800189999999,
+    "lon": -98.04143119999999
+  },
+  "50.2355,-99.4454": {
+    "name": "Neepawa",
+    "address": "Neepawa",
+    "lat": 50.2284857,
+    "lon": -99.4664294
+  },
+  "49.899,-98.2536": null,
+  "50.7741,-101.2115": null,
+  "50.124,-100.029": {
+    "name": "Rapid City",
+    "address": "Rapid City",
+    "lat": 50.1206158,
+    "lon": -100.0372957
+  },
+  "50.0155,-100.3302": null,
+  "50.1724,-100.5912": {
+    "name": "Hamiota",
+    "address": "Hamiota",
+    "lat": 50.1798712,
+    "lon": -100.5998347
+  },
+  "49.0238,-97.5677": null,
+  "49.1814,-97.9637": {
+    "name": "Winkler",
+    "address": "Winkler",
+    "lat": 49.18021969999999,
+    "lon": -97.93911729999999
+  },
+  "50.1204,-101.0214": {
+    "name": "Miniota Golf Club",
+    "address": "Miniota",
+    "lat": 50.12046050000001,
+    "lon": -101.0211413
+  },
+  "49.2331,-98.543": {
+    "name": "Manitou",
+    "address": "Manitou",
+    "lat": 49.24043710000001,
+    "lon": -98.53849869999999
+  },
+  "49.1966,-98.864": null,
+  "53.8566,-101.3365": null,
+  "49.1518,-100.4105": null,
+  "49.21,-100.056": null,
+  "49.8021,-99.6141": null,
+  "50.3981,-97.2408": null,
+  "49.0902,-99.3839": null,
+  "54.8889,-100.0329": {
+    "name": "Snow Lake",
+    "address": "Snow Lake",
+    "lat": 54.8566371,
+    "lon": -99.95200369999999
+  },
+  "49.1968,-99.7067": null,
+  "49.6704,-96.5198": null,
+  "49.5823,-99.3078": null,
+  "55.7767,-97.8277": {
+    "name": "Thompson",
+    "address": "Thompson",
+    "lat": 55.7451003,
+    "lon": -97.8509232
+  },
+  "49.8506,-100.0031": {
+    "name": "Brandon",
+    "address": "Brandon",
+    "lat": 49.8437486,
+    "lon": -99.95148069999999
+  },
+  "51.6355,-99.9404": null,
+  "49.6431,-98.6376": null,
+  "49.8387,-100.9677": null,
+  "49.7648,-100.6262": {
+    "name": "Oak Lake",
+    "address": "Oak Lake",
+    "lat": 49.7661914,
+    "lon": -100.6308589
+  },
+  "49.7641,-100.6235": {
+    "name": "Oak Lake",
+    "address": "Oak Lake",
+    "lat": 49.7661914,
+    "lon": -100.6308589
+  },
+  "49.9692,-101.2356": {
+    "name": "Elkhorn",
+    "address": "Elkhorn",
+    "lat": 49.9753646,
+    "lon": -101.2408402
+  },
+  "51.1648,-98.3332": null,
+  "52.0976,-101.3168": null,
+  "50.5625,-96.2028": {
+    "name": "Dupont Street",
+    "address": "Powerview",
+    "lat": 50.56244592621344,
+    "lon": -96.20345834102636
+  },
+  "50.3098,-96.9957": null,
+  "50.3135,-96.9956": null,
+  "50.0671,-96.4679": null,
+  "49.9723,-98.7718": {
+    "name": "MacGregor",
+    "address": "MacGregor",
+    "lat": 49.9661717,
+    "lon": -98.7781945
+  },
+  "51.1416,-99.8389": {
+    "name": "145-157 Campbell Ave",
+    "address": "Ochre River",
+    "lat": 51.14234151244443,
+    "lon": -99.83974083884583
+  },
+  "49.8439,-97.2549": {
+    "name": "Winnipeg",
+    "address": "Winnipeg",
+    "lat": 49.8954221,
+    "lon": -97.1385145
+  },
+  "49.7406,-96.8971": null,
+  "49.608,-100.2392": null,
+  "49.6066,-100.2436": null
 }
