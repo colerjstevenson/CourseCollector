@@ -7,7 +7,7 @@ import time
 from bs4 import BeautifulSoup
 import html as _html
 
-SITEMAP_URLS = ["https://www.golfcanada.ca/golf-facility-sitemap2.xml", "https://www.golfcanada.ca/golf-facility-sitemap3.xml", "https://www.golfcanada.ca/golf-facility-sitemap4.xml"]
+SITEMAP_URLS = ["https://www.golfcanada.ca/golf-facility-sitemap2.xml", "https://www.golfcanada.ca/golf-facility-sitemap3.xml", "https://www.golfcanada.ca/golf-facility-sitemap4.xml", "https://www.golfcanada.ca/golf-facility-sitemap.xml"]
 
 # Step 1 — fetch sitemap and extract course URLs
 def get_course_urls(sitemap_url):
@@ -37,6 +37,9 @@ def extract_facts(html):
     )
     matches = pattern.findall(html)
     data = {label.strip(): value.strip() for label, value in matches}
+    title_match = re.search(r'<h1 class="course__title">(.*?)</h1>', html)
+    if title_match:
+        data["name"] = title_match.group(1).strip()
     return data
 
 
@@ -109,7 +112,7 @@ def scrape_all(sitemap_url):
     urls = get_course_urls(sitemap_url)
     for i, url in enumerate(urls, start=1):
         print(f"[{i}/{len(urls)}] Scraping {url}")
-        if 'en' not in url:
+        if '-en' not in url:
             print("  Skipping non-English URL.")
             continue
         html = fetch_html(url)
