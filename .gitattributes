@@ -65,3 +65,12 @@
 /data/combined.csv filter=lfs diff=lfs merge=lfs -text
 /data/combined.geojson filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_newfoundland_and_labrador.png filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data1.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data1.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data2.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data2.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data3.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data3.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data4.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_full.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_full.json filter=lfs diff=lfs merge=lfs -text
