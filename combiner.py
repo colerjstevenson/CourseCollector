@@ -73,7 +73,7 @@ def drop_sparse_columns(df: pd.DataFrame, thresh: float = 0.2) -> pd.DataFrame:
 
 
 def main():
-    files = sorted(DATA_DIR.glob("**/*golf_canada*"))
+    files = sorted(DATA_DIR.glob("**/*sitemap*"))
     csvs = [p for p in files if p.suffix.lower() == ".csv"]
     jsons = [p for p in files if p.suffix.lower() in (".json", ".ndjson")]  # include .json
 
