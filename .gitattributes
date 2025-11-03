@@ -74,3 +74,10 @@
 /data/golf_canada_data4.json filter=lfs diff=lfs merge=lfs -text
 /data/golf_canada_full.csv filter=lfs diff=lfs merge=lfs -text
 /data/golf_canada_full.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap2.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap2.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap3.csv filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap3.json filter=lfs diff=lfs merge=lfs -text
+/data/golf_canada_data_golf-facility-sitemap4.json filter=lfs diff=lfs merge=lfs -text
