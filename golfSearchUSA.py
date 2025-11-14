@@ -32,6 +32,7 @@ logging.basicConfig(
 MAX_MEMORY_PERCENT = 85  # Warn if memory usage exceeds 85%
 GC_INTERVAL = 1  # Run garbage collection after each state
 STATE_COUNT = 0  # Track states processed
+MAKE_MAP = False  # Set to True to generate map images
 
 def cleanup_memory():
     """
@@ -215,7 +216,7 @@ def run_states(state):
         
         # Create a visual map overlay showing golf course locations
         # Note: MAKE_MAP flag is currently undefined - set this to True/False as needed
-        if hasattr(__builtins__, 'MAKE_MAP'):
+        if MAKE_MAP == True:
             try:
                 print("Creating map image with translucent overlays...")
 
@@ -280,8 +281,10 @@ def main():
     global STATE_COUNT
     
     # Load state names from file (one state per line)
+    # ignore states that start with #
     with open("states_list.txt", "r") as f:
         states = f.read().splitlines()
+        states = [state for state in states if not state.strip().startswith('#')]
     
     total_states = len(states)
     
