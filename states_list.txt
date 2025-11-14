@@ -1,8 +1,8 @@
 Alabama
-Alaska
+#Alaska
 Arizona
 Arkansas
-California
+#California
 Colorado
 Connecticut
 Delaware
@@ -40,7 +40,7 @@ Rhode Island
 South Carolina
 South Dakota
 Tennessee
-Texas
+#Texas
 Utah
 Vermont
 Virginia
