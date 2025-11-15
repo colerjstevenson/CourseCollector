@@ -21,7 +21,11 @@ def save_cache(cache):
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, indent=2)
 
+<<<<<<< HEAD
 def find_nearby_golf_course(lat, lon, radius=10, tolerance=0.0005):
+=======
+def find_nearby_golf_course(lat, lon, radius=50, tolerance=0.0005):
+>>>>>>> a329d0fbbdca92b34927dec3d598df7243d4fe0b
     """
     Check for nearby golf courses using Google Places API.
     Results are cached locally by rounded coordinates.

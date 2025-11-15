@@ -22,7 +22,11 @@ try:
 except Exception:
     has_gpd = False
 
+<<<<<<< HEAD
 DATA_DIR = Path(__file__).resolve().parent / "data/usa"
+=======
+DATA_DIR = Path(__file__).resolve().parent / "data"
+>>>>>>> a329d0fbbdca92b34927dec3d598df7243d4fe0b
 CSV_OUTPUT = DATA_DIR / "combined.csv"
 GEOJSON_OUTPUT = DATA_DIR / "combined.geojson"
 

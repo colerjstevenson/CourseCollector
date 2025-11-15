@@ -2,7 +2,11 @@ Alabama
 #Alaska
 Arizona
 Arkansas
+<<<<<<< HEAD
 California
+=======
+#California
+>>>>>>> a329d0fbbdca92b34927dec3d598df7243d4fe0b
 Colorado
 Connecticut
 Delaware
@@ -40,7 +44,11 @@ Rhode Island
 South Carolina
 South Dakota
 Tennessee
+<<<<<<< HEAD
 Texas
+=======
+#Texas
+>>>>>>> a329d0fbbdca92b34927dec3d598df7243d4fe0b
 Utah
 Vermont
 Virginia
