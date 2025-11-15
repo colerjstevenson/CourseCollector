@@ -22,17 +22,19 @@ except Exception:
     _HAS_CONTEXTILY = False
 
 # Configure logging to write messages to a log file with timestamps
+# Specify UTF-8 encoding so log writes won't fail on non-ASCII characters
 logging.basicConfig(
     filename="golf_course_collection.log",
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    encoding='utf-8'
 )
 
 # Memory management settings
 MAX_MEMORY_PERCENT = 85  # Warn if memory usage exceeds 85%
 GC_INTERVAL = 1  # Run garbage collection after each state
 STATE_COUNT = 0  # Track states processed
-MAKE_MAP = False  # Set to True to generate map images
+MAKE_MAP = True  # Set to True to generate map images
 
 def cleanup_memory():
     """
@@ -185,7 +187,12 @@ def run_states(state):
             # Fill in missing course names by searching nearby features
             name_check = []
             for name, lat, lon in zip(gdf['name'], gdf['lat'], gdf['lon']):
-                print(name)
+                try:
+                    print(name)
+                except Exception as e:
+                    print("encoding error:", e)
+                    continue
+                
                 if not name or name == '':
                     # Try to find a nearby golf course name
                     check = find_nearby_golf_course(lat, lon)
@@ -210,9 +217,40 @@ def run_states(state):
             geojson_file = f"data/usa/{output_prefix}.geojson"
             csv_file = f"data/usa/{output_prefix}.csv"
 
-            gdf.to_file(geojson_file, driver="GeoJSON")
+            # Ensure output directories exist
+            os.makedirs(os.path.dirname(geojson_file), exist_ok=True)
+            os.makedirs(os.path.dirname(csv_file), exist_ok=True)
+
+            # Try to write GeoJSON using GeoPandas/Fiona first. If that fails (sometimes
+            # due to encoding or Fiona issues), fall back to writing the GeoJSON string
+            # manually using UTF-8 encoding.
+            try:
+                gdf.to_file(geojson_file, driver="GeoJSON")
+            except Exception as e:
+                logging.warning(f"GeoJSON write via Fiona failed: {e}; falling back to manual write")
+                try:
+                    # to_json returns a GeoJSON string (WGS84); ensure it's UTF-8 when writing
+                    geojson_str = gdf.to_crs(epsg=4326).to_json()
+                    with open(geojson_file, 'w', encoding='utf-8') as fh:
+                        fh.write(geojson_str)
+                except Exception:
+                    logging.exception("Fallback GeoJSON write failed")
+                    raise
+
             # Save as CSV without geometry column for easier spreadsheet viewing
-            gdf.drop(columns=['leisure','geometry']).to_csv(csv_file, index=False)
+            # Use UTF-8 and be defensive about pandas versions (errors arg may not be supported)
+            try:
+                gdf.drop(columns=['leisure', 'geometry']).to_csv(csv_file, index=False, encoding='utf-8', errors='replace')
+            except TypeError:
+                # pandas version may not accept errors=; try without it
+                try:
+                    gdf.drop(columns=['leisure', 'geometry']).to_csv(csv_file, index=False, encoding='utf-8')
+                except Exception:
+                    logging.exception("CSV write failed on fallback")
+                    raise
+            except Exception:
+                logging.exception("CSV write failed")
+                raise
         
         # Create a visual map overlay showing golf course locations
         # Note: MAKE_MAP flag is currently undefined - set this to True/False as needed
@@ -282,7 +320,8 @@ def main():
     
     # Load state names from file (one state per line)
     # ignore states that start with #
-    with open("states_list.txt", "r") as f:
+    # Read state list using utf-8-sig to gracefully handle a UTF-8 BOM if present
+    with open("states_list.txt", "r", encoding='utf-8-sig') as f:
         states = f.read().splitlines()
         states = [state for state in states if not state.strip().startswith('#')]
     
