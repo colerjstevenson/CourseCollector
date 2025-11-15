@@ -1,0 +1,192 @@
+golf,addr:city,addr:housenumber,addr:postcode,addr:state,addr:street,check_date,name,opening_hours,access,disused,note,tiger:cfcc,tiger:county,wikidata,gnis:feature_id,phone,website,operator,addr:country,landuse,source,sport,cr:blue,sr:blue,short_name,golf:course,fixme,club,old_name,fax,wikipedia,operator:type,start_date,building,driving_range,addr:county,boundary,operator:wikidata,owner,ownership,protected,ref,barrier,fence_type,fee,ele,description,type,addr:housename,protect_class,ref:MNCPPC,golf:par,golf_cart,protection_title,operator:name,area_m2,lat,lon,province,gcid
+,,,,,,,Turf Valley,,,,,,,,1708100,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,136,,multipolygon,,,,,,,,3553516.4411785537,39.2983999413042,-76.88561540319667,Maryland,MD00054
+,,,,,,,Lake Presidential Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2687301.8069928745,38.84789509748718,-76.73622257842177,Maryland,MD00200
+,,,,,,,Compass Point Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,2448369.2413103078,39.13452165061003,-76.49478245289336,Maryland,MD00029
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2119248.3235878097,38.98716674911147,-76.17294582317125,Maryland,MD00199
+,,,,,,,Trump National Golf Club,,,,,,,Q20714076,,,,,,,,,,,,,,,Lowes Island Golf Club,,"en:Trump National Golf Club Washington, D.C.",,,,,,,,,,,,,,,,,,,,,,,,,1887978.2004400357,39.05828807776792,-77.34749494237559,Maryland,MD00137
+,Rockville,1201,20852,MD,Rockville Pike,,Woodmont Country Club,,,,,,,,,+1 301 424 7200,https://www.woodmontcc.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1852679.2889973219,39.063806577602605,-77.13926300138573,Maryland,MD00068
+,,,,,,,Baltimore Country Club,,,,,,,Q4852836,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1773427.863977899,39.44233715908627,-76.66301354672598,Maryland,MD00110
+,Davidsonville,1380,21035,,West Central Avenue,,Renditions Golf Course,,,,,,,,2458680,+1-410-798-9798,https://www.renditionsgolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1732669.2322564237,38.921620651739886,-76.67768241230334,Maryland,MD00143
+,,,,,,,Caves Valley Golf Club,,,,,,,Q5055097,,,https://www.cavesvalley.net/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1708809.8470524389,39.4472754770253,-76.73912718162829,Maryland,MD00043
+,Issue,11550,20645,,Swan Point Boulevard,,Swan Point Yacht & Country Club,,,,,,,,,301-259-0047,https://swanpointgolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1654501.0734983084,38.2974638732417,-76.91243209565002,Maryland,MD00016
+,,,,,,,Glen Riddle Golf Club,,,,,,,,,,,,,,,golf,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1640228.8706492053,38.34635792977111,-75.14893246089768,Maryland,MD00037
+,,,,,,,River Marsh Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1590249.5641820594,38.55952587334798,-76.05000370628294,Maryland,MD00139
+,,,,,,,Poolesville Golf Course,,yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1546025.9991477097,39.11817672554065,-77.4159337975282,Maryland,MD00075
+,,,,,,,Hampshire Greens Golf Course,,,,,,,,,,http://www.montgomerycountygolf.com/,,,,,,,,,,,,,,,,,,,,protected_area,,Revenue Authority,,,,,,,,,multipolygon,,5,,,,Miscellaneous Recreational Facility,,1526642.0225370713,39.127826273646484,-77.00101116632806,Maryland,MD00032
+,,,,,,,Beach Club Golf Links,,,,,,,,2503103,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1459038.683946117,38.36080733417023,-75.22322359254895,Maryland,MD00167
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1444441.483932185,38.96008755813967,-76.13631299951264,Maryland,MD00185
+,,,,,,,Northwest Branch Golf Course,,,,Official surveyed boundary. Do not move unless MNCPPC acquires/updated property lines,,,,,,,Montgomery Parks,,,MNCPPC official boundary data - public domain,,,,,,,,,,,public,,,,,protected_area,Q61359691,M-NCPPC,county,perpetuity,,,,,,,multipolygon,,,,,,,,1423632.0528434734,39.111739394949986,-77.03050591120962,Maryland,MD00052
+,,,,,,,Lodestone Golf Course,,,,,,,,,,https://www.wispresort.com/Lodestone/,Wisp Resort,,,,,,,,,,,,,,,,,,,,,,private,,,,,,,,multipolygon,,,,,,,,1376858.0152774346,39.529663756951784,-79.37357918749474,Maryland,MD00017
+,Clarksburg,25900,20871,,Prescott Road,,Little Bennett Golf Course,,yes,,,,,,,+1-301-253-1515,https://www.mcggolf.com/Courses/LittleBennett.aspx,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1318368.4619944394,39.28630532603185,-77.29787029488823,Maryland,MD00073
+,,,,,,,Bretton Woods Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1260890.1935808142,39.07365126816139,-77.33392795744781,Maryland,MD00050
+,,,,,,,Hayfields Country Club,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1221735.776934795,39.50067020974565,-76.67505720163723,Maryland,MD00112
+,,,,,,,Hayfields Country Club,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1221735.776934795,39.50067020974565,-76.67505720163723,Maryland,MD00111
+,Aberdeen Proving Ground,5600,21005,,Maryland Boulevard,,Ruggles Golf Course,,,,,,,,1698819,410-278-9452,https://aberdeen.armymwr.com/programs/ruggles-golf-course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1210361.6287947407,39.483025232655656,-76.16855221563567,Maryland,MD00158
+,,,,,,,Bulle Rock Golf Club,,,,,,,Q14691891,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1188747.576810168,39.53796638824292,-76.13035119374936,Maryland,MD00103
+,,,,,,,Mountain Branch Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1155608.32721851,39.46978685402069,-76.36159732857834,Maryland,MD00124
+,Phoenix,14101,21131,MD,Phoenix Rd,,Hunt Valley Country Club,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1147095.3049844191,39.51174299113051,-76.6053051933052,Maryland,MD00030
+,,,,,,,TPC Potomac at Avanel Farm,,,,,,,Q7671115,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1125474.4496488306,38.99205888587315,-77.20145511568221,Maryland,MD00006
+,Easton,10142,21601,,Old Cordova Road,,Hog Neck Golf Course,,,,,,,,592775,+1-410-822-6079,http://www.hogneck.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1114794.2770101451,38.826935268892875,-76.05291961741248,Maryland,MD00055
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1104779.542072322,39.69650261465879,-78.65216554937389,Maryland,MD00202
+,,,,,,,Anne Arundell Manor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1099766.770442954,38.85490204808345,-76.66769733181917,Maryland,MD00144
+,,,,,,,Anne Arundell Manor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1099766.770442954,38.85490204808345,-76.66769733181917,Maryland,MD00145
+,Hagerstown,20025,21742,,Mount Aetna Road,,Black Rock Golf Course,,,,,,,,,+1-240-313-2816,http://www.blackrockgolfcourse.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1087028.4482000151,39.61108729453115,-77.66154148190653,Maryland,MD00095
+,,,,,,,Sparrows Point Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1084427.4400160897,39.252517609702814,-76.47186714196471,Maryland,MD00084
+,Bishopville,12723,21813,,Saint Martin's Neck Road,,The Links at Lighthouse Sound,,,,,,,,,410-641-1189,https://www.lighthousesound.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1067318.6437893058,38.40643023482899,-75.10895774195436,Maryland,MD00021
+,,,,,,,Waverly Woods Golf Course,,,,,,,,,,https://www.waverlywoods.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1062052.477581406,39.31155814417439,-76.88885556023513,Maryland,MD00011
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1047986.0636283223,38.301541208264915,-76.39460210980559,Maryland,MD00197
+,,,,,,,Andrews South Course,,,,,,,,,,http://www.aafbgc.com/,,,,yahoo_wms,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,1046307.5734874294,38.78696026619542,-76.8723863016857,Maryland,MD00009
+,,,,,,,University of Maryland Golf Course,,,,,,,Q7895687,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1035019.8680692972,38.9960228354705,-76.9548776352709,Maryland,MD00082
+,,,,,,,The Cannon Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1029352.2098171354,38.81600989934179,-76.65253726003495,Maryland,MD00191
+,Besthesda,8500,20817,MD,River Road,,Congressional Country Club,,,,,,,Q2088876,,,https://www.ccclub.org/,,,,,,,,,,,,,,en:Congressional Country Club,,,,,,,,,,,,,,,,,,,,,,,,,1026812.7642437074,38.994565982929245,-77.17875315302051,Maryland,MD00196
+,,,,,,,Piney Branch Golf Club,,,,,,,,,,https://www.pineybranchgolf.com/,Piney Branch Golf Club,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1020768.0042483824,39.57832967554431,-76.8305929144505,Maryland,MD00114
+,,,,,,,The Links at Challedon,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1009090.7959188627,39.40947822169097,-77.11444655575217,Maryland,MD00126
+,,,,,,,The Links at Challedon,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1009090.7959188627,39.40947822169097,-77.11444655575217,Maryland,MD00127
+,,,,,,,Breton Bay Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,988966.4901183894,38.26952540546663,-76.66855729241246,Maryland,MD00039
+,,,,,,,Breton Bay Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,988966.4901183894,38.26952540546663,-76.66855729241246,Maryland,MD00040
+,,,,,,,PB Dye Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,973926.8436863836,39.291313775788375,-77.34280020065147,Maryland,MD00072
+,,,,,,,Woodlands Golf Course,,,,,,,Q7775736,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,973187.6721240502,39.33444070506053,-76.77754081392071,Maryland,MD00090
+,Lutherville,2101,21093,MD,Dulaney Valley Road,,Pine Ridge Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,966917.6782421998,39.444156559009365,-76.58032872206635,Maryland,MD00033
+,,,,,,,Greystone Golf Course,,,,,,,Q5608495,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,954465.191634252,39.632332552363565,-76.60613850291833,Maryland,MD00046
+,Derwood,6724,20855,MD,Needwood Road,,Needwood Golf Course,,,,,,,,,+1-301-948-1075,https://www.mcggolf.com/Courses/Needwood.aspx,Montgomery Parks,,,,,,,,,,,,,,public,,,,,protected_area,Q61359691,M-NCPPC,county,perpetuity,G10,,,,,,,,,,,,,,936409.4383208664,39.11833933377617,-77.13874808535039,Maryland,MD00067
+,Berlin,7000,21811,MD,Rum Pointe Lane,,Rum Pointe Seaside Golf Links,,,,,,,,,+1-410-629-1414,https://rumpointe.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,929001.0373726743,38.24536000459812,-75.16405478676855,Maryland,MD00085
+,,,,,,,Hobbit's Glen Golf Club,,,,,,,,,,https://www.columbiaassociation.org/facilities/golf/hobbits-glen/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,72,cartpath,,,923082.5204751145,39.22628434794042,-76.90173908887579,Maryland,MD00012
+,Grasonville,311,21638,MD,Prospect Bay Drive West,,Prospect Bay Country Club,"Tu-Su 08:00-17:00, Mo 12:00-17:00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,920865.0890691975,38.92022819339893,-76.19581370718048,Maryland,MD00174
+,,,,,,,Timbers at Troy Golf Course,,,,,,,,2503714,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,910446.0006340485,39.204508831873284,-76.76840843433322,Maryland,MD00135
+,,,,,,,Crofton Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,907521.4974043698,39.00454485422628,-76.6885254549183,Maryland,MD00013
+,,,,,,,Andrews East Course,,,,,,,,,,http://www.aafbgc.com/course_info/East_Course_Layout.asp,,,,yahoo_wms,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,905819.3694327632,38.78914953932953,-76.88106741917107,Maryland,MD00008
+,,,,,,,Woodholme Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,903867.0355729713,39.38470819936508,-76.74596191921873,Maryland,MD00087
+,,,,,,,Oakland Golf Course,,,,,,,,592453,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,887013.6351699677,39.42362173721072,-79.40743931885886,Maryland,MD00048
+,,,,,,,Maryland Golf & Country Club,,,,,,,,,,https://marylandgcc.org/,,,,,,,,,,"rough area, based upon land parcels",,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,868096.1825990884,39.52210811519409,-76.30654318017906,Maryland,MD00038
+,,,,,,,Eisenhower Golf Course,,,,,A41,"Anne Arundel, MD",Q5349915,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,862863.7534467577,39.01527925512294,-76.58602367023173,Maryland,MD00058
+,,,,,,,Whiskey Creek Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,860954.3686968867,39.36504537332875,-77.29704705385015,Maryland,MD00101
+,,,,,,,Clustered Spires Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,852743.6862736956,39.429828885904364,-77.37406002326107,Maryland,MD00122
+,Essex,1935,21221,,Back River Neck Road,,Rocky Point Golf Course,,,,,,,Q7355971,,+1-410-887-0215,http://www.baltimoregolfing.com/-rocky-point,,,,,,71.7,126,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,848238.2904588245,39.25306059669708,-76.41322979223027,Maryland,MD00123
+,,,,,,,Four Streams Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,845626.5055514203,39.17854473583896,-77.39927616454602,Maryland,MD00074
+,,,,,,,Burning Tree Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,843804.3655829686,38.99781955224131,-77.15139022372195,Maryland,MD00078
+,North East,1500,21901,,Chesapeake Club Drive,,Chesapeake Bay Golf Club North East Course,,,,,,,,2503184,410-287-0200,http://chesapeakegolf.com/,Chesapeake Bay Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,842815.4429434282,39.57905983111693,-75.93164035216779,Maryland,MD00022
+,,,,,,,Fantasy Valley Golf Course,,,,,,,,,,https://www.wispresort.com/Fantasy-Valley/,Wisp Resort,,,,,,,,,,,Wisp Resort Golf Course,,,,,,,,,,,private,,,,,,,,multipolygon,,,,,,,,842661.6139788937,39.55658808144804,-79.37264860486766,Maryland,MD00031
+,,,,,,,Lakewood Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,842219.7610431091,39.08260147802055,-77.19267338432464,Maryland,MD00049
+,,,,,,,Talbot Country Club,,,,,,,,,,https://www.talbotcc.com/,,,,,,,,,,,yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,838745.0425945504,38.72298743952537,-76.09591358230794,Maryland,MD00188
+,Westover,8380,21871,,Crisfield Highway,,Great Hope Golf Course,,,,,,,,2503330,,https://www.greathopegolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,837460.5197826851,38.10982000304395,-75.72007342037584,Maryland,MD00150
+,Bethesda,6100,20815,MD,Connecticut Avenue,,Chevy Chase Country Club,,private,,,,,,,+1-301-652-4100,https://www.chevychaseclub.org/Club/Scripts/Home/home.asp,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,826386.5946082836,38.97360374875371,-77.08430363183292,Maryland,MD00061
+,,,,,,,Rattlewood Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,825352.6951379698,39.341235189658015,-77.19395909486718,Maryland,MD00076
+,,,,,,,Norbeck Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,822757.8788552757,39.13812614517903,-77.09554042858268,Maryland,MD00066
+,,,,,,,Fairway Hills Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,822389.9285382046,39.23378758254928,-76.84959268442007,Maryland,MD00010
+,Berlin,12367,21811,MD,Eagles Nest Road,,Eagles Landing Golf Course,,,,,,,,2503251,+1-410-213-7277,http://eagleslandinggolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,813251.0537909702,38.30440927214905,-75.12908833390051,Maryland,MD00148
+,Baltimore,2900,21207,MD,Hillsdale Road,,Forest Park Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,public,,,,,,Q110062922,,,,,,,,,,multipolygon,,,,,,,BCRP,810725.2942473788,39.323429353179684,-76.70222371452905,Maryland,MD00047
+,Bel Air,1000,21014,,North Tollgate Road,,Winters Run Golf Club,,,,,,,,1698546,410-879-1200,https://www.wintersrun.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,804580.6473393054,39.52452352208736,-76.38083041291404,Maryland,MD00160
+,,,,,,,Woodmere Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,799415.8572709886,38.92987614995795,-76.79714229363158,Maryland,MD00133
+,Middletown,50,21769,MD,Glenbrook Drive,,Richland Golf Club,,,,,,,,,+1-301-371-0400,https://www.richlandgolfclub.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,794940.5749901857,39.43227802038485,-77.52717584819223,Maryland,MD00104
+,Ijamsville,5502,21754,,Mussetter Road,,Holly Hills Country Club,,,,,,,,,+1-301-694-7210,https://www.hollyhillsgolf.com/,,,,,golf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,793018.9645302185,39.38528794541786,-77.31512702417525,Maryland,MD00102
+,,,,,,,Worthington Manor Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,792313.720497014,39.32563859438707,-77.37960831081263,Maryland,MD00092
+,Baltimore,6001,21239,MD,Hillen Road,,Mount Pleasant Golf Course,,,,,,,,,,https://classic5golf.com/mount-pleasant,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,788334.4089720024,39.36618593635308,-76.57568888834551,Maryland,MD00042
+,Hagerstown,9535,21740,MD,Mapleville Road,,Beaver Creek Country Club,,,,,,,,,+1-301-733-5138,https://beavercreekcc.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,781406.9287373383,39.576586204589866,-77.64111722969983,Maryland,MD00136
+,,,,,,,Enterprise Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,776706.0385233634,38.92947576821963,-76.81717561019684,Maryland,MD00100
+,,,,,,,Cumberland Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,764048.8103027992,39.661617529379065,-78.72739112964545,Maryland,MD00141
+,,,,,,,Laytonsville Golf Course,,yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,759821.1799994007,39.19244283702393,-77.14356797646359,Maryland,MD00069
+,,,,,,,Musket Ridge Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,754196.635339388,39.494551302451285,-77.55016399253338,Maryland,MD00094
+,,,,,,,Patriots Glen National Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,751955.4229580692,39.6228870473431,-75.80776034050946,Maryland,MD00182
+,,,,,,,Manor Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,748335.7163493951,39.100856710902626,-77.08449650968576,Maryland,MD00065
+,Laytonsville,5821,20882,,Olney Laytonsville Road,,Blue Mash Golf Course,,,,,,,,,+1-301-670-1966,https://www.bluemash.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,721050.989176037,39.189430137703965,-77.11350841564746,Maryland,MD00071
+,,,,,,,Chartwell Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,720680.4582571518,39.09328371313834,-76.59897694256671,Maryland,MD00173
+,,,,,,,Fox Hollow Golf Course,,,,,,,,,410-887-7735,http://www.baltimoregolfing.com/sites/courses/view.asp?id=457&page=14060,Baltimore County Revenue Authority,,,,,,,Longview GC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,719775.6647361619,39.46367821839154,-76.61952193035417,Maryland,MD00060
+,,,,,,,Maryland National Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,718451.3157114139,39.477646867821434,-77.52705793682395,Maryland,MD00105
+,Street,217,21154,,Davis Road,,Geneva Farm Golf Course,,,,,,,Q5533002,1697902,+1-410-452-8800,https://www.genevafarmgolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,715885.9706407664,39.658685501586355,-76.39634423289118,Maryland,MD00156
+,Beltsville,12800,20705,,Bay Hill Drive,,Cross Creek Golf Club,,,,,,,,2503233,301-595-8901,http://www.crosscreekgcmd.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,707578.5597671545,39.06723278451976,-76.92881072382147,Maryland,MD00027
+,Baltimore,2701,21213,MD,Saint Lo Drive,,Clifton Park Golf Course,,,,,,,,,410-243-3500,http://www.bmgcgolf.com/-clifton-park,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,707448.8027014898,39.322440321664615,-76.58149932622219,Maryland,MD00034
+,Berlin,11401,21811,,Country Club Drive,,Newport Bay,,,,,,,,,+1-800-442-3570,http://www.oceancitygolfclub.com/,Ocean City Yacht & Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,706898.4491793938,38.251905361678325,-75.18014204730443,Maryland,MD00152
+,Berlin,11605,21811,,Masters Lane,,River Run Golf Club,,,,,,,,,+1-410-641-7200,https://riverrungolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,703611.763479374,38.398438875207724,-75.17684601952573,Maryland,MD00020
+,,,,,,,Montgomery Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,699383.7397415912,39.20463191349944,-77.12437781262143,Maryland,MD00070
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,689238.2162738298,38.581896991380965,-76.12457756342786,Maryland,MD00140
+,,,,,,,Marlton Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,681330.8645650084,38.75532800357544,-76.79217761985106,Maryland,MD00128
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,approximate shape,,,,,,,,,,,,,,,,,,,,,,,,,,,,,677567.1433238644,39.18816686904286,-76.08376364542835,Maryland,MD00198
+,,,,,,,Hillendale Country Club,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,669413.7527526928,39.49864626107713,-76.55360237952415,Maryland,MD00115
+,Crofton,1500,21114,MD,Riedel Road,,Walden Golf & Country Club,,,,,,,,2503737,+1-410-721-8268,,,,,esri_USDOT_Maryland,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,Walden Golf & Country Club,,,,,,,667259.3832109936,39.021857937443485,-76.67230633683259,Maryland,MD00015
+,Crofton,1500,21114,MD,Riedel Road,,Walden Golf & Country Club,,,,,,,,2503737,+1-410-721-8268,,,,,esri_USDOT_Maryland,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,Walden Golf & Country Club,,,,,,,667259.3832109936,39.021857937443485,-76.67230633683259,Maryland,MD00014
+,White Plains,1015,20695,MD,Saint Charles Parkway,,White Plains Golf Course,,,,,,,,,,,Charles County Parks and Recreation,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,666167.5077712444,38.572746124764805,-76.91685021612261,Maryland,MD00132
+,Annapolis,,,,Greenbury Point Road,,United States Naval Academy Golf Club,,,,,,,,,,,US Naval Academy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,657931.8872324799,38.995883885984284,-76.46617665918451,Maryland,MD00172
+,Aberdeen,740,21001,,Gilbert Road,,Wetlands Golf Course,,,,,,,,2503750,+1-410-273-7488,https://www.golfwetlands.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,655675.8381348284,39.545825170722125,-76.18420779919731,Maryland,MD00159
+,Walkersville,10502,21793,MD,Glade Road,,Glade Valley Golf Club,,,,,,,,1711483,+1-301-898-5555,https://www.gladevalleygc.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,655575.2341968456,39.52526868070404,-77.32896905413762,Maryland,MD00161
+,,,,,,,Diamond Ridge Golf Couse,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,652797.6448346799,39.328594304256264,-76.77383126828742,Maryland,MD00091
+,,,,,,,Bethesda Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,650164.5317253631,39.016022449050745,-77.15252873368038,Maryland,MD00080
+,,,,,,,Bethesda Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,650164.5317253631,39.016022449050745,-77.15252873368038,Maryland,MD00079
+,Silver Spring,14600,20906,MD,Argyle Club Lane,,Argyle Country Club,,private,,,,,,,+1-301-598-5500,https://www.argylecc.net/,,US,,,golf,,,,,,,,,,,,,,Montgomery,,,,,,,,,,,,,,,,,,,,647301.799963422,39.09592014805733,-77.05277864186259,Maryland,MD00064
+,Berlin,10655,21811,,Cathell Road,,Ocean Resorts Golf Club,,,,,,,,2503536,+1-410-641-5643,https://www.oceanresortsgolfclub.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,644267.6679518627,38.37260580208832,-75.18868519334957,Maryland,MD00153
+,,,,,,,Green Hill Golf Course,,,,,,,,,,https://www.greenhillcc.com/golf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,642492.4138723081,38.342700997076946,-75.73142457023478,Maryland,MD00186
+,,,,,,,Falls Road Golf Course,,yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,637077.3414319729,39.03543540450598,-77.19946742309442,Maryland,MD00083
+,,,,,,,Country Club of Maryland,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,628225.7217284023,39.385311501634824,-76.58939638665667,Maryland,MD00108
+,Chevy Chase,7900,20815,MD,Connecticut Avenue,,Columbia Country Club,,,,,,,Q5149670,,301-951-5000,https://www.columbiacc.org/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,628072.7076886988,38.9944022687827,-77.0827538510893,Maryland,MD00045
+,Perryville,79,21903,MD,Chesapeake View Road,,Furnace Bay Golf Course,,,,,,,,2503300,+1 410-642-6816,https://www.furnacebaygc.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,614481.3214401556,39.569040144895844,-76.04256186423454,Maryland,MD00024
+,,,,,,,The Suburban Club,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,fence,chain_link,,,,,,,,,,,,606981.4124507258,39.374577309651876,-76.716722698105,Maryland,MD00093
+,Finksburg,1900,21048,,River Downs Drive,,River Downs Golf Club,,,,,,,,2503610,410-526-2000,http://www.riverdownsgolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,606586.1729133982,39.52124834505534,-76.87963636323022,Maryland,MD00025
+,Rising Sun,128,21911,MD,Karen Drive,,Cheasapeake Bay Golf Club Rising Sun Course,,,,,,,,2503181,+1-410-658-4343,http://chesapeakegolf.com/,Chesapeake Bay Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,605958.3851210454,39.66204472558944,-75.98928478646583,Maryland,MD00155
+,Lusby,11352,20657,,HG Trueman Road,,Chesapeake Hills Golf Course,,,,,,,,2503182,410-326-4653,http://www.co.cal.md.us/index.aspx?nid=422,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,602602.2681872189,38.38193930781179,-76.42699523460487,Maryland,MD00023
+,,,,,,,Links at Perry Cabin,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,600918.0093070396,38.80952511476539,-76.23000289617562,Maryland,MD00195
+,,,,,,,Unknown Golf Course,,,golf_course,,,,,,,,,,,,,,,,,,,Caroline Country Club,,,,,,,,,,,,,,,,,,Currently Closed,multipolygon,,,,,,,,574720.2130722381,38.844172011664654,-75.84164101685528,Maryland,MD00044
+,,,,,,,Green Spring Valley Hunt Club,,,,,,,,,+14103630433,https://www.gsvhc.com,,,,,,,,,,,,,+14107533630,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,569409.4660814799,39.40808794924223,-76.75031958281387,Maryland,MD00035
+,,,,,,,Green Spring Valley Hunt Club,,,,,,,,,+14103630433,https://www.gsvhc.com,,,,,,,,,,,,,+14107533630,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,569409.4660814799,39.40808794924223,-76.75031958281387,Maryland,MD00036
+,,,,,,,Willow Springs Golf Course,,,,,,,,,,,,,,USGS Ortho,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,552336.733930807,39.31519429140251,-76.96467885745828,Maryland,MD00125
+,,,,,,,Fountain Head Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,551568.6249484315,39.67338810442729,-77.71322786868816,Maryland,MD00053
+,,,,,,,Westminster National Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,540586.8143427371,39.62977595557099,-77.00894622881557,Maryland,MD00119
+,New Market,11330,21774,,Country Club Road,,West Winds Golf Club,,,,,,,,1712007,301-831-6191,https://westwindsgc.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,534180.552986247,39.42357592547136,-77.27592797171442,Maryland,MD00026
+,,,,,,,Nutters Crossing Golf Course,,,,,,,,2503526,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,530200.5700985279,38.32145451952331,-75.5645703952789,Maryland,MD00018
+,Berlin,8804,21811,,Logtown Road,,Deer Run Golf Club,,,,,,,,2503240,+1-410-629-0060,http://www.golfdeerrun.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,526855.719940196,38.3582459928556,-75.26745344164692,Maryland,MD00147
+,,,,,,,Maplehurst Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,525005.9256374157,39.64197230161672,-78.91694792249068,Maryland,MD00142
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,523289.3745865491,39.603346109560285,-77.40442909503697,Maryland,MD00019
+,Baltimore,6100,21212,MD,North Charles Street,,Elkridge Club,,,,,,,,,,,,US,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,514996.43495453056,39.37322013681544,-76.62955679612539,Maryland,MD00116
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,512657.26264490036,38.71893449996617,-77.01395514261002,Maryland,MD00146
+,,,,,,,Kenwood Golf & Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,502851.1700361777,38.97328228377714,-77.11526442395228,Maryland,MD00077
+,Bowie,7420,20715,,Laurel Bowie Road,,Bowie Golf and Coutry Club,,,,,,,,597062,+1-301-262-8141,https://www.bowiegolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,502689.537509736,38.99419441488025,-76.76233977505835,Maryland,MD00163
+,,,,,,,Bay Hills Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,500129.3749845325,39.04410639497529,-76.47629025488799,Maryland,MD00088
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,490817.89727605414,38.87054058138038,-76.33764182356671,Maryland,MD00170
+,,,,,,,Wicomico Shores Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,470146.4688184747,38.38498665079856,-76.84769187544919,Maryland,MD00130
+,Laurel,14300,20707,,Old Gunpowder Road,,Gunpowder Golf Course,,,,,,,,1713149,+1 301 725 4532,http://www.gunpowdergolfcourse.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,yes,,,,,,,,,,,465892.7550192429,39.088716366906645,-76.92248001171826,Maryland,MD00164
+,Berlin,11401,21811,,Country Club Drive,,Seaside,,,,,,,,,+1-800-442-3570,http://www.oceancitygolfclub.com/,Ocean City Yacht & Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,465155.55027420766,38.248325668441375,-75.17527807214893,Maryland,MD00086
+,Silver Spring,3701,20906,MD,Rossmoor Boulevard,,Leisure World Golf Course,,,,,,,,,,https://leisureworldmaryland.com/media/Golf-Map-v1.pdf,Leisure World of Maryland Corporation,,,,,,,,18_hole,,,,,,,1966,,,,,,,,,,,,,,,multipolygon,,,,69,,,,450147.2194471203,39.103523345344975,-77.0668626729124,Maryland,MD00007
+,,,,,,,Oakmont Green Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,441699.41196162277,39.63447893493004,-76.85950751896517,Maryland,MD00106
+,,,,,,,Rolling Road Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,409985.2501235618,39.25649850766394,-76.72484294103016,Maryland,MD00059
+,,,,,,,Hawthorne Country Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,398014.8538192804,38.543302264155635,-77.00969944228011,Maryland,MD00171
+,Mount Airy,12731,21771,,Jesse Smith Road,,Hope Valley Golf Course,,,,,,,,2503388,+1-301-865-0026,https://hopevalleygolf.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,390777.41665115877,39.386784368819896,-77.21811213091812,Maryland,MD00162
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,370094.46240385383,38.98305555255405,-77.1779539793746,Maryland,MD00120
+,Stevensville,3270,21666,,Romancoke Road,,Blue Heron Golf Course,,,,,,,,596134,+1-410-643-5721,http://blueherongolf.org/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,332282.56552492466,38.90950112220494,-76.3544787119948,Maryland,MD00154
+,Silver Spring,9701,20901,MD,Sligo Creek Parkway,,Sligo Golf Course,,yes,,Official surveyed boundary. Do not move unless MNCPPC acquires/updated property lines,,,,,,https://www.mcggolf.com/courses/sligo-creek,Montgomery Parks,,,MNCPPC official boundary data - public domain,,,,,,,,,,,public,,,,,protected_area,Q61359691,M-NCPPC,county,perpetuity,L04,,,,,Stream Valley,multipolygon,,6,,,,,,292484.8259186298,39.014176814688355,-77.02741538086747,Maryland,MD00051
+,Gibson Island,,21056,,Broadwater Way,,Gibson Island Golf Course,,,,,,,,1710888,410-255-1040,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,287973.10094997525,39.08029673679585,-76.428800773446,Maryland,MD00028
+,,,,,,,Paint Branch Golf Complex,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,268898.6788979308,39.00547614846954,-76.9354499789114,Maryland,MD00117
+,,,,,,,Exton Golf Course,,,,,,,,,410-436-2213,https://aberdeen.armymwr.com/programs/exton-golf-course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,264564.4858460295,39.41213572939647,-76.29300884556187,Maryland,MD00176
+,,,,,,,Henson Creek Golf Course,,,,,,,,,,,Prince George's County Department of Parks and Recreation,,,,,,,,,,,,,,,,,,,protected_area,Q62029847,M-NCPPC,county,perpetuity,,,,,,,multipolygon,,,Q92,,,,,263605.90309597924,38.78751676347748,-76.98135943462364,Maryland,MD00057
+,,,,,,,Wicomico Shores Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,253869.91626850376,38.38294167001361,-76.8505300547299,Maryland,MD00129
+,Baltimore,2100,21230,MD,Washington Boulevard,,Carroll Park Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,236023.51443409044,39.27474884700283,-76.65025991137217,Maryland,MD00180
+,,,,,,,Ocean Pines Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,multipolygon,,,,,,,,227705.2309398621,38.38367007898435,-75.14040776547809,Maryland,MD00041
+,,,,,,,Ocean Pines Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,221264.48193365854,38.39015256454712,-75.14825913008704,Maryland,MD00175
+,Westminster,,21157,,Pennsylvania Avenue,,McDaniel College Golf Course,,,,,,,,,+1-410-386-4648,https://mcdanielathletics.com/information/facilities/golf,McDaniel College,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,219063.14150668168,39.58776897584656,-77.00431490962298,Maryland,MD00118
+,Salisbury,401,21804,,Churchill Avenue,,Elks Golf Club,,,,,,,,1668644,+1-410-749-2695,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,214306.3593093308,38.358776062859945,-75.58446082191325,Maryland,MD00149
+,,,,,,,South River Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,207974.06925640983,38.921085280321044,-76.5796906462982,Maryland,MD00097
+,Hagerstown,2,21740,MD,South Cleveland Ave,,The Greens at Hamilton Run,,,,,,,,,+1-301-733-8630,https://www.hagerstowngreens.com/,,,,Hagerstown GIS Specialist,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,205257.3232933339,39.63837628814752,-77.7051738869001,Maryland,MD00131
+,,,,,,,Tom Mitchell's Golf Complex,,,,,,,,,,,,,,,golf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,201388.48826916344,39.47105443047636,-76.84063661037355,Maryland,MD00113
+,,,,,,,Horse Bridge Golf Course,,,,,,,,2503390,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,190127.13528772435,38.35015769403734,-75.48821314979372,Maryland,MD00151
+,,,,,,,South River Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,162859.90639514205,38.91912817676853,-76.57133859353925,Maryland,MD00096
+,,,,,,,Black Horse Golf,,,,,,,,,,https://blackhorsegolfmd.com/,,,,"Own knowledge, used to work there",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,149937.25207010048,39.62314732834803,-76.54718380308015,Maryland,MD00134
+,,,,,,,Wood Creek Golf Links,,,,,,,,,,,,,,Yahoo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,149102.340485287,38.442694136429004,-75.57445643453589,Maryland,MD00107
+,,,,,,,South River Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,133248.7875975304,38.91649752436112,-76.56632843686954,Maryland,MD00099
+,West Ocean City,,,MD,,,Assateague Greens Golf Course,,,,,,,,,+1-410-213-2332,https://www.facebook.com/AssateagueGreens,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,110944.64529445945,38.312071847567076,-75.13002084240215,Maryland,MD00203
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,103973.71350384672,39.509917661029974,-79.27646964911594,Maryland,MD00168
+,,,,,,,South River Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,94038.21601981572,38.91587947236176,-76.5826248977024,Maryland,MD00098
+,,,,,,,Ocean Pines Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,87126.0494235526,38.39312953473583,-75.15752178912831,Maryland,MD00179
+,Chestertown,22170,21620,,Great Oak Landing Road,,Mears Great Oak Landing Marina,,,,,,,,591877,,https://www.mearsgreatoaklanding.com/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,86463.4396640618,39.265580739098866,-76.19905122140594,Maryland,MD00157
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,83808.63884668777,39.03248307062966,-77.10769609323339,Maryland,MD00169
+,Arnold,1257,21012,,Ritchie Highway,,Severna Park Golf Center,,,,,,,,,+1-410-647-8618,https://www.severnaparkgolf.com/,Self,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,78884.12440023222,39.04589677588024,-76.51515986884465,Maryland,MD00109
+driving_range,,,,,,,Unknown Golf Course,,,,,,,,,,,,,grass,USGS Ortho,golf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,73931.41850506996,39.16040695975195,-76.65543619574456,Maryland,MD00121
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,73578.4047978712,39.64515880147371,-77.66792699656499,Maryland,MD00201
+,,,,,,,Bay Hills Golf Club,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,69826.04762882993,39.044486756620515,-76.46704634098596,Maryland,MD00089
+,,,,,,,Olney Golf Park,,,,,,,,,,,,,,,,,,,,,,,,,,,,yes,,,,,,,,,,,,,,,,,,,,,58822.531123329616,39.131942651015144,-77.0684965853793,Maryland,MD00063
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,55753.794471564615,39.606441396270114,-77.05670272341189,Maryland,MD00138
+,,,,,,,Wood Creek Golf Links,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,40599.77661815325,38.440576381252704,-75.57072691197529,Maryland,MD00187
+,,,,,,,Sherwood Forest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,39483.89944842934,39.027825188583684,-76.5402658048687,Maryland,MD00189
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,36534.50859162171,39.106905404600454,-77.07040534503491,Maryland,MD00081
+driving_range,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,34326.819114372185,39.47890836059487,-76.403904929952,Maryland,MD00177
+,,,,,,,Sherwood Forest,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,26912.269624039385,39.02628466352446,-76.5435487485133,Maryland,MD00190
+,,,,,,,Night Hawk Golf Course,,,,,,,,2087731,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25767.67648737983,39.044861005346775,-76.67092854048273,Maryland,MD00166
+,,,,,,,Night Hawk Golf Course,,,,,,,,2087731,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25767.67648737983,39.044861005346775,-76.67092854048273,Maryland,MD00165
+,,,,,,,Unknown Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,23031.480547886815,39.61878908165865,-75.80709197868697,Maryland,MD00183
+,,,,,,,Ocean Pines Golf Course,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21638.662523258892,38.39320990309933,-75.14897110527484,Maryland,MD00178

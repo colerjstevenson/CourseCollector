@@ -1,0 +1,60 @@
+name,operator,source,golf:course,golf:par,phone,sport,website,addr:city,addr:housenumber,addr:postcode,addr:state,addr:street,description,opening_hours,note,old_name,disused,disused:end_date,access,wikidata,contact:facebook,addr:country,type,area_m2,lat,lon,province,gcid
+Vermont National Country Club,,Yahoo; local_knowledge,18_hole,72,+1-802-864-7770,golf,https://www.vermontnational.com/,,,,,,,,,,,,,,,,multipolygon,1135488.2878864382,44.43508460608443,-73.17519901059094,Vermont,VT00002
+Alburg Golf Links,,,18_hole,72,+1-802-796-3586,,https://alburggolflinks.com/,,,,,,,,,,,,,,,,,985421.3833450725,44.9094601422045,-73.3028595356518,Vermont,VT00012
+Cedar Knoll Country Club,,,,,,,,,,,,,,,,,,,,,,,multipolygon,957547.8937417284,44.30488799776267,-73.07972011171097,Vermont,VT00006
+Burlington Country Club,,,,,,golf,,,,,,,,,,,,,,,,,multipolygon,894084.367230801,44.46111431207931,-73.19581481959439,Vermont,VT00001
+Country Club of Vermont,,,18_hole,72,+1-802-244-1800,,https://www.countryclubvt.com/,,,,,,,,,,,,,,,,,891394.372426206,44.35073000112675,-72.7294874371996,Vermont,VT00037
+Brattleboro Country Club,,,18_hole,71,+1-802-257-7380,,https://brattleborocountryclub.com/,,,,,,,,,,,,,,,,,864079.1545936591,42.87106379473446,-72.58466229775367,Vermont,VT00010
+Fox Run Golf Club,,,18_hole,70,+1-802-228-1396,,https://www.foxrungolf.org/,,,,,,,,,Okemo Valley Golf Club,,,,,,,,836241.5465151347,43.4182354957415,-72.69874604152945,Vermont,VT00049
+Jay Peak Resort Golf Course,,,,,,,,Jay,830,05859,VT,Jay Peak Road,,,,,,,,,,,multipolygon,825247.2340180842,44.94107297248732,-72.50106693725382,Vermont,VT00005
+Mount Snow Golf Club,,,18_hole,72,+1 802-464-4254,,https://mountsnow.com/golf/,West Dover,95,05356,VT,Country Club Road,,,,,,,,,,,,816209.380195423,42.93368482895675,-72.86823285592949,Vermont,VT00017
+Green Mountain National Golf Course,,,18_hole,71,+1-802-422-4653,,https://gmngc.com/,,,,,,,,,,,,,,,,,736764.6738301135,43.69860296698078,-72.8261617441334,Vermont,VT00041
+The Golf Club at Basin Harbor,,,18_hole,71,+1-802-475-2309,,https://basinharborgolf.com/,,,,,,,,,,,,,,,,,707308.398483296,44.189581237442646,-73.36498950774275,Vermont,VT00020
+Killington Golf Course,Killington Resort,,,,,,,Killington,277,05751,VT,East Mountain Road,,,,,,,,,,,multipolygon,704802.8613599106,43.631577840973236,-72.7891343564116,Vermont,VT00009
+Ekwanok Country Club,,,,,,,,,,,,,,,,,,,private,Q16890894,,,,679186.8918973631,43.15608929769834,-73.06442355283265,Vermont,VT00026
+Crown Point Golf Course,,,18_hole,72,+1-802-885-1010,,https://www.crownpointcountryclub.com/,Springfield,11,05156,VT,Town Farm Road,,,,,,,,,,,,670035.0680554367,43.34103441932445,-72.47420056578191,Vermont,VT00051
+Lake St Catherine Country Club,,EsriWorldImageryClarity,18_hole,72,+1-802-287-9341,,https://lakestcatherinecountryclub.com/,,,,,,,,,,,,,,,,,669718.5569447252,43.48967055823388,-73.19892546190655,Vermont,VT00052
+Neshobe Golf Course,,,18_hole,,+1-802-247-3611,,https://neshobe.com/,,,,,,,,,,,,,,,,,649909.0427031781,43.81578725018102,-73.07712157939906,Vermont,VT00034
+Stowe Country Club,Stowe Mountain Resort,,,,,,,,,,,,"In the Village of Stowe you’ll find the Stowe Country Club, with its beautiful undulating fairways and manicured greens, the course occupies what was a turn of the century dairy farm and golfers have watched as it matured into a challenging, and rewarding",,,,,,,,,,,645135.5287158528,44.47998644419317,-72.70305547836665,Vermont,VT00035
+Sugarbush Resort Golf Club,,,18_hole,70,+1-802-552-4007,,https://www.sugarbush.com/summer/golf-club,,,,,,,,,,,,,,,,,639454.4111866172,44.13328412286048,-72.87677690544463,Vermont,VT00056
+Manchester Country Club,,,18_hole,72,+1 802 362 3148,,https://www.mccvt.com/,Manchester,229,05255,,Beech Street,,,,,,,,,,,,624013.3090278384,43.204730149469064,-73.01854576887747,Vermont,VT00019
+Proctor Pittsford Country Club,,,18_hole,70,+1 802-483-9379,,https://www.proctor-pittsford.com/,Pittsford,311,05763,VT,Country Club Drive,,,,,,,,,,,,611956.5790301772,43.68594090107227,-73.00438883033246,Vermont,VT00024
+Saint Johnsbury Country Club,,,18_hole,70,+1 802 748 2442,,https://www.golfstjcc.com/,Saint Johnsbury,4357,05819,,Memorial Drive,,,,,,,,,,,,587161.3653317447,44.49188212323351,-72.01063647845754,Vermont,VT00022
+The Golf Club at The Equinox Resort,,,18_hole,71,+1-800-362-4747,,https://www.playequinox.com/,Manchester Village,108,05254,VT,Union Street,,,,,,,,,,,,584889.5753571448,43.16301142137318,-73.06401528516925,Vermont,VT00018
+Orleans Country Club,,,18_hole,72,+1 802 754 2333,,https://www.orleanscc.com/,Orleans,316,05860,,Country Club Lane,,,,,,,,,,,,578738.4303306651,44.79843353179905,-72.18086602382122,Vermont,VT00025
+Rocky Ridge Golf Club,,esri/USA_NAD_Addresses,,,,,https://www.rockyridge.com/,Saint George,7470,05482,VT,Vermont Route 116,,,,,,,,,,,,572953.4544219922,44.36834683987195,-73.1333886045234,Vermont,VT00059
+Bakersfeild Country Club,,,,,+1 802-933-5100,,,Bakersfeild,7595,05450,VT,Boston Post Road,,,,,,,,,,,,568247.996420266,44.81622826616693,-72.78365186146397,Vermont,VT00050
+Essex Country Club,,,18_hole,72,+1-802-879-3232,,https://www.essexccvt.com/,,,,,,,,,,,,,,,,,554562.6345143683,44.55611884805431,-73.06570170962927,Vermont,VT00043
+Montague Golf Club,,,18_hole,70,+1-802-728-3806,,https://www.montaguegolf.com/,Randolph,50,05060,,Randolph Avenue,,,,,,,,,,,,551537.6516993522,43.92265825053589,-72.65253872084857,Vermont,VT00032
+Champlain Country Club,,,,,+1 802 527 1187,,https://www.champlaincountryclub.com/,Swanton,581,05488,,Saint Albans Road,,,,,,,,,,,,534369.7457316892,44.85521950501212,-73.08700817272589,Vermont,VT00029
+Haystack Golf Course,,,18_hole,72,+1 802-464-8301,,,West Dover,70,05363,,Spyglass Road,,,,,,,,,,,multipolygon,531804.0405214427,42.90145587271642,-72.88693725525529,Vermont,VT00003
+Ralph Myhre Golf Course,Middlebury College,,,,+1 802 443 5125,,https://www.ralphmyhregolfcourse.com/,Middlebury,317,05753,VT,Golf Course Road,,,,,,,,,,,multipolygon,530272.9670373506,43.997158628650396,-73.17945196012145,Vermont,VT00004
+Barton Golf Club,,,18_hole,72,+1 802 525 1126,,https://www.bartongolfclub.com/,Barton,548,05822,,Telfer Hill Road,,,,,,,,,,,,508928.7190527591,44.7648327684251,-72.16587675496798,Vermont,VT00028
+West Bolton Country Club,,,,,,,,Bolton,,05465,VT,,,,,,,,,,,US,multipolygon,498621.8791704505,44.442465989801306,-72.90512111734317,Vermont,VT00008
+Stowe Mountain Club,,,,,,,,,,,,,,,,,,,,,,,,495378.6149804299,44.5285452723213,-72.7721147987764,Vermont,VT00038
+Rutland Country Club,,,,,+1 802 773 7061,,https://www.rutlandcountryclub.com/,Rutland,275,05702,,Grove Street,,,,,,,,,,,,482152.13963765645,43.625261965751726,-72.98950159300637,Vermont,VT00023
+Newport Country Club,,,18_hole,72,+1-802-334-2391,,https://www.newportscountryclub.com/,Newport,590,05855,,Mount Vernon Street,,,,,,,,,,,,477588.3169621014,44.92807358682504,-72.1919896286625,Vermont,VT00027
+Mt Anthony Country Club,,,18_hole,71,+1-802-442-2617,,https://mtanthonycc.com/,,,,,,,,,,,,,,,,,468443.56924855587,42.892804574962916,-73.210791295413,Vermont,VT00013
+Williston Country Club,,,18_hole,71,+1-802-878-3747,,http://www.willistongolfclub.com/,,,,,,,,,,,,,,,,,466131.0851088,44.4399245704575,-73.05803501942633,Vermont,VT00040
+Woodstock Country Club,,,,,+1 888 338 2745,,https://www.woodstockinn.com/golf-club,Woodstock,14,05091,,The Green,,,,,,,,,,,,417832.0197408414,43.61226206227935,-72.51527425260423,Vermont,VT00033
+Enosburg Falls Country Club,,,18_hole,72,+1-802-933-2296,,https://www.efccvt.com/,,,,,,,,,,,,,,,,,413218.04332497687,44.91745776595418,-72.80144077785941,Vermont,VT00036
+Links at Lang Farm,,,,,+1 802 8780298,,https://www.linksatlangfarm.com/,Essex,39,05452,VT,Essex Way,,,,,,,,,,US,,381981.68186846125,44.502053428594515,-73.08644911214523,Vermont,VT00021
+Lake Morey Golf Course,Avery,,,,,,,Fairlee,,,VT,,,,,,,,,,,,multipolygon,379242.37278311234,43.90642533692128,-72.15743587184943,Vermont,VT00007
+Kwiniaska Golf Club,,knowledge; Yahoo,18_hole,70,+1-802-985-3672,,https://kwiniaska.com/,,,,,,,,,,,,,,,,,354485.1658819687,44.39385208444938,-73.19812157963173,Vermont,VT00011
+Richford Country Club,,,9_hole,36,+1-802-848-3527,,https://richfordcountryclub.wixsite.com/richfordcountryclub2,,,,,,,,,,,,,,,,,353449.7181540502,45.00653200895013,-72.64350694385183,Vermont,VT00053
+Mountain View Country Club,,,9_hole,35,+1-802- 533-7477,,https://mvccvt.com/,,,,,,,,,,,,,,,,,330438.75077761605,44.5650382592094,-72.30225669182374,Vermont,VT00046
+West Hills Golf Course,,,,,,,,Stowe,2295,,VT,Weeks Hill Road,,,,,,,,,,,,326500.2780166655,44.49532890376245,-72.70721922839773,Vermont,VT00058
+Ryder Brook Golf Club,,,9_hole,36,+1-802-888-3525,,https://www.ryderbrookgc.com/,,,,,,,,,,,,,,,,,303651.6439794532,44.52368976489208,-72.62417042932108,Vermont,VT00030
+Catamount Country Club,,,9_hole,35,+1-802-878-7227,,https://www.catamountcountryclub.com/,,,,,,,,,,,,,,,,,264873.33010328613,44.45559393987497,-73.08791634260515,Vermont,VT00039
+Prospect Point Golf Club,,,9_hole,35,+1-802-468-5581,,,Castleton,111,05735,VT,Prospect Point Road,,,,Lake Bomoseen Golf Club,,,,,https://www.facebook.com/bomoseen.golf.club/,,,251164.92389227037,43.641428921452466,-73.2032000935122,Vermont,VT00014
+Bellows Falls Country Club,,,9_hole,35,+1-802-463-9809,golf,https://bellowsfallscountryclub.com/,,,,,,,,,,,,,,,,,238703.14456806474,43.1988695940689,-72.50151053144319,Vermont,VT00015
+Unknown Golf Course,,,,,,,,,,,,,,,Unable to determine name. Only features imagery reveals are greens.,,,,,,,,,219825.308852833,44.7915730583766,-72.01157329380936,Vermont,VT00016
+Copley Country Club,,,9_hole,35,+1 802 888 3013,,https://www.copleycountryclub.com/,Morrisville,377,05661,,Copley Country Club Road,,,,,,,,,,,,212706.20115968623,44.558372213470086,-72.58985741325957,Vermont,VT00031
+John P. Larkin Country Club,,,9_hole,34,+1-802-674-6491,,https://www.johnplarkincc.com/,,,,,,,,,,,,,,,,,191688.91462084334,43.50376888820532,-72.39371234365534,Vermont,VT00048
+White River Golf Course,,,9_hole,36,,,,,,,,,,,,,yes,2023,,,,,,189665.37683043446,43.82689286392929,-72.79371662086349,Vermont,VT00042
+Bradford Golf Club,,,9_hole,32,+1-802-222-5207,,https://bradfordgolfclubvt.com/,Bradford,,05033,VT,,"The Club offers a 9-hole foot golf course, with separate pins",,,,,,,,,,,151099.46826249073,43.994601738113886,-72.1253917955449,Vermont,VT00047
+Honey Pond Farm Golf Course,,,3_hole,35,+1-201-960-8559,,https://honeypondfarmvt.com/,,,,,,"Only thee greens, but a large number of tees to use with them. Access limited to resort guests.",,,,,,private,,,,,148397.06092194904,43.4497646677161,-73.11273829827925,Vermont,VT00054
+The Kwini Club Practice Facility,,,,,+1-802-233-6019,,https://kwiniaska.com/,,,,,,,,,,,,,,,,,107239.74554996236,44.39826459353051,-73.1960106142483,Vermont,VT00057
+Woodbury Golf Course,Darwin Thompson,,9_hole,27,,,https://woodburygolf.com/,Woodbury,1738,05681,VT,East Hill Road,,Mo-Su 07:00-19:00,,,,,,,,,,80967.39581894808,44.40178255278977,-72.3720616678284,Vermont,VT00045
+Apple Island Resort Golf Club,,,9_hole,27,+1-802-372-9600,,https://appleislandresort.com/apple-island-golf-course-on-lake-champlain-in-vermont/,,,,,,,,,,,,,,,,,49340.34387258556,44.63634940666407,-73.27212693412133,Vermont,VT00055
+Airport Driving Range,,,,,,,,,,,,,,,,,,,,,,,,48641.4213307876,43.54383273193253,-72.95335787864342,Vermont,VT00044

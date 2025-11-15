@@ -1,0 +1,1 @@
+{"version": 0.6, "generator": "Overpass API 0.7.62.8 e802775f", "osm3s": {"timestamp_osm_base": "2025-11-14T22:25:30Z", "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."}, "elements": [{"type": "node", "id": 12739793514, "lat": 38.5847384, "lon": -85.3019385, "tags": {"leisure": "golf_course"}}]}
