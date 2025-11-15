@@ -1,27 +1,3 @@
-name,access,addr:city,addr:housenumber,addr:postcode,addr:state,addr:street,phone,website,wikidata,source,sport,operator,barrier,note,golf,landuse,opening_hours,fixme,type,area_m2,lat,lon,province,gcid
-Pelham Bay & Split Rock Golf Course,,,,,,,,,,Yahoo,,,,,,,,,multipolygon,1557989.9676274606,40.880215717338665,-73.8069170221996,New York,NY00005
-Bally's Golf Links at Ferry Point,,Bronx,500,10465,NY,Hutchinson River Parkway,,https://casinos.ballys.com/golf-links-ferry-point/,,,,Bally's,,,,,,,multipolygon,826750.3168532952,40.81564113803033,-73.83085841374212,New York,NY00002
-Marine Park Golf Course,,Brooklyn,2880,11234,NY,Flatbush Avenue Greenway,+1-718-252-4625,https://www.golfmarinepark.com/,,,,,,,,,,,,796484.1062179777,40.59901873113129,-73.91547099193261,New York,NY00024
-South Shore Golf Course,,,,,,,,,,,golf,,,,,,,,,792724.4623071724,40.550786744692594,-74.2054479098667,New York,NY00014
-Dyker Beach Golf Course,,Brooklyn,,11228,NY,,+1-718-836-9722,https://www.dykerbeachgc.com/,Q5318678,,,,,,,,,,,714951.1121915509,40.61211400764038,-74.01944853725136,New York,NY00019
-La Tourette Golf Course,,Staten Island,1001,10306,NY,Richmond Hill Road,+1-718-351-1889,https://www.latourettegc.com/,,,golf,,,,,,,,multipolygon,701994.0611886291,40.57783305175917,-74.14923350739393,New York,NY00007
-Richmond County Country Club,,,,,,,+1-718-351-0600,http://www.richmondcountycc.org/,,,,,,,,,,,,545392.3175861799,40.588495740697105,-74.1139693652208,New York,NY00012
-Unknown Golf Course,,,,,,,,,,,,,,,,,,,multipolygon,492954.4454405881,40.7566892784691,-73.71391094269603,New York,NY00006
-Lake Success Golf Club,,,,,,,,,,,,Incorporated Village of Lake Success,,,,,,,,487634.1441017149,40.76550112331504,-73.7127589776283,New York,NY00015
-Clearview Park,,,,,,,,,,,,,,,,,,,,476488.66142918303,40.782113793462855,-73.78877910504643,New York,NY00009
-Douglaston Golf Course,,Douglaston,6320,11363,NY,Marathon Pkwy,+1-718-224-6566,https://www.golfnyc.com/douglaston-course/,Q5302202,,,,,,,,,,,446966.86559748906,40.75222130043595,-73.73260814872366,New York,NY00011
-Van Cortlandt Golf Course,,,,,,,,,,Bing,,,,,,,,,multipolygon,435840.0959770594,40.897686282064804,-73.88727008898573,New York,NY00004
-Forest Park Golf Course,yes,Wood Haven,101,11421,NY,Forest Park Drive,+1-718-296-0999,https://www.golfnyc.com/forest-park-course/,,,,,,,,,,,multipolygon,425803.9586324638,40.69954236535817,-73.86414712920114,New York,NY00001
-Silver Lake Golf Course,,,,,,,,,,,,,,,,,,,,422620.50291912106,40.624279528935254,-74.10039417995078,New York,NY00013
-Unknown Golf Course,,,,,,,,,,,,,fence,golf course outer relation,,,,,multipolygon,334660.8736667527,40.89619043469492,-73.88799171208923,New York,NY00008
-Kissena Golf Course,yes,Flushing,165-14,11365,NY,Booth Memorial Avenue,+1-718-939-4594,https://www.golfnyc.com/kissena-course/,,,,,,,,,,,,330697.35014870233,40.74416580545541,-73.79931645454504,New York,NY00010
-Unknown Golf Course,,,,,,,,,,,golf,,,,,,,,multipolygon,303525.23451493046,40.88722909642421,-73.88636637541939,New York,NY00003
-Unknown Golf Course,,,,,,,,,,Yahoo,,,fence,,,,,,,190291.70616394142,40.88739886631668,-73.88402370735407,New York,NY00017
-Aviator Golf Center,,,,,,,,,,,,,,,driving_range,grass,Th-Tu 08:00-20:00; We 12:00-20:00,,,119491.9177641266,40.59011871840063,-73.903488453603,New York,NY00021
-Unknown Golf Course,,,,,,,,,,Yahoo,,,fence,,,,,,,113233.52835098893,40.886943790475165,-73.89030333459324,New York,NY00018
-Unknown Golf Course,,,,,,,,,,,,,fence,golf course outer relation,,,,,,101179.22231030681,40.90263311612527,-73.8848836491528,New York,NY00016
-Jacob Riis Park Golf Course,,,,,,,,,,,,,,,,,,,,89241.16162693984,40.56554909179121,-73.87952558600027,New York,NY00022
-Unknown Golf Course,,,,,,,,,,bing,,,,,,,,looks like a driving range,,54269.11119034358,40.88625769173539,-73.88154984603192,New York,NY00023
-Alley Pond Golf Center,,,,,,,,,,,,,,,,,,,,50106.98396933807,40.76514649441598,-73.74908712918563,New York,NY00025
-Flushing Meadows Golf Center,,,,,,,,,,,,,,,,,,,,48606.584331625665,40.751356197416136,-73.84010554003473,New York,NY00020
-Unknown Golf Course,,,,,,,,,,,,,,,,,,,,35368.3944303101,40.765355077218494,-73.74927491700522,New York,NY00026
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb48654cf3305bf84394d9c9cb32f4002096fb35d7d7de6f66ce57fe82db537b
+size 4212
