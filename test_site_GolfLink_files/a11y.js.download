@@ -1,0 +1,1 @@
+var a11y=setInterval(()=>{$&&($("button:empty").html("<span style='display:none'>Arrows<\/span>"),$("img:not([alt])").attr("alt","Image"),$(".dz-hidden-input:not([id])").each(function(n){$(this).attr("id","dz-hidden-input"+n);$(this).append("<label class='d-none' for='dz-hidden-input"+n+"'>Input<\/label>")}))},250);setTimeout(()=>{clearInterval(a11y)},6e4)

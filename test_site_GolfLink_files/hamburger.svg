@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D087225C-8405-4FE5-9399-9329F807F444@1x</title>
+    <g id="🥚-Design-tokens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Specifications/1---Tokens/Icons" transform="translate(-108.000000, -4375.000000)">
+            <g id="///-NAVIGATION" transform="translate(80.000000, 4120.000000)">
+                <g id="Menu" transform="translate(0.000000, 255.000000)">
+                    <g id="menu" transform="translate(28.000000, 0.000000)">
+                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M3,18 L21,18 L21,16 L3,16 L3,18 Z M3,13 L21,13 L21,11 L3,11 L3,13 Z M3,6 L3,8 L21,8 L21,6 L3,6 Z" id="Shape" fill="#000000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

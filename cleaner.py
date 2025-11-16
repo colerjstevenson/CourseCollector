@@ -3,6 +3,7 @@ import sys
 import json
 import pandas as pd
 import geopandas as gpd
+from postal_lookup import PostalCodeLookup
 
 #!/usr/bin/env python3
 """
@@ -22,11 +23,7 @@ try:
 except Exception:
     has_gpd = False
 
-<<<<<<< HEAD
 DATA_DIR = Path(__file__).resolve().parent / "data/usa"
-=======
-DATA_DIR = Path(__file__).resolve().parent / "data"
->>>>>>> a329d0fbbdca92b34927dec3d598df7243d4fe0b
 CSV_OUTPUT = DATA_DIR / "combined.csv"
 GEOJSON_OUTPUT = DATA_DIR / "combined.geojson"
 
@@ -152,7 +149,7 @@ def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
     # Normalize gcid and name to string
     combined["gcid"] = combined["gcid"].astype(str).replace({"nan": pd.NA})
     combined["name"] = combined["name"].astype(str).replace({"nan": pd.NA})
-
+    combined["postal"] = [PostalCodeLookup().get_postal_code(lat, lon) for lat, lon in zip(combined['lat'], combined['lon'])]
 
     # Ensure output dir exists
     out_path.parent.mkdir(parents=True, exist_ok=True)
