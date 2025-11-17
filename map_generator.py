@@ -687,8 +687,8 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
         // Merge: fill in missing fields from external data
         for (const [key, value] of Object.entries(externalMatch)) {
             if (key.startsWith('_')) continue;
-            const currentVal = rowData[key] || '';
-            if (!currentVal && value) {
+            const currentVal = rowData[key];
+            if (currentVal && value && currentVal == 'NOMATCH') {
                 updates[key] = value;
             }
         }
@@ -971,7 +971,7 @@ def main(csv_paths, output_file: str = "golf_courses_map.html", serve=True, port
         server_thread.start()
 
         map_url = f"http://localhost:{port}/{output_file}"
-        print(f"\n✓ Local server started on {map_url}")
+        print(f"\nLocal server started on {map_url}")
         print("The map will now open in your browser.")
         print("Edit features are now enabled! Close the server when done.")
 

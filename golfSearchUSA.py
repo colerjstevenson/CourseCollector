@@ -135,7 +135,7 @@ def run_states(state):
         state (str): The name of the US state to process
     """
     province = state
-    region = f"{province}, United States"
+    region = f"{province}, United States of America"
     abbrev = state_abbreviation(province)
     output_prefix = f"golf_courses_{province.lower().replace(' ', '_')}"
     gdf = None
