@@ -473,7 +473,7 @@ def main(csv_paths, output_file: str = "golf_courses_map.html", serve=True, port
 if __name__ == "__main__":
     # Default path to the CSV file
     csv_file_canada = Path(__file__).parent / "data" / "canada" / "Fully_Matched_Golf_Courses.csv"
-    csv_file_usa = Path(__file__).parent / "data" / "usa" / "combined.csv"
-    files = (str(csv_file_canada))
+    csv_file_usa = Path(__file__).parent / "data" / "usa" / "Fully_Matched_Golf_Courses.csv"
+    files = (str(csv_file_canada), str(csv_file_usa))
     
     main(files)
