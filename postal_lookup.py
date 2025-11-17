@@ -10,7 +10,7 @@ class PostalCodeLookup:
         
     
         
-    def greedy_match_by_postal(coords_csv, info_csv, output_csv):
+    def greedy_match_by_postal(self, coords_csv, info_csv, output_csv):
         # Load coordinates table (A)
         coords_by_postal = defaultdict(list)
         print("Loading coordinates...")
@@ -33,12 +33,34 @@ class PostalCodeLookup:
                 if postal in coords_by_postal:
                     info_by_postal[postal].append(row)
 
+        # extra_by_postal = defaultdict(list)
+        # print("Loading golf canada...")
+        # with open('data/canada/golf_canada_full.csv', newline="", encoding="utf-8") as f:
+        #     reader = csv.DictReader(f)
+        #     for row in reader:
+        #         postal = row["postal_code"].replace(" ", "").upper()
+        #         if postal in coords_by_postal:
+        #             entry = row
+        #             entry["AccessType"] = entry.get("Course Type", "NOMATCH")
+        #             entry["CourseName"] = "NOMATCH"
+        #             entry["NumHoles"] = entry.get("# of holes", "NOMATCH")
+        #             entry["Par"] = entry.get("Course Par", "NOMATCH")
+        #             entry["Address"] = entry.get("address", "NOMATCH")
+        #             entry["City"] = entry.pop("location", "NOMATCH").split(", ")[0] if ", " in entry.get("location", "") else entry.get("location", "NOMATCH")
+        #             entry["State"] = entry.pop("locations", "NOMATCH").split(", ")[1] if ", " in entry.get("locations", "") else "NOMATCH"
+        #             entry["Yardage"] = entry.pop("Total Yards", "NOMATCH")
+        #             entry["established"] = "NOMATCH"
+        #             entry["url"] = entry.pop("url", "NOMATCH")
+        #             entry["website"] = entry.pop("Website", "NOMATCH")
+
+        #             info_by_postal[postal].append(row)
+
         # Prepare output
         fieldnames = [
                     "gcid",
                     "latitude",
                     "longitude",
-                    "area_m2"
+                    "area_m2",
                     "AccessType",
                     "Address",
                     "City",
@@ -47,12 +69,12 @@ class PostalCodeLookup:
                     "NumHoles",
                     "Par",
                     "Phone",
-                    "State",
+                    "Region",
                     "Yardage",
-                    "Zip",
                     "established",
                     "url",
-                    "website"
+                    "website",
+                    "match_type"
                     ]
         print("Writing output...")
         with open(output_csv, "w", newline="", encoding="utf-8") as f_out:
@@ -63,7 +85,12 @@ class PostalCodeLookup:
                 print(f"Processing postal code: {postal}")
                 coords_list = coords_by_postal.get(postal, [])
                 info_list = info_by_postal.get(postal, [])
-
+                
+                # if len(info_list) == 0:
+                #     info_list = extra_by_postal.get(postal, [])
+                        
+                #     if len(info_list) > 0:
+                #         print(f"  Found {len(info_list)} additional info entries from golf canada for postal code {postal}.")
                 
 
                 lenA = len(coords_list)
@@ -73,7 +100,7 @@ class PostalCodeLookup:
                     print(f"  No coordinates found for postal code {postal}, skipping.")
                     continue
                 
-                if lenB == 0:
+                if lenB == 0 or postal == "NOMATCH":
                     print(f"  No info found for postal code {postal}, adding NOMATCH entries.")
                     info_list.append({
                         "CourseName": "NOMATCH",
@@ -89,22 +116,22 @@ class PostalCodeLookup:
                         "website": "NOMATCH"
                     })
                     lenB = 1
-                    match_type = "no_info_match"
+                    
 
                 n = max(lenA, lenB)
                 for i in range(n):
                     a = coords_list[i%(lenA)]  # wrap around if needed
                     b = info_list[i%(lenB)]  # wrap around if needed
                     
-                    if not match_type:
-                        if lenA == 1 and lenB == 1:
-                            match_type = "unique"
-                        elif lenA > lenB:
-                            match_type = "multiple_coords_more"
-                        elif lenB > lenA:
-                            match_type = "multiple_info_more"
-                        else:
-                            match_type = "multiple"
+                    
+                    if lenA == 1 and lenB == 1:
+                        match_type = "unique"
+                    elif lenA > lenB:
+                        match_type = "multiple_coords_more"
+                    elif lenB > lenA:
+                        match_type = "multiple_info_more"
+                    else:
+                        match_type = "multiple"
                     
                     writer.writerow({
                         "postal_code": postal,
@@ -112,7 +139,8 @@ class PostalCodeLookup:
                         "latitude": a["lat"],
                         "longitude": a["lon"],
                         "area_m2": a["area_m2"],
-                        "courseName": b["CourseName"],
+                        "AccessType": b.get("AccessType", "NOMATCH"),
+                        "CourseName": b["CourseName"],
                         "NumHoles": b["NumHoles"],
                         "Par": b["Par"],
                         "Phone": b["Phone"],
@@ -155,7 +183,7 @@ class PostalCodeLookup:
         print("Adding postal codes...")
         with open(input_csv, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
-            number_of_rows = sum(1 for _ in open(input_csv)) - 1  # subtract header
+            number_of_rows = sum(1 for _ in open(input_csv, newline="", encoding="utf-8")) - 1  # subtract header
             for i, row in enumerate(reader):
                 if "postal_code" in row and row["postal_code"].strip():
                     print(f"Skipping GCID: {row['gcid']} (already has postal code)")
@@ -182,7 +210,7 @@ class PostalCodeLookup:
 
 
 if __name__ == "__main__":
-    COUNTRY = "canada"
+    COUNTRY = "usa"
     # Example usage
     lookup = PostalCodeLookup()
     lookup.add_postal_codes(f"data/{COUNTRY}/combined.csv")
