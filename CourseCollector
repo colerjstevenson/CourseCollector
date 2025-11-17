@@ -1,0 +1,46 @@
+'''
+CourseCollector: A collection of scripts to scrape, clean, and compile golf course data from various sources.
+This is the main Script used to run all other scrapping, cleaning, and compiling to produce a final dataset.
+'''
+
+COUNTRY = "usa"
+
+import os
+import json
+import pandas as pd
+
+
+#import golflink and map data from csv
+
+class CourseCollector:
+    
+    def __init__(self):
+        self.golflink_data = self.load_golflink_data()
+        self.map_data = self.load_map_data()
+        
+    def execute(self):
+        #run courseCollector process
+        
+        for course in 
+        
+        
+        
+        
+    
+    def load_golflink_data(self):
+        with open(f"data/golfLinkData.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    
+    
+    #returns map data as dictionary
+    def load_map_data(self):
+        data_path = f"data/{COUNTRY}/combined.csv"
+        df = pd.read_csv(data_path)
+        return df.to_dict(orient="records")
+        
+    
+
+if __name__ == "__main__":
+    collector = CourseCollector()
+    collector.execute()

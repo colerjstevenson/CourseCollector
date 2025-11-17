@@ -6,10 +6,11 @@ Usage: python combiner.py
 """
 from pathlib import Path
 import json
+import re
 import pandas as pd
 
 
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent / "data/canada"
 OUT_CSV = DATA_DIR / "golf_canada_full.csv"
 OUT_JSON = DATA_DIR / "golf_canada_full.json"
 
@@ -46,6 +47,23 @@ def normalize_strings(df: pd.DataFrame) -> pd.DataFrame:
             s = " ".join(s.split())
             return s
         return v
+    
+    # split address column into google_link, address, and postal_code if present
+    if 'Address' in df.columns:
+        def split_address(addr):
+            if not isinstance(addr, str):
+                return pd.Series([pd.NA, pd.NA, pd.NA])
+            parts = [part.strip() for part in addr.split(' ')]
+            google_link = parts[0] if len(parts) > 0 else pd.NA
+            address = ' '.join(parts[1:]) if len(parts) > 2 else pd.NA
+            
+            postal_code_match = re.search(r'[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d', addr)
+            postal_code = postal_code_match.group(0) if postal_code_match else pd.NA
+            return pd.Series([google_link, address, postal_code])
+        
+        addr_split = df['Address'].apply(split_address)
+        addr_split.columns = ['google_link', 'address', 'postal_code']
+        df = pd.concat([df.drop(columns=['Address']), addr_split], axis=1)
 
     return df.applymap(_clean)
 
@@ -73,20 +91,20 @@ def drop_sparse_columns(df: pd.DataFrame, thresh: float = 0.2) -> pd.DataFrame:
 
 
 def main():
-    files = sorted(DATA_DIR.glob("**/*sitemap*"))
-    csvs = [p for p in files if p.suffix.lower() == ".csv"]
+    files = sorted(DATA_DIR.glob("**/golf_canada_data*"))
+    # csvs = [p for p in files if p.suffix.lower() == ".csv"]
     jsons = [p for p in files if p.suffix.lower() in (".json", ".ndjson")]  # include .json
 
-    print(f"Found {len(csvs)} CSV(s) and {len(jsons)} JSON file(s) matching 'golf_canada'.")
+    print(f"Found {len(jsons)} JSON file(s) matching 'golf_canada'.")
 
     dfs = []
-    for p in csvs:
-        try:
-            df = pd.read_csv(p, dtype=str, low_memory=False)
-            dfs.append(df)
-            print(f"Loaded CSV: {p} ({len(df)} rows)")
-        except Exception as e:
-            print(f"Failed to read CSV {p}: {e}")
+    # for p in csvs:
+    #     try:
+    #         df = pd.read_csv(p, dtype=str, low_memory=False)
+    #         dfs.append(df)
+    #         print(f"Loaded CSV: {p} ({len(df)} rows)")
+    #     except Exception as e:
+    #         print(f"Failed to read CSV {p}: {e}")
 
     for p in jsons:
         try:
@@ -145,3 +163,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

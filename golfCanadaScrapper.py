@@ -129,12 +129,12 @@ def scrape_all(sitemap_url):
 # Step 5 — save to JSON and CSV
 def save_results(data, json_path="courses.json", csv_path="courses.csv"):
     # JSON
-    with open(json_path, "w", encoding="utf-8") as f:
+    with open(json_path, "a", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     # CSV — collect all possible fieldnames
     fieldnames = sorted({k for d in data for k in d.keys()})
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+    with open(csv_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data)
@@ -145,4 +145,4 @@ if __name__ == "__main__":
     for SITEMAP_URL in SITEMAP_URLS:
         print(f"Processing sitemap: {SITEMAP_URL}")
         all_data = scrape_all(SITEMAP_URL)
-        save_results(all_data, json_path=f'data/golf_canada_data_{SITEMAP_URL.split("/")[-1].replace(".xml", "")}.json', csv_path=f'data/golf_canada_data_{SITEMAP_URL.split("/")[-1].replace(".xml", "")}.csv')
+        save_results(all_data, json_path=f'data/golf_canada_data_full.json', csv_path=f'data/golf_canada_data_full.csv')
