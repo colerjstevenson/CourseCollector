@@ -7,9 +7,86 @@ from collections import defaultdict
 class PostalCodeLookup:
     def __init__(self, user_agent="postal_code_lookup"):
         self.geolocator = Nominatim(user_agent=user_agent)
-        
     
+    def _match_by_course_name(self, coords_row, info_list):
+        """
+        Attempt to find a matching course in info_list by comparing course names.
+        Returns the best matching info row, or None if no match found.
         
+        Uses a similarity check based on:
+        1. Course name matching (primary) - ignoring common golf course words
+        2. State/Province matching (secondary)
+        3. City matching (tertiary)
+        """
+        if not info_list or "name" not in coords_row:
+            return None
+        
+        coords_name = coords_row.get("name", "").lower().strip()
+        if not coords_name:
+            return None
+        
+        coords_city = coords_row.get("city", "").lower().strip() if "city" in coords_row else ""
+        coords_state = coords_row.get("state", "").lower().strip() if "state" in coords_row else ""
+        
+        # Common words to exclude from name matching (they appear in most golf courses)
+        common_words = {"golf", "course", "club", "country", "cc", "public", "private", "municipal"}
+        
+        def filter_words(name_str):
+            """Remove common golf course words and return filtered word set."""
+            words = set(name_str.split())
+            return words - common_words
+        
+        coords_words = filter_words(coords_name)
+        
+        candidates = []
+        
+        for info_row in info_list:
+            info_name = info_row.get("CourseName", "").lower().strip()
+            if not info_name or info_name == "nomatch":
+                continue
+            
+            info_words = filter_words(info_name)
+            
+            # Skip if either has no meaningful words after filtering
+            if not coords_words or not info_words:
+                continue
+            
+            # Calculate name similarity: check if words match or if one is substring of other
+            matching_words = len(coords_words & info_words)
+            total_words = len(coords_words | info_words)
+            
+            name_score = matching_words / total_words if total_words > 0 else 0
+            
+            # Also check for substring matches (using original names)
+            if coords_name in info_name or info_name in coords_name:
+                name_score = max(name_score, 0.8)
+            
+            # Only consider rows with reasonable name confidence
+            if name_score >= 0.5:
+                # Calculate location bonus scores
+                location_bonus = 0
+                
+                info_city = info_row.get("City", "").lower().strip()
+                info_state = info_row.get("State", "").lower().strip()
+                
+                # State/Province match (most important)
+                if coords_state and info_state and (coords_state in info_state or info_state in coords_state):
+                    location_bonus += 0.3
+                
+                # City match (second most important)
+                if coords_city and info_city and (coords_city in info_city or info_city in coords_city):
+                    location_bonus += 0.2
+                
+                total_score = name_score + location_bonus
+                candidates.append((total_score, info_row))
+        
+        # Return the best match if any candidates found
+        if candidates:
+            candidates.sort(key=lambda x: x[0], reverse=True)
+            return candidates[0][1]
+        
+        return None
+    
     def greedy_match_by_postal(self, coords_csv, info_csv, output_csv):
         # Load coordinates table (A)
         coords_by_postal = defaultdict(list)
@@ -32,6 +109,13 @@ class PostalCodeLookup:
                 postal = row["Zip"].replace(" ", "").upper()
                 if postal in coords_by_postal:
                     info_by_postal[postal].append(row)
+        
+        # Also load all info data globally for name-based fallback matching
+        all_info_data = []
+        print("Loading all info data for fallback name matching...")
+        with open(info_csv, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            all_info_data = list(reader)
 
         # extra_by_postal = defaultdict(list)
         # print("Loading golf canada...")
@@ -123,6 +207,16 @@ class PostalCodeLookup:
                     a = coords_list[i%(lenA)]  # wrap around if needed
                     b = info_list[i%(lenB)]  # wrap around if needed
                     
+                    # Try to find a better match by course name if:
+                    # 1. There are multiple courses in coordinates but only one in info (ambiguous)
+                    # 2. There are no info matches for this postal code (name-based fallback)
+                    if (lenA > 1 and lenB == 1 and info_list[0].get("CourseName") != "NOMATCH") or \
+                       (lenB == 1 and info_list[0].get("CourseName") == "NOMATCH"):
+                        name_match = self._match_by_course_name(a, all_info_data)
+                        if name_match:
+                            b = name_match
+                            print(f"    Found name-based match for {a.get('name', 'Unknown')}: {b.get('CourseName', 'Unknown')}")
+                    
                     
                     if lenA == 1 and lenB == 1:
                         match_type = "unique"
@@ -210,7 +304,7 @@ class PostalCodeLookup:
 
 
 if __name__ == "__main__":
-    COUNTRY = "usa"
+    COUNTRY = "canada"
     # Example usage
     lookup = PostalCodeLookup()
     lookup.add_postal_codes(f"data/{COUNTRY}/combined.csv")

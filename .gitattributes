@@ -555,3 +555,4 @@ data/usa/combined.geojson filter=lfs diff=lfs merge=lfs -text
 /images/golf_courses_texas.png filter=lfs diff=lfs merge=lfs -text
 data/golfLinkData.csv filter=lfs diff=lfs merge=lfs -text
 data/golfLinkData.json filter=lfs diff=lfs merge=lfs -text
+/golf_courses_map.html filter=lfs diff=lfs merge=lfs -text

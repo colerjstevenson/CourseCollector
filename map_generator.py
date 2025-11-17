@@ -145,6 +145,29 @@ def load_multiple_csvs(csv_paths):
     return combined
 
 
+def load_external_data(csv_path: str = "data/golfLinkData.csv") -> pd.DataFrame:
+    """
+    Load external golf course data from golfLinkData.csv.
+    
+    Args:
+        csv_path: Path to external data CSV
+        
+    Returns:
+        DataFrame with external data, or empty DataFrame if file not found
+    """
+    repo_root = Path(__file__).parent.resolve()
+    full_path = repo_root / csv_path
+    
+    try:
+        if full_path.exists():
+            df = pd.read_csv(full_path, encoding='utf-8')
+            return df
+    except Exception as e:
+        print(f"Warning: Could not load external data from {full_path}: {e}")
+    
+    return pd.DataFrame()
+
+
 def save_row_data(csv_path: str, row_index: int, updated_data: dict):
     """
     Save updated row data back to the CSV file.
@@ -193,6 +216,34 @@ def get_unique_locations(df: pd.DataFrame) -> pd.DataFrame:
     return unique_locs
 
 
+def load_geojson_polygons(geojson_path: str) -> dict:
+    """
+    Load polygons from a GeoJSON file and index them by gcid.
+    
+    Args:
+        geojson_path: Path to the GeoJSON file
+        
+    Returns:
+        Dictionary mapping gcid -> geojson feature
+    """
+    geojson_map = {}
+    try:
+        with open(geojson_path, 'r', encoding='utf-8') as f:
+            geojson_data = json.load(f)
+        
+        if 'features' in geojson_data:
+            for feature in geojson_data['features']:
+                if 'properties' in feature and 'gcid' in feature['properties']:
+                    gcid = feature['properties']['gcid']
+                    geojson_map[gcid] = feature
+        
+        print(f"Loaded {len(geojson_map)} polygons from {geojson_path}")
+    except Exception as e:
+        print(f"Error loading GeoJSON: {e}")
+    
+    return geojson_map
+
+
 def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path: str = None, output_file: str = "golf_courses_map.html") -> folium.Map:
     """
     Create an interactive map of Canada with golf course pins.
@@ -221,6 +272,22 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
     
     # Add marker cluster for better visualization at various zoom levels
     marker_cluster = MarkerCluster().add_to(golf_map)
+    
+    # Load GeoJSON polygons for all countries
+    repo_root = Path(__file__).parent.resolve()
+    geojson_polygons = {}
+    
+    # Try loading Canada GeoJSON
+    canada_geojson = repo_root / "data" / "canada" / "combined.geojson"
+    if canada_geojson.exists():
+        geojson_polygons.update(load_geojson_polygons(str(canada_geojson)))
+    
+    # Try loading USA GeoJSON
+    usa_geojson = repo_root / "data" / "usa" / "combined.geojson"
+    if usa_geojson.exists():
+        geojson_polygons.update(load_geojson_polygons(str(usa_geojson)))
+    
+    print(f"Total polygons loaded: {len(geojson_polygons)}")
     
     # Add individual markers
     for idx, row in unique_locations.iterrows():
@@ -258,26 +325,95 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
         gcid = row.get('gcid', 'unknown')
         edit_button = f'''
         <br><br>
-        <button onclick="editRow({idx}, '{gcid}')" style="background-color:#4CAF50;color:white;padding:10px;border:none;border-radius:4px;cursor:pointer;">Edit Row</button>
+        <button onclick="editRow({idx}, '{gcid}')" style="background-color:#4CAF50;color:white;padding:10px;border:none;border-radius:4px;cursor:pointer;margin-right:5px;">Edit Row</button>
+        <button onclick="linkExternalData({idx}, '{gcid}')" style="background-color:#2196F3;color:white;padding:10px;border:none;border-radius:4px;cursor:pointer;">Link External Data</button>
         '''
 
         popup_text = "<br>".join(popup_parts) + edit_button
         
+        if row.get('url', 'NOMATCH') == "NOMATCH":
+            marker_color = 'red'
+        else:
+            marker_color = 'blue'
+
         # Create marker
-        folium.Marker(
+        marker = folium.Marker(
             location=[lat, lon],
             popup=folium.Popup(popup_text, max_width=400),
             tooltip=row.get('CourseName', 'Golf Course'),
-            icon=folium.Icon(color='blue', icon='info-sign')
-        ).add_to(marker_cluster)
+            icon=folium.Icon(color=marker_color, icon='info-sign')
+        )
+        
+        # Store gcid as marker option for hover detection
+        marker.options['gcid'] = gcid
+        marker.add_to(marker_cluster)
     
     # Build the rowDataMap from unique_locations (keys are unique_locations indexes)
     row_data_map = {str(idx): row.to_dict() for idx, row in unique_locations.iterrows()}
+    
+    # Build a map of gcid to polygon GeoJSON for JavaScript access
+    polygon_geojson_map = {}
+    for gcid, feature in geojson_polygons.items():
+        polygon_geojson_map[gcid] = feature
+
+    # Load external data for search functionality
+    repo_root = Path(__file__).parent.resolve()
+    external_csv = repo_root / "data" / "golfLinkData.csv"
+    external_data = load_external_data(str(external_csv)) if external_csv.exists() else pd.DataFrame()
+    external_json = external_data.to_json(orient='records', default_handler=str) if not external_data.empty else '[]'
 
     # Make sure source paths in row_data_map are relative (already set in combined df)
     # Inject custom JavaScript for edit functionality
-    edit_js = '''
+    edit_js = r'''
     <script>
+    // Store active polygon layers for cleanup
+    let activePolygonLayers = [];
+    
+    function showCoursePolygon(gcid) {
+        // Clear existing polygons
+        activePolygonLayers.forEach(layer => {
+            window.map.removeLayer(layer);
+        });
+        activePolygonLayers = [];
+        
+        // Get polygon data
+        const geojsonPolygons = window.polygonGeojsonMap || {};
+        if (!geojsonPolygons[gcid]) {
+            return;
+        }
+        
+        const feature = geojsonPolygons[gcid];
+        
+        // Add the polygon to the map with styling
+        const geoJsonLayer = L.geoJSON(feature, {
+            style: {
+                color: '#FF6B6B',
+                weight: 3,
+                opacity: 0.8,
+                fillOpacity: 0.3,
+                fillColor: '#FF6B6B'
+            },
+            onEachFeature: (feature, layer) => {
+                activePolygonLayers.push(layer);
+            }
+        });
+        
+        geoJsonLayer.addTo(window.map);
+        activePolygonLayers.push(geoJsonLayer);
+        
+        // Optionally fit map to polygon bounds
+        if (geoJsonLayer.getBounds) {
+            window.map.fitBounds(geoJsonLayer.getBounds(), { padding: [50, 50] });
+        }
+    }
+    
+    function hideCoursePolygon() {
+        activePolygonLayers.forEach(layer => {
+            window.map.removeLayer(layer);
+        });
+        activePolygonLayers = [];
+    }
+    
     function editRow(rowIdx, gcid) {
         const rowData = window.rowDataMap[rowIdx];
         let formHtml = '<div style="max-height: 500px; overflow-y: auto;">';
@@ -375,6 +511,216 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
             alert('Error: ' + error);
         });
     }
+    
+    function linkExternalData(rowIdx, gcid) {
+        const rowData = window.rowDataMap[rowIdx];
+        const externalData = window.externalData || [];
+        
+        if (!externalData || externalData.length === 0) {
+            alert('No external data available.');
+            return;
+        }
+        
+        // Create search modal
+        const modal = document.createElement('div');
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 10000; overflow-y: auto;';
+        
+        const content = document.createElement('div');
+        content.style.cssText = 'background: white; padding: 20px; border-radius: 8px; max-width: 800px; margin: 20px auto;';
+        
+        const title = document.createElement('h2');
+        title.textContent = `Link External Data - Search`;
+        content.appendChild(title);
+        
+        // Search input
+        const searchLabel = document.createElement('label');
+        searchLabel.textContent = 'Search by course name, city, or state:';
+        searchLabel.style.cssText = 'display: block; margin-bottom: 8px; font-weight: bold;';
+        content.appendChild(searchLabel);
+        
+        const searchInput = document.createElement('input');
+        searchInput.type = 'text';
+        searchInput.placeholder = 'e.g., "Pebble Beach", "San Diego", "CA"';
+        searchInput.style.cssText = 'width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; font-size: 14px;';
+        content.appendChild(searchInput);
+        
+        // Results container
+        const resultsDiv = document.createElement('div');
+        resultsDiv.style.cssText = 'max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; border-radius: 4px; background: #f9f9f9;';
+        resultsDiv.id = 'searchResults';
+        content.appendChild(resultsDiv);
+        
+        let selectedMatch = null;
+        
+        // Function to filter and display results
+        const performSearch = () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            resultsDiv.innerHTML = '';
+            
+            if (!searchTerm) {
+                resultsDiv.innerHTML = '<div style="color: #999; text-align: center; padding: 20px;">Enter a search term to find courses</div>';
+                selectedMatch = null;
+                return;
+            }
+            
+            const matches = externalData.filter(ext => {
+                const extName = (ext['CourseName'] || '').toLowerCase();
+                const extCity = (ext['City'] || '').toLowerCase();
+                const extState = (ext['State'] || '').toLowerCase();
+                return extName.includes(searchTerm) || extCity.includes(searchTerm) || extState.includes(searchTerm);
+            });
+            
+            if (matches.length === 0) {
+                resultsDiv.innerHTML = `<div style="color: #999; text-align: center; padding: 20px;">No matches found for "${searchTerm}"</div>`;
+                selectedMatch = null;
+                return;
+            }
+            
+            // Display matches
+            // Display matches
+            matches.forEach((match, midx) => {
+                const matchItem = document.createElement('div');
+                matchItem.style.cssText = `padding: 10px; margin-bottom: 10px; border: 2px solid ${selectedMatch === match ? '#4CAF50' : '#ccc'}; border-radius: 4px; cursor: pointer; background: ${selectedMatch === match ? '#f0fff0' : 'white'};`;
+                
+                const matchInfo = document.createElement('div');
+                matchInfo.innerHTML = `
+                    <strong>${match['CourseName'] || 'N/A'}</strong><br>
+                    City: ${match['City'] || 'N/A'}, State: ${match['State'] || 'N/A'}<br>
+                    Holes: ${match['NumHoles'] || 'N/A'} | Par: ${match['Par'] || 'N/A'} | Yardage: ${match['Yardage'] || 'N/A'}
+                `;
+                
+                matchItem.appendChild(matchInfo);
+                matchItem.onclick = () => {
+                    // Update selection styling
+                    Array.from(resultsDiv.children).forEach(child => {
+                        child.style.borderColor = '#ccc';
+                        child.style.background = 'white';
+                    });
+                    matchItem.style.borderColor = '#4CAF50';
+                    matchItem.style.background = '#f0fff0';
+                    selectedMatch = match;
+                    updatePreview();
+                };
+                
+                resultsDiv.appendChild(matchItem);
+            });
+        };
+        
+        // Show field merge preview
+        const previewTitle = document.createElement('h3');
+        previewTitle.textContent = 'Fields to Merge (fill missing data)';
+        content.appendChild(previewTitle);
+        
+        const previewDiv = document.createElement('div');
+        previewDiv.style.cssText = 'max-height: 250px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 4px; margin-bottom: 15px; border: 1px solid #ddd;';
+        previewDiv.id = 'mergePreview';
+        content.appendChild(previewDiv);
+        
+        // Update preview on selection
+        const updatePreview = () => {
+            previewDiv.innerHTML = '';
+            if (!selectedMatch) {
+                previewDiv.innerHTML = '<div style="color: #999;">Select a match to preview fields.</div>';
+                return;
+            }
+            for (const [key, value] of Object.entries(selectedMatch)) {
+                if (key.startsWith('_')) continue;
+                const currentVal = rowData[key] || '';
+                const externalVal = value || '';
+                
+                // Only show fields where external has data but current doesn't
+                if (externalVal && !currentVal) {
+                    const fieldDiv = document.createElement('div');
+                    fieldDiv.style.cssText = 'margin-bottom: 8px; padding: 8px; background: white; border-left: 3px solid #2196F3; border-radius: 2px;';
+                    fieldDiv.innerHTML = `<strong>${key}:</strong> ${externalVal}`;
+                    previewDiv.appendChild(fieldDiv);
+                }
+            }
+            if (previewDiv.children.length === 0) {
+                previewDiv.innerHTML = '<div style="color: #999;">No missing fields to fill.</div>';
+            }
+        };
+        
+        // Set up search listener
+        searchInput.oninput = performSearch;
+        searchInput.onkeyup = performSearch;
+        
+        // Initialize with empty state
+        updatePreview();
+        
+        // Button container
+        const buttonContainer = document.createElement('div');
+        buttonContainer.style.cssText = 'display: flex; gap: 10px; justify-content: flex-end;';
+        
+        const mergeBtn = document.createElement('button');
+        mergeBtn.textContent = 'Merge Data';
+        mergeBtn.style.cssText = 'background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;';
+        mergeBtn.onclick = () => {
+            if (!selectedMatch) {
+                alert('Please select a match first.');
+                return;
+            }
+            mergeExternalRow(rowIdx, selectedMatch, modal);
+        };
+        
+        const cancelBtn = document.createElement('button');
+        cancelBtn.textContent = 'Cancel';
+        cancelBtn.style.cssText = 'background-color: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;';
+        cancelBtn.onclick = () => modal.remove();
+        
+        buttonContainer.appendChild(mergeBtn);
+        buttonContainer.appendChild(cancelBtn);
+        content.appendChild(buttonContainer);
+        
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        
+        // Focus search input and trigger initial load of first 10 results
+        searchInput.focus();
+        selectedMatch = null;
+    }
+    
+    function mergeExternalRow(rowIdx, externalMatch, modal) {
+        const rowData = window.rowDataMap[rowIdx];
+        const updates = {};
+        
+        // Merge: fill in missing fields from external data
+        for (const [key, value] of Object.entries(externalMatch)) {
+            if (key.startsWith('_')) continue;
+            const currentVal = rowData[key] || '';
+            if (!currentVal && value) {
+                updates[key] = value;
+            }
+        }
+        
+        if (Object.keys(updates).length === 0) {
+            alert('No new data to merge.');
+            return;
+        }
+        
+        // Include source file and source index
+        const source_file = rowData['_source_file'];
+        const source_index = rowData['_source_index'];
+        
+        fetch('/api/update_row', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({rowIdx: rowIdx, updates: updates, source_file: source_file, source_index: source_index})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(`Merged ${Object.keys(updates).length} field(s) successfully!`);
+                modal.remove();
+                location.reload();
+            } else {
+                alert('Error merging data: ' + data.error);
+            }
+        })
+        .catch(error => {
+            alert('Error: ' + error);
+        });
+    }
     </script>
     '''
     
@@ -387,9 +733,182 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
 
     # Store row data as JavaScript object (from unique_locations)
     row_data_script = f'<script>window.rowDataMap = {json.dumps(row_data_map, default=str)};</script>'
+    external_data_script = f'<script>window.externalData = {external_json};</script>'
+    
+    # Store polygon GeoJSON data
+    polygon_data_script = f'<script>window.polygonGeojsonMap = {json.dumps(polygon_geojson_map, default=str)};</script>'
+    
+    # Add hover event listener initialization script and search UI
+    hover_script = r'''
+    <script>
+    // Initialize hover listeners after page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        // Determine Leaflet map object and store on window.map
+        try {
+            if (typeof map !== 'undefined' && map) {
+                window.map = map;
+            } else {
+                // find first global that looks like a Leaflet map (has setView & eachLayer)
+                for (const k in window) {
+                    try {
+                        const v = window[k];
+                        if (v && typeof v.setView === 'function' && typeof v.eachLayer === 'function') {
+                            window.map = v;
+                            console.log('Detected Leaflet map in window.' + k);
+                            break;
+                        }
+                    } catch (e) {}
+                }
+            }
+        } catch (e) { console.error('Error finding map object', e); }
+        
+        // Find all markers and attach hover listeners
+        if (window.L && window.L.marker) {
+            // For each layer in the map, attach hover events to any markers found (recursively handle clusters/groups)
+            function attachToLayer(l) {
+                try {
+                    if (l instanceof L.Marker) {
+                        const gcid = l.options && l.options.gcid ? l.options.gcid : null;
+                        if (gcid) {
+                            l.on('mouseover', function() { showCoursePolygon(gcid); });
+                            l.on('mouseout', function() { hideCoursePolygon(); });
+                        } else {
+                            // fallback: try to extract gcid from popup HTML
+                            l.on('mouseover', function() {
+                                try {
+                                    const popupHtml = l.getPopup() && l.getPopup().getContent ? l.getPopup().getContent() : '';
+                                    const match = popupHtml.match(/editRow\((\d+),\s*'([^']+)'\)/);
+                                    if (match) {
+                                        showCoursePolygon(match[2]);
+                                    }
+                                } catch (e) {}
+                            });
+                            l.on('mouseout', function() { hideCoursePolygon(); });
+                        }
+                    } else if (l && l._layers) {
+                        // LayerGroup or MarkerCluster: iterate inner layers
+                        Object.values(l._layers).forEach(function(inner) { attachToLayer(inner); });
+                    }
+                } catch (e) {}
+            }
+
+            map.eachLayer(function(layer) { attachToLayer(layer); });
+        }
+    });
+
+    // Simple search box UI for jumping to a GCID
+    function createGcidSearchBox() {
+        const container = document.createElement('div');
+        container.style.cssText = 'position: absolute; top: 10px; left: 10px; z-index:10000; background: white; padding: 8px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); font-family: Arial, sans-serif;';
+        container.id = 'gcid-search-box';
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Enter GCID (e.g. AA00216)';
+        input.style.cssText = 'width: 180px; padding: 6px; margin-right: 6px; border: 1px solid #ccc; border-radius: 4px;';
+        input.id = 'gcidInput';
+
+        const btn = document.createElement('button');
+        btn.textContent = 'Go';
+        btn.style.cssText = 'padding: 6px 10px; background:#2196F3; color:white; border:none; border-radius:4px; cursor:pointer;';
+        btn.onclick = function() {
+            const val = document.getElementById('gcidInput').value.trim();
+            if (val) gotoGCID(val);
+        };
+
+        container.appendChild(input);
+        container.appendChild(btn);
+        document.body.appendChild(container);
+    }
+
+    function gotoGCID(gcid) {
+        try {
+            console.log('gotoGCID called for', gcid);
+            // Search rowDataMap for matching gcid
+            const rows = window.rowDataMap || {};
+            let found = null;
+            for (const [key, row] of Object.entries(rows)) {
+                if (row.gcid && String(row.gcid).toLowerCase() === String(gcid).toLowerCase()) {
+                    found = row;
+                    break;
+                }
+            }
+            if (!found) {
+                alert('GCID not found: ' + gcid);
+                return;
+            }
+
+            const lat = parseFloat(found.latitude);
+            const lon = parseFloat(found.longitude);
+            if (isNaN(lat) || isNaN(lon)) {
+                alert('No coordinates for GCID: ' + gcid);
+                return;
+            }
+
+            // Ensure map reference
+            if (!window.map) {
+                console.warn('window.map not set; attempting to detect map');
+                for (const k in window) {
+                    try {
+                        const v = window[k];
+                        if (v && typeof v.setView === 'function' && typeof v.eachLayer === 'function') {
+                            window.map = v;
+                            console.log('Detected Leaflet map in window.' + k);
+                            break;
+                        }
+                    } catch (e) {}
+                }
+            }
+
+            // Pan to location and open popup for the marker at this lat/lon
+            window.map.setView([lat, lon], Math.max(window.map.getZoom(), 12));
+
+            // Find marker by location (tolerance to floating point)
+            let matchedMarker = null;
+            window.map.eachLayer(function(layer) {
+                try {
+                    if (layer instanceof L.Marker) {
+                        const pos = layer.getLatLng();
+                        if (Math.abs(pos.lat - lat) < 1e-6 && Math.abs(pos.lng - lon) < 1e-6) {
+                            matchedMarker = layer;
+                        }
+                    } else if (layer && layer._layers) {
+                        // check internal markers
+                        Object.values(layer._layers).forEach(function(inner) {
+                            try {
+                                if (inner instanceof L.Marker) {
+                                    const pos = inner.getLatLng();
+                                    if (Math.abs(pos.lat - lat) < 1e-6 && Math.abs(pos.lng - lon) < 1e-6) {
+                                        matchedMarker = inner;
+                                    }
+                                }
+                            } catch (e) {}
+                        });
+                    }
+                } catch (e) {}
+            });
+
+            if (matchedMarker) {
+                matchedMarker.openPopup();
+            } else {
+                console.warn('No marker found exactly at', lat, lon);
+            }
+
+            // Show polygon if available
+            showCoursePolygon(gcid);
+        } catch (err) {
+            console.error('Error in gotoGCID', err);
+            alert('Error locating GCID: ' + err);
+        }
+    }
+
+    // Create the search box once the DOM is ready
+    document.addEventListener('DOMContentLoaded', function() { createGcidSearchBox(); });
+    </script>
+    '''
 
     # Inject scripts before closing body tag
-    html_content = html_content.replace('</body>', f'{row_data_script}\n{edit_js}\n</body>')
+    html_content = html_content.replace('</body>', f'{row_data_script}\n{external_data_script}\n{polygon_data_script}\n{edit_js}\n{hover_script}\n</body>')
 
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html_content)
