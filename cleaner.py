@@ -100,7 +100,7 @@ def drop_sparse_columns(df, thresh=0.2):
 
 
 def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
-    csv_files = list(Path(data_dir).glob("**/*.csv"))
+    csv_files = list(Path(data_dir).glob("**/golf_courses_*.csv"))
     if not csv_files:
         print("No CSV files found in", data_dir)
         return
@@ -135,8 +135,9 @@ def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
             df["name"] = pd.NA
 
         # Move gcid and name to front
-        cols_now = [c for c in df.columns if c not in ("gcid", "name", "province", 'lat', 'lon', 'area_m2')]
-        new_order = ["gcid", "name", "province", 'lat', 'lon', 'area_m2'] + sorted(cols_now)
+        cols_now = [c for c in df.columns if c in ("gcid", "name", "province", 'lat', 'lon', 'area_m2')]
+        new_order = ["gcid", "name", "province", 'lat', 'lon', 'area_m2']
+        df = df.loc[:, ~df.columns.duplicated()]
         df = df.reindex(columns=new_order)
 
         dfs.append(df)
@@ -149,7 +150,7 @@ def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
     # Normalize gcid and name to string
     combined["gcid"] = combined["gcid"].astype(str).replace({"nan": pd.NA})
     combined["name"] = combined["name"].astype(str).replace({"nan": pd.NA})
-    combined["postal"] = [PostalCodeLookup().get_postal_code(lat, lon) for lat, lon in zip(combined['lat'], combined['lon'])]
+    
 
     # Ensure output dir exists
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -170,7 +171,7 @@ def read_geojson_features(path):
 
 
 def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
-    geo_files = list(Path(data_dir).glob("**/*.geojson")) + list(Path(data_dir).glob("**/*.json"))
+    geo_files = list(Path(data_dir).glob("**/golf_courses_*.geojson")) + list(Path(data_dir).glob("**/golf_courses_*.json"))
     geo_files = [p for p in geo_files if p.is_file()]
     if not geo_files:
         print("No GeoJSON files found in", data_dir)
@@ -213,18 +214,32 @@ def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
                 gdf = gdf.rename(columns={name_col: "name"})
             elif not name_col:
                 gdf["name"] = pd.NA
-            # reorder: gcid, name, others..., geometry at end
-            cols_now = [c for c in gdf.columns if c not in ("gcid", "name")]
-            # ensure geometry remains geometry column
-            if geom_name and geom_name in cols_now:
-                cols_now.remove(geom_name)
-                new_order = ["gcid", "name"] + cols_now + [geom_name]
-            else:
-                new_order = ["gcid", "name"] + cols_now
-            # some columns may be missing - reindex safely
-            for c in new_order:
-                if c not in gdf.columns:
-                    gdf[c] = pd.NA
+           # Force gcid and name to exist
+            if "gcid" not in gdf.columns:
+                gdf["gcid"] = pd.NA
+            if "name" not in gdf.columns:
+                gdf["name"] = pd.NA
+
+            # geometry name
+            geom_name = gdf.geometry.name if hasattr(gdf, "geometry") else None
+
+            # Build clean new_order
+            new_order = ["gcid", "name"]
+
+            # # Add all other columns except geometry
+            # for c in gdf.columns:
+            #     if c not in new_order and c != geom_name:
+            #         new_order.append(c)
+
+            # Add geometry last
+            if geom_name:
+                new_order.append(geom_name)
+
+            # Remove any duplicates in case upstream added some
+            new_order = list(dict.fromkeys(new_order))
+
+            # reindex safely
+            gdf = gdf.loc[:, ~gdf.columns.duplicated()]
             gdf = gdf.reindex(columns=new_order)
             gdfs.append(gdf)
 

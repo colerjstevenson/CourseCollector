@@ -3,6 +3,7 @@ from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
 
 import csv
 from collections import defaultdict
+import os
 
 class PostalCodeLookup:
     def __init__(self, user_agent="postal_code_lookup"):
@@ -94,7 +95,29 @@ class PostalCodeLookup:
         with open(coords_csv, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                postal = row["postal_code"].replace(" ", "").upper()
+                # Load postal codes mapping once (from a postal_codes.csv located alongside coords_csv)
+                if 'postal_map' not in locals():
+                    postal_map = {}
+                    postal_file = os.path.join(os.path.dirname(coords_csv), "postal_codes.csv")
+                    try:
+                        with open(postal_file, newline="", encoding="utf-8") as pf:
+                            preader = csv.DictReader(pf)
+                            for prow in preader:
+                                key = prow.get("gcid")
+                                val = prow.get("postal_code", "")
+                                if key and val:
+                                    postal_map[key] = val.replace(" ", "").upper()
+                    except Exception:
+                        # If postal file can't be read, keep postal_map empty and fallback to NOMATCH
+                        postal_map = {}
+
+                gcid = row.get("gcid")
+                # Prefer lookup from postal_map by gcid; fall back to any postal field in the row if present
+                postal = None
+                if gcid:
+                    postal = postal_map.get(gcid)
+                if not postal:
+                    postal = (row.get("postal_code") or row.get("postal") or "").replace(" ", "").upper() if (row.get("postal_code") or row.get("postal")) else None
                 if postal:
                     coords_by_postal[postal].append(row)
                 else:
@@ -271,41 +294,59 @@ class PostalCodeLookup:
         postal_code = address.get("postcode")
         return postal_code
     
-    def add_postal_codes(self, input_csv):
-        # Load input CSV and add postal codes
-        output_rows = []
-        print("Adding postal codes...")
-        with open(input_csv, newline="", encoding="utf-8") as f:
+    def add_postal_codes(self, coords_csv, postal_codes_csv):
+        """
+        Ensure every GCID in coords_csv has a postal code in postal_codes_csv.
+        If missing, look up postal code and append to postal_codes_csv.
+        """
+        print("Loading coordinates...")
+        coords = {}
+        with open(coords_csv, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
-            number_of_rows = sum(1 for _ in open(input_csv, newline="", encoding="utf-8")) - 1  # subtract header
-            for i, row in enumerate(reader):
-                if "postal_code" in row and row["postal_code"].strip():
-                    print(f"Skipping GCID: {row['gcid']} (already has postal code)")
-                    output_rows.append(row)
-                    continue
-                print(f"[{i}/{number_of_rows}] Getting Postal Code: {row['gcid']}: {row['name']}")
-                lat = float(row["lat"])
-                lon = float(row["lon"])
-                postal_code = self.get_postal_code(lat, lon)
-                row["postal_code"] = postal_code if postal_code else "NOMATCH"
-                output_rows.append(row)
-                print(f"  Found postal code: {row['postal_code']}")
+            for row in reader:
+                gcid = row["gcid"]
+                coords[gcid] = (row.get("lat"), row.get("lon"), row)
 
-        # Write output CSV
-        output_csv = input_csv
-        fieldnames = list(output_rows[0].keys())
-        print(f"Writing output to {output_csv}...")
-        with open(output_csv, "w", newline="", encoding="utf-8") as f_out:
-            writer = csv.DictWriter(f_out, fieldnames=fieldnames)
-            writer.writeheader()
-            for row in output_rows:
-                writer.writerow(row)
-        print("postal codes added.")
+        print("Loading existing postal codes...")
+        postal_codes = {}
+        with open(postal_codes_csv, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                postal_codes[row["gcid"]] = row["postal_code"]
+
+        missing_gcids = [gcid for gcid in coords if gcid not in postal_codes]
+        print(f"Found {len(missing_gcids)} GCIDs missing postal codes.")
+
+        new_rows = []
+        for i, gcid in enumerate(missing_gcids):
+            lat, lon, row = coords[gcid]
+            print(f"[{i+1}/{len(missing_gcids)}] Looking up postal code for GCID: {gcid} ({row.get('name', '')})")
+            try:
+                lat_f = float(lat) if lat else None
+                lon_f = float(lon) if lon else None
+            except Exception:
+                lat_f = lon_f = None
+            postal_code = self.get_postal_code(lat_f, lon_f) if lat_f and lon_f else "NOMATCH"
+            print(f"  Found postal code: {postal_code}")
+            new_rows.append({"gcid": gcid, "postal_code": postal_code})
+
+        # Append new postal codes to the file
+        if new_rows:
+            print(f"Appending {len(new_rows)} new postal codes to {postal_codes_csv}...")
+            with open(postal_codes_csv, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=["gcid", "postal_code"])
+                # Only write header if file is empty
+                if f.tell() == 0:
+                    writer.writeheader()
+                for row in new_rows:
+                    writer.writerow(row)
+        else:
+            print("No missing GCIDs. Postal codes file is up to date.")
 
 
 if __name__ == "__main__":
-    COUNTRY = "canada"
+    COUNTRY = "usa"
     # Example usage
     lookup = PostalCodeLookup()
-    lookup.add_postal_codes(f"data/{COUNTRY}/combined.csv")
+    lookup.add_postal_codes(f"data/{COUNTRY}/combined.csv", f"data/{COUNTRY}/postal_codes.csv")
     lookup.greedy_match_by_postal(f"data/{COUNTRY}/combined.csv", "data/golfLinkData.csv", f"data/{COUNTRY}/Fully_Matched_Golf_Courses.csv")
