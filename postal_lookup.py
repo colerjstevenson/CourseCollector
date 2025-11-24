@@ -345,7 +345,7 @@ class PostalCodeLookup:
 
 
 if __name__ == "__main__":
-    COUNTRY = "canada"
+    COUNTRY = "world"
     # Example usage
     lookup = PostalCodeLookup()
     lookup.add_postal_codes(f"data/{COUNTRY}/combined.csv", f"data/{COUNTRY}/postal_codes.csv")
