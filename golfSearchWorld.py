@@ -123,7 +123,20 @@ def state_abbreviation(state_name):
         "wisconsin": "WI",
         "wyoming": "WY",
         "mexico": "MX",
-        "united kingdom": "UK"
+        "united kingdom": "UK",
+        "france métropolitaine": "FR",
+        "germany": "DE",
+        "spain": "ES",
+        "ireland": "IE",
+        "costa rica": "CR",
+        "qatar": "QA",
+        "south korea": "KR",
+        "south africa": "ZA",
+        "denmark": "DK",
+        "sweden": "SE",
+        "belgium": "BE",
+        "dominican republic": "DO",
+        "united arab emirates": "AE"
     }
 
     key = state_name.strip().lower()

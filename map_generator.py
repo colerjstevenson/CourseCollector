@@ -1,8 +1,8 @@
 """
-Golf Course Map Generator for Canada
+Golf Course Map Generator
 
 This module reads golf course data from a CSV file and generates an interactive
-map of Canada with pins at each unique latitude/longitude location.
+map with pins at each unique latitude/longitude location.
 """
 
 import pandas as pd
@@ -121,6 +121,13 @@ def load_multiple_csvs(csv_paths):
     for path in csv_paths:
         p = Path(path)
         df = pd.read_csv(p)
+        
+        # Standardize column names - handle both 'lat'/'lon' and 'latitude'/'longitude'
+        if 'lat' in df.columns and 'latitude' not in df.columns:
+            df['latitude'] = df['lat']
+        if 'lon' in df.columns and 'longitude' not in df.columns:
+            df['longitude'] = df['lon']
+        
         # Ensure tracking column exists
         if 'manually_edited' not in df.columns:
             df['manually_edited'] = False
@@ -203,6 +210,13 @@ def get_unique_locations(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         DataFrame with unique locations and associated course info
     """
+    # Standardize column names - handle both 'lat'/'lon' and 'latitude'/'longitude'
+    df = df.copy()
+    if 'lat' in df.columns and 'latitude' not in df.columns:
+        df['latitude'] = df['lat']
+    if 'lon' in df.columns and 'longitude' not in df.columns:
+        df['longitude'] = df['lon']
+    
     # Remove rows with missing latitude or longitude
     df_clean = df.dropna(subset=['latitude', 'longitude'])
     
@@ -244,9 +258,9 @@ def load_geojson_polygons(geojson_path: str) -> dict:
     return geojson_map
 
 
-def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path: str = None, output_file: str = "golf_courses_map.html") -> folium.Map:
+def create_golf_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path: str = None, output_file: str = "golf_courses_map.html") -> folium.Map:
     """
-    Create an interactive map of Canada with golf course pins.
+    Create an interactive map with golf course pins.
     
     Args:
         df: Full DataFrame with all data (needed for row lookups)
@@ -257,7 +271,7 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
     Returns:
         Folium map object
     """
-    # Calculate center of map (rough center of Canada)
+    # Calculate center of map based on the data
     center_lat = unique_locations['latitude'].mean()
     center_lon = unique_locations['longitude'].mean()
     
@@ -273,19 +287,17 @@ def create_canada_map(df: pd.DataFrame, unique_locations: pd.DataFrame, csv_path
     # Add marker cluster for better visualization at various zoom levels
     marker_cluster = MarkerCluster().add_to(golf_map)
     
-    # Load GeoJSON polygons for all countries
+    # Load GeoJSON polygons for all available regions
     repo_root = Path(__file__).parent.resolve()
     geojson_polygons = {}
     
-    # Try loading Canada GeoJSON
-    canada_geojson = repo_root / "data" / "canada" / "combined.geojson"
-    if canada_geojson.exists():
-        geojson_polygons.update(load_geojson_polygons(str(canada_geojson)))
-    
-    # Try loading USA GeoJSON
-    usa_geojson = repo_root / "data" / "usa" / "combined.geojson"
-    if usa_geojson.exists():
-        geojson_polygons.update(load_geojson_polygons(str(usa_geojson)))
+    # Dynamically find all combined.geojson files in data subdirectories
+    data_dir = repo_root / "data"
+    if data_dir.exists():
+        for geojson_file in data_dir.glob("*/combined.geojson"):
+            region_geojson = load_geojson_polygons(str(geojson_file))
+            geojson_polygons.update(region_geojson)
+            print(f"Loaded polygons from {geojson_file.parent.name}: {len(region_geojson)} polygons")
     
     print(f"Total polygons loaded: {len(geojson_polygons)}")
     
@@ -955,7 +967,7 @@ def main(csv_paths, output_file: str = "golf_courses_map.html", serve=True, port
     # Save the HTML one directory above the `images/` folder (i.e., repo root next to `images/`)
     repo_root = Path(__file__).parent.resolve()
     map_file_path = repo_root / output_file
-    create_canada_map(df, unique_locations, None, str(map_file_path))
+    create_golf_map(df, unique_locations, None, str(map_file_path))
 
     if serve:
         # Serve from repository root so the HTML can reference the `images/` folder as a sibling
@@ -993,6 +1005,9 @@ if __name__ == "__main__":
     # Default path to the CSV file
     csv_file_canada = Path(__file__).parent / "data" / "canada" / "Fully_Matched_Golf_Courses.csv"
     csv_file_usa = Path(__file__).parent / "data" / "usa" / "Fully_Matched_Golf_Courses.csv"
-    files = (str(csv_file_canada), str(csv_file_usa))
+    csv_file_mexico = Path(__file__).parent / "data" / "mexico" / "Fully_Matched_Golf_Courses.csv"
+    csv_file_world = Path(__file__).parent / "data" / "world" / "combined.csv"
+
+    files = (str(csv_file_canada), str(csv_file_usa), str(csv_file_mexico), str(csv_file_world))
     
     main(files)

@@ -4,6 +4,20 @@ import json
 import pandas as pd
 import geopandas as gpd
 from postal_lookup import PostalCodeLookup
+import re
+try:
+    from deep_translator import GoogleTranslator
+    has_translator = True
+except ImportError:
+    try:
+        from googletrans import Translator
+        has_translator = True
+        use_deep_translator = False
+    except ImportError:
+        has_translator = False
+        print("Warning: Neither deep_translator nor googletrans available. Translation will be skipped.")
+else:
+    use_deep_translator = True
 
 #!/usr/bin/env python3
 """
@@ -11,6 +25,7 @@ cleaner.py
 
 Combine all CSV and GeoJSON files from data/ into a single CSV and a single GeoJSON.
 - Ensures first column is "gcid" and second is "name" (attempts to map common variants).
+- Translates non-English text to English (requires: pip install deep-translator or googletrans==4.0.0rc1).
 - Drops columns that are mostly empty after combining (default threshold: 50% empty).
 - Outputs: data/combined.csv and data/combined.geojson
 """
@@ -30,6 +45,81 @@ GEOJSON_OUTPUT = DATA_DIR / "combined.geojson"
 # Column name candidates for mapping to gcid and name
 GCID_CANDIDATES = ["gcid", "id", "gid", "uuid", "global_id", "objectid"]
 NAME_CANDIDATES = ["name", "title", "label", "placename", "site_name", "display_name"]
+
+
+def has_non_english_chars(text):
+    """Check if text contains non-English characters (excluding basic punctuation and numbers)."""
+    if not isinstance(text, str) or not text.strip():
+        return False
+    
+    # Allow basic English letters, numbers, spaces, and common punctuation
+    english_pattern = re.compile(r'^[a-zA-Z0-9\s\.,\-\'"&()\[\]/\\:;!?@#$%^*+=~`|<>{}]+$')
+    return not english_pattern.match(text.strip())
+
+
+def translate_text(text, translator):
+    """Translate text to English if it contains non-English characters."""
+    if not has_translator or not translator or not isinstance(text, str) or not text.strip():
+        return text
+    
+    if not has_non_english_chars(text):
+        return text
+    
+    try:
+        if use_deep_translator:
+            # Using deep_translator (GoogleTranslator)
+            result = translator.translate(text)
+            if result:
+                print(f"Translated: '{text}' -> '{result}'")
+                return result
+        else:
+            # Using googletrans (legacy)
+            result = translator.translate(text, dest='en')
+            if result and hasattr(result, 'text') and result.text:
+                print(f"Translated: '{text}' -> '{result.text}'")
+                return result.text
+    except Exception as e:
+        print(f"Translation failed for '{text}': {e}")
+    
+    return text
+
+
+def translate_dataframe_columns(df, columns_to_translate=None):
+    """Translate specified columns in dataframe to English."""
+    if not has_translator:
+        print("Translation skipped: translation library not available")
+        return df
+    
+    # Initialize the appropriate translator
+    try:
+        if use_deep_translator:
+            translator = GoogleTranslator(source='auto', target='en')
+        else:
+            translator = Translator()
+    except Exception as e:
+        print(f"Failed to initialize translator: {e}")
+        return df
+    
+    # Default to translating name-related columns
+    if columns_to_translate is None:
+        columns_to_translate = ['name', 'title', 'label', 'placename', 'site_name', 'display_name']
+    
+    # Filter to only existing columns
+    existing_cols = [col for col in columns_to_translate if col in df.columns]
+    
+    if not existing_cols:
+        return df
+    
+    print(f"Translating columns: {existing_cols}")
+    
+    for col in existing_cols:
+        if col in df.columns:
+            # Apply translation to non-null values
+            mask = df[col].notna() & (df[col] != '')
+            if mask.any():
+                df.loc[mask, col] = df.loc[mask, col].apply(lambda x: translate_text(x, translator))
+    
+    return df
 
 
 def normalize_cols(columns):
@@ -99,14 +189,86 @@ def drop_sparse_columns(df, thresh=0.2):
     return df.loc[:, new_order]
 
 
+def load_existing_provinces(file_path):
+    """Load existing provinces/countries from combined.csv if it exists."""
+    existing_provinces = set()
+    if file_path.exists():
+        try:
+            existing_df = pd.read_csv(file_path, dtype=str, low_memory=False)
+            if 'province' in existing_df.columns:
+                # Filter out null/nan values and convert to set
+                existing_provinces = set(existing_df['province'].dropna().astype(str))
+                existing_provinces.discard('nan')  # Remove 'nan' strings
+                print(f"Found existing provinces/countries: {sorted(existing_provinces)}")
+            else:
+                print(f"No 'province' column found in existing {file_path}")
+        except Exception as e:
+            print(f"Failed to read existing {file_path}: {e}")
+    return existing_provinces
+
+
+def load_existing_provinces_from_geojson(file_path):
+    """Load existing provinces/countries from combined.geojson if it exists."""
+    existing_provinces = set()
+    if file_path.exists():
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                geojson_data = json.load(f)
+            
+            if 'features' in geojson_data:
+                for feature in geojson_data['features']:
+                    if 'properties' in feature and 'province' in feature['properties']:
+                        province = feature['properties']['province']
+                        if province and str(province).strip() not in ['', 'nan', 'None']:
+                            existing_provinces.add(str(province).strip())
+            
+            print(f"Found existing provinces/countries in GeoJSON: {sorted(existing_provinces)}")
+        except Exception as e:
+            print(f"Failed to read existing GeoJSON {file_path}: {e}")
+    return existing_provinces
+
+
+def extract_province_from_filename(filename):
+    """Extract province/country name from golf_courses_*.csv filename."""
+    # Remove golf_courses_ prefix and .csv suffix
+    name = filename.replace('golf_courses_', '').replace('.csv', '').replace('.geojson', '').replace('.json', '')
+    # Convert underscores to spaces and title case
+    return name.replace('_', ' ').title()
+
+
 def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
+    # Load existing provinces/countries to avoid reprocessing entire regions
+    existing_provinces = load_existing_provinces(out_path)
+    
     csv_files = list(Path(data_dir).glob("**/golf_courses_*.csv"))
     if not csv_files:
         print("No CSV files found in", data_dir)
         return
 
     dfs = []
+    existing_data_df = None
+    files_to_process = []
+    skipped_files = []
+    
+    # Load existing data once if it exists
+    if existing_provinces and out_path.exists():
+        try:
+            existing_data_df = pd.read_csv(out_path, dtype=str, low_memory=False)
+        except Exception as e:
+            print(f"Failed to read existing {out_path}: {e}")
+    
+    # Filter files based on whether their province/country already exists
     for p in csv_files:
+        province_from_file = extract_province_from_filename(p.name)
+        if province_from_file in existing_provinces:
+            print(f"Skipping {p.name} - {province_from_file} already exists in combined file")
+            skipped_files.append(p)
+        else:
+            files_to_process.append(p)
+    
+    print(f"Processing {len(files_to_process)} new files, skipping {len(skipped_files)} existing regions")
+    
+    for p in files_to_process:
         try:
             df = pd.read_csv(p, dtype=str, low_memory=False)
         except Exception as e:
@@ -133,25 +295,49 @@ def combine_csvs(data_dir, out_path, sparsity_threshold=0.2):
             df = df.rename(columns={name_col: "name"})
         elif not name_col:
             df["name"] = pd.NA
-
+        
+        # Set province from filename if not present
+        province_from_file = extract_province_from_filename(p.name)
+        if 'province' not in df.columns or df['province'].isna().all():
+            df['province'] = province_from_file
+        
+        print(f"Processing {len(df)} rows from {p.name} ({province_from_file})")
+        
         # Move gcid and name to front
         cols_now = [c for c in df.columns if c in ("gcid", "name", "province", 'lat', 'lon', 'area_m2')]
         new_order = ["gcid", "name", "province", 'lat', 'lon', 'area_m2']
         df = df.loc[:, ~df.columns.duplicated()]
         df = df.reindex(columns=new_order)
-
         dfs.append(df)
 
-    if not dfs:
+    if not dfs and existing_data_df is None:
         print("No CSV content to combine.", file=sys.stderr)
         return
-
-    combined = pd.concat(dfs, ignore_index=True, sort=False)
-    # Normalize gcid and name to string
-    combined["gcid"] = combined["gcid"].astype(str).replace({"nan": pd.NA})
-    combined["name"] = combined["name"].astype(str).replace({"nan": pd.NA})
     
-
+    # Combine new data if any
+    if dfs:
+        new_combined = pd.concat(dfs, ignore_index=True, sort=False)
+        # Normalize gcid and name to string
+        new_combined["gcid"] = new_combined["gcid"].astype(str).replace({"nan": pd.NA})
+        new_combined["name"] = new_combined["name"].astype(str).replace({"nan": pd.NA})
+        
+        # Translate non-English text to English
+        new_combined = translate_dataframe_columns(new_combined)
+        print(f"Processed {len(new_combined)} new rows")
+    else:
+        new_combined = pd.DataFrame()
+    
+    # Combine with existing data
+    if existing_data_df is not None and not existing_data_df.empty:
+        if not new_combined.empty:
+            combined = pd.concat([existing_data_df, new_combined], ignore_index=True, sort=False)
+            print(f"Combined {len(new_combined)} new rows with {len(existing_data_df)} existing rows")
+        else:
+            combined = existing_data_df
+            print(f"No new data to process, keeping {len(existing_data_df)} existing rows")
+    else:
+        combined = new_combined
+    
     # Ensure output dir exists
     out_path.parent.mkdir(parents=True, exist_ok=True)
     combined.to_csv(out_path, index=False)
@@ -171,16 +357,34 @@ def read_geojson_features(path):
 
 
 def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
+    # Load existing provinces/countries to avoid reprocessing  
+    # For GeoJSON, check the GeoJSON file itself, not the CSV
+    existing_provinces = load_existing_provinces_from_geojson(out_path)
+    
     geo_files = list(Path(data_dir).glob("**/golf_courses_*.geojson")) + list(Path(data_dir).glob("**/golf_courses_*.json"))
     geo_files = [p for p in geo_files if p.is_file()]
     if not geo_files:
         print("No GeoJSON files found in", data_dir)
         return
 
+    # Filter files based on whether their province/country already exists
+    files_to_process = []
+    skipped_files = []
+    
+    for p in geo_files:
+        province_from_file = extract_province_from_filename(p.name)
+        if province_from_file in existing_provinces:
+            print(f"Skipping {p.name} - {province_from_file} already exists in combined file")
+            skipped_files.append(p)
+        else:
+            files_to_process.append(p)
+    
+    print(f"Processing {len(files_to_process)} new GeoJSON files, skipping {len(skipped_files)} existing regions")
+
     # Prefer geopandas if available
     if has_gpd:
         gdfs = []
-        for p in geo_files:
+        for p in files_to_process:
             try:
                 gdf = gpd.read_file(p)
             except Exception as e:
@@ -219,6 +423,11 @@ def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
                 gdf["gcid"] = pd.NA
             if "name" not in gdf.columns:
                 gdf["name"] = pd.NA
+            
+            # Set province from filename if not present
+            province_from_file = extract_province_from_filename(p.name)
+            if 'province' not in gdf.columns or gdf['province'].isna().all():
+                gdf['province'] = province_from_file
 
             # geometry name
             geom_name = gdf.geometry.name if hasattr(gdf, "geometry") else None
@@ -248,6 +457,10 @@ def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
             return
 
         combined_gdf = pd.concat(gdfs, ignore_index=True, sort=False)
+        
+        # Translate non-English text to English
+        combined_gdf = translate_dataframe_columns(combined_gdf)
+        
         # ensure geometry column
         if hasattr(combined_gdf, "geometry"):
             # Drop sparse columns excluding geometry
@@ -270,12 +483,16 @@ def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
     # Manual GeoJSON merge (no geopandas)
     all_features = []
     prop_keys = set()
-    for p in geo_files:
+    
+    for p in files_to_process:
         try:
             feats = read_geojson_features(p)
         except Exception as e:
             print(f"Failed to read {p}: {e}", file=sys.stderr)
             continue
+        
+        province_from_file = extract_province_from_filename(p.name)
+        
         for f in feats:
             props = f.get("properties", {}) or {}
             # normalize property keys
@@ -297,34 +514,78 @@ def combine_geojsons(data_dir, out_path, sparsity_threshold=0.2):
                     new_props["name"] = new_props.pop(name_k)
                 else:
                     new_props.setdefault("name", None)
+            
+            # Set province from filename
+            new_props["province"] = province_from_file
+            
             f["properties"] = new_props
             all_features.append(f)
 
     if not all_features:
-        print("No features collected.", file=sys.stderr)
+        print("No new features collected.", file=sys.stderr)
         return
+    
+    print(f"Collected {len(all_features)} features from new regions")
 
     # Build properties dataframe to compute sparsity
     props_list = [f.get("properties", {}) for f in all_features]
     props_df = pd.DataFrame(props_list)
     props_df = props_df.astype(object)
+    
+    # Translate non-English text to English
+    props_df = translate_dataframe_columns(props_df)
+    
     # Use drop_sparse_columns to compute desired ordering (sparse-first, dense alpha)
     props_df = drop_sparse_columns(props_df, thresh=sparsity_threshold)
 
     # Keep ordered list of keys to preserve column ordering in output
     keep_keys = list(props_df.columns)
-    combined = {"type": "FeatureCollection", "features": []}
+    
+    # Update feature properties with translated values
     for i, f in enumerate(all_features):
+        props = f.get("properties", {})
+        for key in keep_keys:
+            if key in props and i < len(props_df):
+                props[key] = props_df.iloc[i][key] if key in props_df.columns else props[key]
+        f["properties"] = props
+    
+    # Handle merging with existing GeoJSON data
+    existing_features = []
+    if existing_provinces and out_path.exists():
+        try:
+            with open(out_path, 'r', encoding='utf-8') as f:
+                existing_geojson = json.load(f)
+            if 'features' in existing_geojson:
+                existing_features = existing_geojson['features']
+                print(f"Loaded {len(existing_features)} existing features from {out_path}")
+        except Exception as e:
+            print(f"Failed to read existing GeoJSON for merging: {e}")
+    
+    # Combine existing and new features
+    all_combined_features = existing_features + all_features
+    
+    combined = {"type": "FeatureCollection", "features": []}
+    for i, f in enumerate(all_combined_features):
         geom = f.get("geometry")
         props = f.get("properties", {})
         # Preserve ordering: iterate keep_keys and pick from props if present
-        filtered_props = {k: props.get(k) for k in keep_keys if k in props}
+        # For existing features, keep all their properties even if not in keep_keys
+        if i < len(existing_features):
+            # Existing feature - preserve all properties
+            filtered_props = props
+        else:
+            # New feature - filter to keep_keys
+            filtered_props = {k: props.get(k) for k in keep_keys if k in props}
         combined["features"].append({"type": "Feature", "geometry": geom, "properties": filtered_props})
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(combined, f, ensure_ascii=False, indent=2)
-    print(f"Wrote combined GeoJSON to {out_path} ({len(combined['features'])} features, {len(keep_keys)} props)")
+    
+    if existing_features and all_features:
+        print(f"Wrote combined GeoJSON to {out_path} ({len(existing_features)} existing + {len(all_features)} new = {len(combined['features'])} total features)")
+    else:
+        print(f"Wrote combined GeoJSON to {out_path} ({len(combined['features'])} features, {len(keep_keys)} props)")
 
 
 def main():

@@ -50,4 +50,17 @@
 #Wyoming
 #Mexico
 #United Kingdom
-Japan
+#Japan
+France métropolitaine
+#Germany
+#Spain
+#Ireland
+#Costa Rica
+#Qatar
+South Korea
+South Africa
+Denmark
+Sweden
+Belgium
+Dominican Republic
+United Arab Emirates
