@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE_SRC = ROOT / "site_src"
+SITE_SRC = ROOT / "docs"
 MAPS_OUT = ROOT / "maps"
 
 

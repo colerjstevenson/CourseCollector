@@ -109,7 +109,7 @@ Required fields for each golf course feature:
 Within this repository:
 
 - maps/ (deployed static site output)
-- site_src/ (templates, JS, CSS source)
+- docs/ (templates, JS, CSS source)
 - data/ (local generated artifacts prior to upload)
 - scripts/
 - scripts/build_site.py

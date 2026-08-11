@@ -294,7 +294,7 @@ def _write_json(path: Path, payload: object) -> None:
 
 
 def _copy_site_links(repo_root: Path, output_dir: Path) -> None:
-    links_path = repo_root / "site_src" / "config" / "site_links.json"
+    links_path = repo_root / "docs" / "config" / "site_links.json"
     if links_path.exists():
         payload = json.loads(links_path.read_text(encoding="utf-8"))
     else:

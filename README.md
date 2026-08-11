@@ -95,10 +95,10 @@ Notes:
 The repository includes a deploy-ready static site pipeline built around a Hugging Face dataset snapshot.
 
 - Source templates and assets:
-  - site_src/templates/index.html
-  - site_src/templates/world-map.html
-  - site_src/assets/
-  - site_src/config/site_links.json
+  - docs/templates/index.html
+  - docs/templates/world-map.html
+  - docs/assets/
+  - docs/config/site_links.json
 - Data preparation and validation scripts:
   - scripts/prepare_dataset.py
   - scripts/validate_site_dataset.py
