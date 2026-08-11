@@ -205,3 +205,18 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Hugging Face credentials
+/token
+/token.*
+
+# Local/generated data artifacts
+# Data should live in Hugging Face dataset: colerjstevenson/GolfGulf
+/cache/
+/cache_bu/
+/data/
+/golf_course_cache.json
+/golf_courses_map.html
+/images/golf_courses_map.html
+/golf_course_collection.log
+/maps/data/

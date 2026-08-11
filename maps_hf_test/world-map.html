@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golf Gulf World Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@4.6.2/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="page-map">
+    <header class="site-header compact">
+      <a class="brand" href="index.html">Golf Gulf Atlas</a>
+      <nav class="nav-links">
+        <a href="index.html">Landing</a>
+      </nav>
+    </header>
+
+    <main class="map-layout">
+      <aside class="map-sidebar">
+        <h1>World Course Map</h1>
+        <p>
+          Uses clustered rendering and lightweight search to keep interaction smooth with large
+          point sets.
+        </p>
+
+        <label class="search-label" for="course-search">Find a course</label>
+        <input
+          id="course-search"
+          class="search-input"
+          type="search"
+          placeholder="Type a course or location"
+          autocomplete="off"
+        />
+
+        <p class="map-meta" id="feature-count">Loading course data...</p>
+
+        <ul class="search-results" id="search-results"></ul>
+
+        <details class="map-notes">
+          <summary>Performance Notes</summary>
+          <ul>
+            <li>Point-only GeoJSON source (no heavy polygons).</li>
+            <li>MapLibre worker-side clustering.</li>
+            <li>Debounced search with prefix bucketing and result cap.</li>
+            <li>Viewport updates do not re-render markers in DOM.</li>
+          </ul>
+        </details>
+      </aside>
+
+      <section class="map-shell">
+        <div id="world-map" aria-label="World map of golf courses"></div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@4.6.2/dist/maplibre-gl.js"></script>
+    <script src="assets/world-map.js" defer></script>
+  </body>
+</html>

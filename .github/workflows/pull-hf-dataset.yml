@@ -1,0 +1,76 @@
+name: Pull Hugging Face Dataset
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      output_dir:
+        description: Local output directory for pulled dataset files
+        required: false
+        default: maps/data
+      include_patterns:
+        description: Comma-separated globs to include
+        required: false
+        default: '**/*.json,**/*.geojson,**/*.csv,manifest.json'
+      revision:
+        description: Optional dataset revision (branch, tag, or commit)
+        required: false
+        default: ''
+  schedule:
+    - cron: '45 6 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install huggingface_hub
+
+      - name: Pull from Hugging Face dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_DATASET_ID: ${{ vars.HF_DATASET_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATASET_ID="${HF_DATASET_ID:-colerjstevenson/GolfGulf}"
+          OUTPUT_DIR="${{ github.event.inputs.output_dir }}"
+          INCLUDE_PATTERNS="${{ github.event.inputs.include_patterns }}"
+          REVISION="${{ github.event.inputs.revision }}"
+
+          if [ -z "${OUTPUT_DIR}" ]; then OUTPUT_DIR="maps/data"; fi
+          if [ -z "${INCLUDE_PATTERNS}" ]; then INCLUDE_PATTERNS='**/*.json,**/*.geojson,**/*.csv,manifest.json'; fi
+
+          REVISION_ARGS=""
+          if [ -n "${REVISION}" ]; then
+            REVISION_ARGS="--revision ${REVISION}"
+          fi
+
+          python scripts/pull_hf_dataset.py \
+            --dataset "${DATASET_ID}" \
+            --output "${OUTPUT_DIR}" \
+            --include-csv "${INCLUDE_PATTERNS}" \
+            --clean \
+            ${REVISION_ARGS}
+
+      - name: Upload pulled dataset artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hf-dataset-snapshot
+          path: maps/data
+          if-no-files-found: error

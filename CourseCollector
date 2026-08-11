@@ -1,46 +1,28 @@
-'''
-CourseCollector: A collection of scripts to scrape, clean, and compile golf course data from various sources.
-This is the main Script used to run all other scrapping, cleaning, and compiling to produce a final dataset.
-'''
+"""CourseCollector launcher.
 
-COUNTRY = "usa"
+This file stays as the top-level entrypoint, while orchestration logic lives in
+src/course_collector.
+"""
 
-import os
-import json
-import pandas as pd
+from __future__ import annotations
+
+import sys
+from pathlib import Path
 
 
-#import golflink and map data from csv
+def _bootstrap_src_path() -> None:
+    repo_root = Path(__file__).resolve().parent
+    src_path = repo_root / "src"
+    if str(src_path) not in sys.path:
+        sys.path.insert(0, str(src_path))
 
-class CourseCollector:
-    
-    def __init__(self):
-        self.golflink_data = self.load_golflink_data()
-        self.map_data = self.load_map_data()
-        
-    def execute(self):
-        #run courseCollector process
-        
-        for course in 
-        
-        
-        
-        
-    
-    def load_golflink_data(self):
-        with open(f"data/golfLinkData.json", "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data
-    
-    
-    #returns map data as dictionary
-    def load_map_data(self):
-        data_path = f"data/{COUNTRY}/combined.csv"
-        df = pd.read_csv(data_path)
-        return df.to_dict(orient="records")
-        
-    
+
+def main() -> int:
+    _bootstrap_src_path()
+    from course_collector.cli import main as cli_main
+
+    return cli_main()
+
 
 if __name__ == "__main__":
-    collector = CourseCollector()
-    collector.execute()
+    raise SystemExit(main())

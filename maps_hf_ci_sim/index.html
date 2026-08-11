@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golf Gulf Data Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="page-landing">
+    <div class="atmosphere" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html">Golf Gulf Atlas</a>
+      <nav class="nav-links">
+        <a href="world-map.html">World Map</a>
+      </nav>
+    </header>
+
+    <main class="landing-main">
+      <section class="hero">
+        <p class="kicker">Open Golf Data</p>
+        <h1>Global courses plus city-level amenities and demographics.</h1>
+        <p class="hero-copy">
+          This build reads a pinned dataset snapshot and renders both the world map layer and
+          city cards from static JSON.
+        </p>
+        <div class="hero-cta-row">
+          <a class="button-primary" href="world-map.html">Open The World Map</a>
+          <a class="button-secondary" href="#data-links">Data Links</a>
+        </div>
+      </section>
+
+      <section class="metric-grid" id="metrics" aria-live="polite">
+        <article class="metric-card">
+          <p class="metric-label">Total Courses</p>
+          <p class="metric-value" data-metric="totalCourses">-</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Data Regions</p>
+          <p class="metric-value" data-metric="sourceRegions">-</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Build Timestamp (UTC)</p>
+          <p class="metric-value metric-small" data-metric="builtAt">-</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-label">Cities Covered</p>
+          <p class="metric-value" data-metric="totalCities">-</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Coverage Snapshot</h2>
+          <p>Top source regions by course count from current combined datasets.</p>
+        </div>
+        <div class="pill-grid" id="coverage-pills"></div>
+      </section>
+
+      <section class="panel" id="data-links">
+        <div class="panel-heading">
+          <h2>Visuals And Data</h2>
+          <p>Managed from a config file so links can evolve independently of UI code.</p>
+        </div>
+        <div class="link-columns">
+          <div>
+            <h3>Visuals</h3>
+            <ul class="link-list" id="visual-links"></ul>
+          </div>
+          <div>
+            <h3>Downloads</h3>
+            <ul class="link-list" id="data-download-links"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="cities">
+        <div class="panel-heading">
+          <h2>City Coverage</h2>
+          <p>Search across city demographics and amenities. Tract-level city maps are not included yet.</p>
+        </div>
+        <label class="search-label" for="city-search">Find a city</label>
+        <input
+          id="city-search"
+          class="search-input"
+          type="search"
+          placeholder="Type a city name"
+          autocomplete="off"
+        />
+        <div class="city-grid" id="city-cards"></div>
+      </section>
+    </main>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

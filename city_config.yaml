@@ -1,0 +1,116 @@
+sources:
+  golf: true
+  amenities: true
+  demographics: true
+  census_cache: true
+
+cities:
+  canada_pool:
+    - [Toronto, Ontario]
+    - [Montreal, Quebec]
+    - [Vancouver, British Columbia]
+    - [Calgary, Alberta]
+    - [Edmonton, Alberta]
+    - [Ottawa, Ontario]
+    - [Winnipeg, Manitoba]
+  us_pool:
+    - [New York, New York]
+    - [Los Angeles, California]
+    - [Chicago, Illinois]
+    - [Houston, Texas]
+    - [Phoenix, Arizona]
+    - [Philadelphia, Pennsylvania]
+    - [San Antonio, Texas]
+    - [San Diego, California]
+    - [Palm Springs, California]
+    - [Scottsdale, Arizona]
+    - [Dallas, Texas]
+    - [San Jose, California]
+    - [Austin, Texas]
+    - [Jacksonville, Florida]
+    - [Fort Worth, Texas]
+    - [Columbus, Ohio]
+    - [Indianapolis, Indiana]
+    - [Charlotte, North Carolina]
+    - [San Francisco, California]
+    - [Seattle, Washington]
+    - [Denver, Colorado]
+    - [Washington, District of Columbia]
+    - [Boston, Massachusetts]
+    - [Nashville, Tennessee]
+    - [Detroit, Michigan]
+    - [Portland, Oregon]
+    - [Las Vegas, Nevada]
+  # If list is non-empty, it overrides regions.
+  # Format: "City,Region" or "City,Region,Country"
+  list: []
+  regions:
+    - canada
+    - us
+  include: []
+  exclude: []
+
+amenities:
+  types:
+    - parks
+    - pools
+    - hockey rinks
+    - golf courses
+    - playgrounds
+    - sports centres
+    - basketball courts
+    - tennis courts
+    - soccer fields
+    - baseball fields
+    - libraries
+    - Schools
+    - hospitals
+
+outputs:
+  data_root: data
+  amenities_json: data/city_amenities.json
+  demographics_json: data/city_demographics.json
+  golf_json: data/canada/golf_canada_full.json
+  golf_csv: data/canada/golf_canada_full.csv
+  legacy_golf_json: data/golf_canada_data_full.json
+  legacy_golf_csv: data/golf_canada_data_full.csv
+  emit_legacy_golf_files: false
+  golf_hf_repo_id: colerjstevenson/GolfGulf
+  golf_hf_repo_type: dataset
+  golf_hf_subdir: ""
+  golf_hf_token:
+  golf_source_globs:
+    - canada/Fully_Matched_Golf_Courses.csv
+    - canada/golf_canada_full.csv
+    - canada/golf_canada_full.json
+    - canada/golf_canada_data*.csv
+    - canada/golf_canada_data*.json
+    - canada/golf_courses_*.csv
+    - canada/combined.csv
+    - usa/Fully_Matched_Golf_Courses.csv
+    - mexico/Fully_Matched_Golf_Courses.csv
+    - world/combined.csv
+    - golfLinkData.csv
+    - golfLinkData.json
+  census_root: data/censusShape
+
+behavior:
+  dry_run: false
+  force_refresh: false
+  skip_existing: true
+  verbose: false
+  amenity_delay_seconds: 0.0
+  amenity_save_every: 50
+  amenity_buffer_km: 0.0
+  small_test_limit:
+  golf_use_hf: true
+  golf_file_limit:
+  max_rows_per_source_file:
+  census_cache_provider: legacy
+
+validation:
+  enabled: true
+  expected_files: []
+  min_amenity_types_per_city: 1
+  min_demographic_cities: 1
+  min_golf_records: 1

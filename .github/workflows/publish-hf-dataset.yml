@@ -1,0 +1,80 @@
+name: Publish Hugging Face Dataset
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_dir:
+        description: Source directory to publish
+        required: false
+        default: data/site_dataset
+      include_patterns:
+        description: Comma-separated globs to include
+        required: false
+        default: '**/*.json,**/*.geojson'
+      delete_removed:
+        description: Delete remote files not present locally
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    - cron: '30 6 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install huggingface_hub
+
+      - name: Publish to Hugging Face dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_DATASET_ID: ${{ vars.HF_DATASET_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATASET_ID="${HF_DATASET_ID:-colerjstevenson/GolfGulf}"
+          SOURCE_DIR="${{ github.event.inputs.source_dir }}"
+          INCLUDE_PATTERNS="${{ github.event.inputs.include_patterns }}"
+          DELETE_REMOVED="${{ github.event.inputs.delete_removed }}"
+
+          if [ -z "${SOURCE_DIR}" ]; then SOURCE_DIR="data/site_dataset"; fi
+          if [ -z "${INCLUDE_PATTERNS}" ]; then INCLUDE_PATTERNS='**/*.json,**/*.geojson'; fi
+
+          if [ ! -d "${SOURCE_DIR}" ]; then
+            if [ -f "data/world/combined.csv" ] && [ -f "data/city_amenities.json" ] && [ -f "data/city_demographics.json" ]; then
+              echo "Preparing dataset artifacts into ${SOURCE_DIR}"
+              python scripts/prepare_dataset.py --data-root data --output "${SOURCE_DIR}"
+            fi
+          fi
+
+          if [ ! -d "${SOURCE_DIR}" ]; then
+            echo "Source directory '${SOURCE_DIR}' not found and no local inputs available. Skipping publish."
+            exit 0
+          fi
+
+          python scripts/validate_site_dataset.py --dataset-root "${SOURCE_DIR}" --min-cities 5
+
+          DELETE_FLAG=""
+          if [ "${DELETE_REMOVED:-false}" = "true" ]; then
+            DELETE_FLAG="--delete-removed"
+          fi
+
+          python scripts/publish_hf_dataset.py \
+            --dataset "${DATASET_ID}" \
+            --source "${SOURCE_DIR}" \
+            --include-csv "${INCLUDE_PATTERNS}" \
+            ${DELETE_FLAG}

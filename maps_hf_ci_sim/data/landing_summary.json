@@ -1,0 +1,72 @@
+{
+  "generated_at_utc": "2026-08-11T01:15:39.038690+00:00",
+  "total_courses": 10229,
+  "source_region_count": 13,
+  "source_regions": {
+    "Belgium": 113,
+    "Costa Rica": 18,
+    "Denmark": 223,
+    "Dominican Republic": 74,
+    "France m\u00e9tropolitaine": 1592,
+    "Ireland": 531,
+    "Japan": 2580,
+    "Qatar": 4,
+    "South Africa": 603,
+    "South Korea": 718,
+    "Sweden": 536,
+    "United Arab Emirates": 53,
+    "United Kingdom": 3184
+  },
+  "top_source_regions": [
+    {
+      "name": "United Kingdom",
+      "count": 3184
+    },
+    {
+      "name": "Japan",
+      "count": 2580
+    },
+    {
+      "name": "France m\u00e9tropolitaine",
+      "count": 1592
+    },
+    {
+      "name": "South Korea",
+      "count": 718
+    },
+    {
+      "name": "South Africa",
+      "count": 603
+    },
+    {
+      "name": "Sweden",
+      "count": 536
+    },
+    {
+      "name": "Ireland",
+      "count": 531
+    },
+    {
+      "name": "Denmark",
+      "count": 223
+    },
+    {
+      "name": "Belgium",
+      "count": 113
+    },
+    {
+      "name": "Dominican Republic",
+      "count": 74
+    },
+    {
+      "name": "United Arab Emirates",
+      "count": 53
+    },
+    {
+      "name": "Costa Rica",
+      "count": 18
+    }
+  ],
+  "total_cities": 4807,
+  "population_covered": 0
+}

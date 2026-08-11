@@ -1,0 +1,21 @@
+{
+  "visuals": [
+    {
+      "label": "World Map",
+      "href": "world-map.html",
+      "external": false
+    }
+  ],
+  "dataDownloads": [
+    {
+      "label": "Hugging Face Dataset",
+      "href": "https://huggingface.co/datasets/colerjstevenson/GolfGulf",
+      "external": true
+    },
+    {
+      "label": "World Combined CSV",
+      "href": "https://huggingface.co/datasets/colerjstevenson/GolfGulf/resolve/main/world/combined.csv?download=true",
+      "external": true
+    }
+  ]
+}

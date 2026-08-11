@@ -1,0 +1,27 @@
+logging:
+  path: golf_course_collection.log
+
+checkpoint:
+  path: .course_collector/checkpoint.json
+
+targets:
+  usa:
+    regions_file: states_list.txt
+    data_dir: data/usa
+    combined_csv: data/usa/combined.csv
+    postal_csv: data/usa/postal_codes.csv
+    matched_csv: data/usa/Fully_Matched_Golf_Courses.csv
+  world:
+    regions_file: states_list.txt
+    data_dir: data/world
+    combined_csv: data/world/combined.csv
+    postal_csv: data/world/postal_codes.csv
+    matched_csv: data/world/Fully_Matched_Golf_Courses.csv
+
+inputs:
+  golflink_csv: data/golfLinkData.csv
+
+scrape:
+  golflink: false
+  golfcanada: false
+  golfdigest: false

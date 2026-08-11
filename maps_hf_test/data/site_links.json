@@ -1,0 +1,26 @@
+{
+  "visuals": [
+    {
+      "label": "World Map",
+      "href": "world-map.html",
+      "external": false
+    },
+    {
+      "label": "Legacy Generated Map",
+      "href": "../golf_courses_map.html",
+      "external": false
+    }
+  ],
+  "dataDownloads": [
+    {
+      "label": "Global Combined CSV (Local)",
+      "href": "../data/world/combined.csv",
+      "external": false
+    },
+    {
+      "label": "Hugging Face Dataset",
+      "href": "https://huggingface.co/datasets/colerjstevenson/GolfGulf",
+      "external": true
+    }
+  ]
+}
